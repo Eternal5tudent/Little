@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMoveState : PlayerGroundedState
+public class PlayerAirState : PlayerState
 {
-    public PlayerMoveState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
 
@@ -26,18 +26,15 @@ public class PlayerMoveState : PlayerGroundedState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        if(input.x == 0)
-        {
-            stateMachine.ChangeState(player.IdleState);
-        }
+        player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-        player.ControlPlayer();
+        if (player.IsGrounded)
+            stateMachine.ChangeState(player.IdleState);
+        else
+            player.ControlPlayer();
     }
-    
-
-
 }

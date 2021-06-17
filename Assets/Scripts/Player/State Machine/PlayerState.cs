@@ -7,7 +7,7 @@ public class PlayerState
     protected Player player;
     protected PlayerStateMachine stateMachine;
     protected PlayerData playerData;
-    private string animBoolName;
+    private readonly string animBoolName;
     protected float startTime;
 
     public PlayerState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName)
@@ -41,6 +41,15 @@ public class PlayerState
     }
 
     public virtual void DoChecks()
+    {
+
+    }
+
+    protected void AnimationStartedTrigger()
+    {
+
+    }
+    protected void AnimationFinishedTrigger()
     {
 
     }
