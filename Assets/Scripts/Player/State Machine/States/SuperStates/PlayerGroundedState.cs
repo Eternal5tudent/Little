@@ -30,15 +30,19 @@ public class PlayerGroundedState : PlayerState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        input = player.InputHandler.Input;
+        input = player.InputHandler.AxisInput;
         jumpInput = player.InputHandler.JumpInput;
 
         if(jumpInput)
         {
             stateMachine.ChangeState(player.JumpState);
         }
-        if (!player.IsGrounded)
+        else if (!player.IsGrounded)
             stateMachine.ChangeState(player.AirState);
+        else if (player.IsTouchingWall && player.GrabToggled)
+        {
+            stateMachine.ChangeState(player.WallGrabState);
+        }
     }
 
     public override void PhysicsUpdate()

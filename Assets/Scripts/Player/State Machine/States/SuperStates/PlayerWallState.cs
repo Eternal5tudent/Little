@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAirState : PlayerState
+public class PlayerWallState : PlayerState
 {
-    public PlayerAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerWallState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
 
@@ -26,21 +26,20 @@ public class PlayerAirState : PlayerState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);
-
-        player.ControlPlayer();
-        if (player.IsGrounded)
-            stateMachine.ChangeState(player.IdleState);
-        else if(player.IsTouchingWall && stateMachine.CurrentState!= player.JumpState)
+        if (player.IsGrounded && !player.GrabToggled)
         {
-            stateMachine.ChangeState(player.WallSlideState);
+            stateMachine.ChangeState(player.IdleState);
+            player.InputHandler.ResetWallGrab();
         }
-
+        else if (!player.IsTouchingWall || player.AxisInput.x * player.FacingDirection == -1)
+        {
+            stateMachine.ChangeState(player.AirState);
+            player.InputHandler.ResetWallGrab();
+        }
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-
     }
 }

@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 6
   jumpPower: 15
-  groundCheckRadius: 0.25
+  wallSlideSpeed: 3.5
+  wallClimbSpeed: 3
+  groundCheckRadius: 0.14
+  wallCheckDistance: 0.39
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64

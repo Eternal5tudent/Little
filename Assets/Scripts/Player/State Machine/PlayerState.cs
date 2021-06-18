@@ -45,11 +45,11 @@ public class PlayerState
 
     }
 
-    protected void AnimationStartedTrigger()
+    public virtual void AnimationStartedTrigger()
     {
 
     }
-    protected void AnimationFinishedTrigger()
+    public virtual void AnimationFinishedTrigger()
     {
 
     }

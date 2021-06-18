@@ -8,8 +8,11 @@ public class PlayerData : ScriptableObject
     [Header("Movement")]
     public float movementSpeed = 10f;
     public float jumpPower = 15;
+    public float wallSlideSpeed = 3f;
+    public float wallClimbSpeed = 2f;
 
     [Header("Check surroundings")]
     public float groundCheckRadius = 0.3f;
+    public float wallCheckDistance = 0.5f;
     public LayerMask whatIsGround;
 }

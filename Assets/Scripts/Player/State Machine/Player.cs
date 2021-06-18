@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] PlayerData playerData;
     [SerializeField] Transform groundedCheck;
+    [SerializeField] Transform wallCheck;
 
     #region States
     public PlayerStateMachine StateMachine { get; private set; }
@@ -13,6 +14,9 @@ public class Player : MonoBehaviour
     public PlayerMoveState MoveState { get; private set; }
     public PlayerJumpState JumpState { get; private set; }
     public PlayerAirState AirState { get; private set; }
+    public PlayerWallSlideState WallSlideState { get; private set; }
+    public PlayerWallGrabState WallGrabState { get; private set; }
+    public PlayerWallClimbState WallClimbState { get; private set; }
     #endregion
 
     #region Components
@@ -23,9 +27,14 @@ public class Player : MonoBehaviour
 
     #region Condition variables
     public int FacingDirection { get; private set; }
+    public Vector2 AxisInput { get { return InputHandler.AxisInput; } }
+    public bool GrabToggled { get { return InputHandler.GrabWallToggle; } }
     public bool canJump { get; private set; }
     public Vector2 CurrentVelocity { get { return Rb.velocity; } }
-    public bool IsGrounded { get { return Physics2D.OverlapCircle(groundedCheck.position, playerData.groundCheckRadius, playerData.whatIsGround); } }
+    public bool IsGrounded { get { return _IsGrounded; } }
+    private bool _IsGrounded = false;
+    public bool IsTouchingWall { get { return _IsTouchingWall; } }
+    private bool _IsTouchingWall;
     #endregion
 
     #region Unity
@@ -36,6 +45,9 @@ public class Player : MonoBehaviour
         MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
         JumpState = new PlayerJumpState(this, StateMachine, playerData, "jump");
         AirState = new PlayerAirState(this, StateMachine, playerData, "air");
+        WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide");
+        WallGrabState = new PlayerWallGrabState(this, StateMachine, playerData, "wallGrab");
+        WallClimbState = new PlayerWallClimbState(this, StateMachine, playerData, "wallClimb");
     }
 
     private void Start()
@@ -50,16 +62,19 @@ public class Player : MonoBehaviour
     private void Update()
     {
         StateMachine.CurrentState.LogicUpdate();
-        if (InputHandler.Input.x * FacingDirection == -1)
+        if (InputHandler.AxisInput.x * FacingDirection == -1)
         {
             Flip();
         }
-        print(StateMachine.CurrentState.ToString());
+        if (GrabToggled && !IsTouchingWall)
+            InputHandler.ResetWallGrab();
     }
 
     private void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
+        _IsGrounded = Physics2D.OverlapCircle(groundedCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
+        _IsTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, playerData.wallCheckDistance, playerData.whatIsGround);
     }
     #endregion
 
@@ -81,6 +96,20 @@ public class Player : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundedCheck.position, playerData.groundCheckRadius);
+        Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.right * playerData.wallCheckDistance);
     }
-    public void ControlPlayer() => SetVelocityX(playerData.movementSpeed * InputHandler.Input.x);
+    public void ControlPlayer()
+    { 
+        if (!IsTouchingWall) 
+            SetVelocityX(playerData.movementSpeed * AxisInput.x); 
+    }
+
+    public virtual void AnimationStartedTrigger()
+    {
+        StateMachine.CurrentState.AnimationStartedTrigger();
+    }
+    public virtual void AnimationFinishedTrigger()
+    {
+        StateMachine.CurrentState.AnimationFinishedTrigger();
+    }
 }
