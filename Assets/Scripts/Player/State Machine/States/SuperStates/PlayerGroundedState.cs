@@ -32,8 +32,11 @@ public class PlayerGroundedState : PlayerState
         base.LogicUpdate();
         input = player.InputHandler.AxisInput;
         jumpInput = player.InputHandler.JumpInput;
-
-        if(jumpInput)
+        if (player.AxisInput.x * player.FacingDirection == -1)
+        {
+            player.Flip();
+        }
+        if (jumpInput)
         {
             stateMachine.ChangeState(player.JumpState);
         }

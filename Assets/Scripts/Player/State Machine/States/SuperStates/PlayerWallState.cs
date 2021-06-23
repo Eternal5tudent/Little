@@ -36,6 +36,10 @@ public class PlayerWallState : PlayerState
             stateMachine.ChangeState(player.AirState);
             player.InputHandler.ResetWallGrab();
         }
+        else if(player.InputHandler.JumpInput)
+        {
+            stateMachine.ChangeState(player.WallJumpState);
+        }
     }
 
     public override void PhysicsUpdate()

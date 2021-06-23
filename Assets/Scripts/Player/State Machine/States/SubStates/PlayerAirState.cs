@@ -27,10 +27,17 @@ public class PlayerAirState : PlayerState
     {
         base.LogicUpdate();
         player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);
-
         player.ControlPlayer();
+        if (player.AxisInput.x * player.FacingDirection == -1)
+        {
+            player.Flip();
+        }
         if (player.IsGrounded)
             stateMachine.ChangeState(player.IdleState);
+        else if (player.IsTouchingWall && player.InputHandler.JumpInput)
+        {
+            stateMachine.ChangeState(player.WallJumpState);
+        }
         else if(player.IsTouchingWall && stateMachine.CurrentState!= player.JumpState)
         {
             stateMachine.ChangeState(player.WallSlideState);

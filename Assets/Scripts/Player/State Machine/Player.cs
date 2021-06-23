@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] PlayerData playerData;
     [SerializeField] Transform groundedCheck;
     [SerializeField] Transform wallCheck;
+    [SerializeField] Transform ledgeCheck;
 
     #region States
     public PlayerStateMachine StateMachine { get; private set; }
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     public PlayerWallSlideState WallSlideState { get; private set; }
     public PlayerWallGrabState WallGrabState { get; private set; }
     public PlayerWallClimbState WallClimbState { get; private set; }
+    public PlayerWallJumpState WallJumpState { get; private set; }
     #endregion
 
     #region Components
@@ -29,12 +31,12 @@ public class Player : MonoBehaviour
     public int FacingDirection { get; private set; }
     public Vector2 AxisInput { get { return InputHandler.AxisInput; } }
     public bool GrabToggled { get { return InputHandler.GrabWallToggle; } }
-    public bool canJump { get; private set; }
     public Vector2 CurrentVelocity { get { return Rb.velocity; } }
     public bool IsGrounded { get { return _IsGrounded; } }
     private bool _IsGrounded = false;
     public bool IsTouchingWall { get { return _IsTouchingWall; } }
     private bool _IsTouchingWall;
+    private bool speedIsConserved = false;
     #endregion
 
     #region Unity
@@ -48,6 +50,7 @@ public class Player : MonoBehaviour
         WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide");
         WallGrabState = new PlayerWallGrabState(this, StateMachine, playerData, "wallGrab");
         WallClimbState = new PlayerWallClimbState(this, StateMachine, playerData, "wallClimb");
+        WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "air");
     }
 
     private void Start()
@@ -62,17 +65,19 @@ public class Player : MonoBehaviour
     private void Update()
     {
         StateMachine.CurrentState.LogicUpdate();
-        if (InputHandler.AxisInput.x * FacingDirection == -1)
-        {
-            Flip();
-        }
         if (GrabToggled && !IsTouchingWall)
             InputHandler.ResetWallGrab();
+        print(StateMachine.CurrentState.ToString());
     }
 
     private void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
+        DoChecks();
+    }
+
+    public void DoChecks()
+    {
         _IsGrounded = Physics2D.OverlapCircle(groundedCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
         _IsTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, playerData.wallCheckDistance, playerData.whatIsGround);
     }
@@ -87,7 +92,12 @@ public class Player : MonoBehaviour
         Rb.velocity = new Vector2(CurrentVelocity.x, velocity);
     }
 
-    private void Flip()
+    public void SetVelocity(Vector2 velocity)
+    {
+        Rb.velocity = velocity;
+    }
+
+    public void Flip()
     {
         FacingDirection *= -1;
         transform.Rotate(0f, 180f, 0f);
@@ -100,7 +110,12 @@ public class Player : MonoBehaviour
     }
     public void ControlPlayer()
     { 
-        if (!IsTouchingWall) 
+        if(speedIsConserved)
+        {
+            if (AxisInput.x != 0)
+                ConserveSpeed(false);
+        }
+        if (!IsTouchingWall && !speedIsConserved) 
             SetVelocityX(playerData.movementSpeed * AxisInput.x); 
     }
 
@@ -111,5 +126,15 @@ public class Player : MonoBehaviour
     public virtual void AnimationFinishedTrigger()
     {
         StateMachine.CurrentState.AnimationFinishedTrigger();
+    }
+
+    public void ConserveSpeed(bool conserve)
+    {
+        speedIsConserved = conserve;
+    }
+
+    public bool CheckLedge()
+    {
+        return Physics2D.Raycast(ledgeCheck.position, transform.right, playerData.wallCheckDistance, playerData.whatIsGround);
     }
 }

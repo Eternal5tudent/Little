@@ -18,7 +18,6 @@ public class PlayerJumpState : PlayerAbilityState
     {
         base.LogicUpdate();
         player.ControlPlayer();
-        Debug.Log(player.CurrentVelocity.y);
         if (player.CurrentVelocity.y <= 7)
             isAbilityDone = true;
     }

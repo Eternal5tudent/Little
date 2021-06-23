@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class PlayerWallClimbState : PlayerWallState
 {
+    bool detectingLedge = true;
     public PlayerWallClimbState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
+    }
+
+    public override void Enter()
+    {
+        base.Enter();
+        detectingLedge = player.CheckLedge();
     }
 
     public override void LogicUpdate()
@@ -16,5 +23,15 @@ public class PlayerWallClimbState : PlayerWallState
         {
             stateMachine.ChangeState(player.WallGrabState);
         }
+        else if(!detectingLedge && player.IsTouchingWall)
+        {
+            stateMachine.ChangeState(player.JumpState);
+        }
+    }
+
+    public override void PhysicsUpdate()
+    {
+        base.PhysicsUpdate();
+        detectingLedge = player.CheckLedge();
     }
 }
