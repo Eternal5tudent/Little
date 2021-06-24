@@ -32,10 +32,8 @@ public class Player : MonoBehaviour
     public Vector2 AxisInput { get { return InputHandler.AxisInput; } }
     public bool GrabToggled { get { return InputHandler.GrabWallToggle; } }
     public Vector2 CurrentVelocity { get { return Rb.velocity; } }
-    public bool IsGrounded { get { return _IsGrounded; } }
-    private bool _IsGrounded = false;
-    public bool IsTouchingWall { get { return _IsTouchingWall; } }
-    private bool _IsTouchingWall;
+    public bool IsGrounded { get; private set; }
+    public bool IsTouchingWall { get; private set; }
     private bool speedIsConserved = false;
     #endregion
 
@@ -67,7 +65,6 @@ public class Player : MonoBehaviour
         StateMachine.CurrentState.LogicUpdate();
         if (GrabToggled && !IsTouchingWall)
             InputHandler.ResetWallGrab();
-        print(StateMachine.CurrentState.ToString());
     }
 
     private void FixedUpdate()
@@ -78,8 +75,8 @@ public class Player : MonoBehaviour
 
     public void DoChecks()
     {
-        _IsGrounded = Physics2D.OverlapCircle(groundedCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
-        _IsTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, playerData.wallCheckDistance, playerData.whatIsGround);
+        IsGrounded = Physics2D.OverlapCircle(groundedCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
+        IsTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, playerData.wallCheckDistance, playerData.whatIsGround);
     }
     #endregion
 
