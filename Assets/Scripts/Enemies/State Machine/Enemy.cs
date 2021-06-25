@@ -1,28 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDamageable
 {
     [SerializeField] D_Enemy enemyData;
     [SerializeField] Transform groundedCheck;
     [SerializeField] Transform wallCheck;
-
-    #region States
-    public EnemyStateMachine StateMachine { get; private set; }
-    public EnemyIdleState IdleState { get; private set; }
-    public EnemyMoveState MoveState { get; private set; }
-    #endregion
-
-    #region Components
-    public Rigidbody2D Rb { get; private set; }
-    public Animator Anim { get; private set; }
-    #endregion
-
-    #region Condition variables
-    public int FacingDirection { get; private set; }
-    public Vector2 CurrentVelocity { get { return Rb.velocity; } }
-    #endregion
+    [SerializeField] UnityEvent onDamage;
+    [SerializeField] UnityEvent onDeath;
 
     #region Unity
     protected virtual void Awake()
@@ -30,10 +17,15 @@ public class Enemy : MonoBehaviour
         StateMachine = new EnemyStateMachine();
         IdleState = new EnemyIdleState(this, StateMachine, enemyData, "idle");
         MoveState = new EnemyMoveState(this, StateMachine, enemyData, "move");
+        PlayerDetectedState = new EnemyPlayerDetectedState(this, StateMachine, enemyData, "idle");
+        AttackState = new EnemyAttackState(this, StateMachine, enemyData, "attack");
+
     }
 
     protected virtual void Start()
     {
+        MaxHealth = enemyData.maxHealth;
+        CurrentHealth = MaxHealth;
         Rb = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
         FacingDirection = 1;
@@ -52,10 +44,32 @@ public class Enemy : MonoBehaviour
 
     protected virtual void OnDrawGizmos()
     {
-        Gizmos.DrawRay(groundedCheck.position, transform.up  * -1 * enemyData.groundCheckRay);
+        Gizmos.DrawRay(groundedCheck.position, transform.up * -1 * enemyData.groundCheckRay);
         Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.right * enemyData.wallCheckRay);
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.right * enemyData.playerCheckRay);
     }
 
+    #endregion
+
+    #region States
+    public EnemyStateMachine StateMachine { get; protected set; }
+    public EnemyIdleState IdleState { get; protected set; }
+    public EnemyMoveState MoveState { get; protected set; }
+    public EnemyPlayerDetectedState PlayerDetectedState { get; protected set; }
+    public EnemyAttackState AttackState { get; protected set; }
+    #endregion
+
+    #region Components
+    public Rigidbody2D Rb { get; private set; }
+    public Animator Anim { get; private set; }
+    #endregion
+
+    #region Condition variables
+    public int FacingDirection { get; private set; }
+    public Vector2 CurrentVelocity { get { return Rb.velocity; } }
+    public int CurrentHealth { get; protected set; }
+    public int MaxHealth { get; protected set; }
     #endregion
 
     #region Control
@@ -102,6 +116,20 @@ public class Enemy : MonoBehaviour
     {
         return Physics2D.Raycast(wallCheck.position, transform.right, enemyData.wallCheckRay, enemyData.whatIsGround);
     }
+
+    public bool CheckPlayer()
+    {
+        return Physics2D.Raycast(wallCheck.position, transform.right, enemyData.playerCheckRay, enemyData.whatIsPlayer);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        CurrentHealth--;
+        onDamage?.Invoke();
+        if (CurrentHealth <= 0)
+            onDeath?.Invoke();
+    }
+
     #endregion
 
 }

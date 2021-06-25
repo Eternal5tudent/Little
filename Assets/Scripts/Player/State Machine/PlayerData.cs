@@ -11,7 +11,7 @@ public class PlayerData : ScriptableObject
     public float wallSlideSpeed = 3f;
     public float wallClimbSpeed = 2f;
 
-    [Header("Check surroundings")]
+    [Header("Surroundings")]
     public float groundCheckRadius = 0.3f;
     public float wallCheckDistance = 0.5f;
     public LayerMask whatIsGround;
