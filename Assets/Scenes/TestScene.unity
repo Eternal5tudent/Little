@@ -5583,6 +5583,40 @@ MonoBehaviour:
   groundedCheck: {fileID: 2000713325}
   wallCheck: {fileID: 1593621539}
   ledgeCheck: {fileID: 432227403}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 509226967}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: EnableHitMaterial
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 1f6872f989f1d75459909df8b9c21f67, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 509226961}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  fistsWeapon: {fileID: 1845785741909306932, guid: ea54103ba2f17984a93808c7f970c75b, type: 3}
+  enemymask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1001 &550196444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6974,7 +7008,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 0.14
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000002f20acbb9b029fc6ed07b64d6392e4250ff15bd2
   m_LightCookieSprite: {fileID: 0}

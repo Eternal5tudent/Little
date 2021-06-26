@@ -24,3 +24,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   playerDetectedAwaitTime: 0.8
+  maxHealth: 2
+  attackRadius: 1.06
+  whatIsDamageable:
+    serializedVersion: 2
+    m_Bits: 128
+  damage: 1

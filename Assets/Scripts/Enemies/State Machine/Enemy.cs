@@ -11,6 +11,14 @@ public class Enemy : MonoBehaviour, IDamageable
     [SerializeField] UnityEvent onDamage;
     [SerializeField] UnityEvent onDeath;
 
+    #region Condition variables
+    private Material originalMaterial;
+    public int FacingDirection { get; private set; }
+    public Vector2 CurrentVelocity { get { return Rb.velocity; } }
+    public int CurrentHealth { get; protected set; }
+    public int MaxHealth { get; protected set; }
+    #endregion
+
     #region Unity
     protected virtual void Awake()
     {
@@ -48,6 +56,7 @@ public class Enemy : MonoBehaviour, IDamageable
         Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.right * enemyData.wallCheckRay);
         Gizmos.color = Color.red;
         Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.right * enemyData.playerCheckRay);
+        Gizmos.DrawWireSphere(transform.position, enemyData.attackRadius);
     }
 
     #endregion
@@ -63,13 +72,6 @@ public class Enemy : MonoBehaviour, IDamageable
     #region Components
     public Rigidbody2D Rb { get; private set; }
     public Animator Anim { get; private set; }
-    #endregion
-
-    #region Condition variables
-    public int FacingDirection { get; private set; }
-    public Vector2 CurrentVelocity { get { return Rb.velocity; } }
-    public int CurrentHealth { get; protected set; }
-    public int MaxHealth { get; protected set; }
     #endregion
 
     #region Control
@@ -125,11 +127,16 @@ public class Enemy : MonoBehaviour, IDamageable
     public void TakeDamage(int damage)
     {
         CurrentHealth--;
+        Debug.Log(name + ": ouch!");
         onDamage?.Invoke();
         if (CurrentHealth <= 0)
             onDeath?.Invoke();
     }
 
+    public void Die()
+    {
+        onDeath?.Invoke();
+    }
     #endregion
 
 }

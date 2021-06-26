@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
     [SerializeField] PlayerData playerData;
     [SerializeField] Transform groundedCheck;
     [SerializeField] Transform wallCheck;
     [SerializeField] Transform ledgeCheck;
+    [SerializeField] UnityEvent OnDamage;
+    [SerializeField] UnityEvent OnDeath;   
+    //todo: this is not the way
+    [SerializeField] Weapon fistsWeapon;
+    [SerializeField] LayerMask enemymask;
 
     #region States
     public PlayerStateMachine StateMachine { get; private set; }
@@ -24,16 +30,21 @@ public class Player : MonoBehaviour
     #region Components
     public Rigidbody2D Rb { get; private set; }
     public Animator Anim { get; private set; }
+    public SpriteRenderer spriteRenderer { get; private set; }
     public InputManager InputHandler { get; private set; }
     #endregion
 
     #region Condition variables
+    private Material originalMat;
     public int FacingDirection { get; private set; }
     public Vector2 AxisInput { get { return InputHandler.AxisInput; } }
     public bool GrabToggled { get { return InputHandler.GrabWallToggle; } }
     public Vector2 CurrentVelocity { get { return Rb.velocity; } }
     public bool IsGrounded { get; private set; }
     public bool IsTouchingWall { get; private set; }
+    public int MaxHealth { get; private set; }
+    public int CurrentHealth { get; private set; }
+
     private bool speedIsConserved = false;
     #endregion
 
@@ -53,11 +64,19 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        MaxHealth = playerData.maxHealth;
+        CurrentHealth = MaxHealth;
         InputHandler = InputManager.Instance;
         Rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalMat = spriteRenderer.material;
         Anim = GetComponent<Animator>();
         FacingDirection = 1;
         StateMachine.Initialize(IdleState);
+        //todo: this is not the way
+        fistsWeapon = Instantiate(fistsWeapon.gameObject, transform.position, Quaternion.identity).GetComponent<Weapon_Fists>();
+        fistsWeapon.Initialize(enemymask);
+        fistsWeapon.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -65,6 +84,14 @@ public class Player : MonoBehaviour
         StateMachine.CurrentState.LogicUpdate();
         if (GrabToggled && !IsTouchingWall)
             InputHandler.ResetWallGrab();
+        //todo: this is not the way
+        if (Input.GetButtonDown("Fire1"))
+        {
+            fistsWeapon.transform.position = transform.position;
+            fistsWeapon.gameObject.SetActive(true);
+            fistsWeapon.Attack();
+            Debug.Log("Attacked");
+        }    
     }
 
     private void FixedUpdate()
@@ -133,5 +160,32 @@ public class Player : MonoBehaviour
     public bool CheckLedge()
     {
         return Physics2D.Raycast(ledgeCheck.position, transform.right, playerData.wallCheckDistance, playerData.whatIsGround);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        CurrentHealth--;
+        if (CurrentHealth <= 0)
+            Die();
+        OnDamage?.Invoke();
+    }
+
+    public void Die()
+    {
+        OnDeath?.Invoke();
+    }
+
+    public void EnableHitMaterial(Material material)
+    {
+        if(gameObject.activeInHierarchy)
+            StartCoroutine(EnableHitMaterial_Cor(material));
+    }
+
+    private IEnumerator EnableHitMaterial_Cor(Material material)
+    {
+        spriteRenderer.material = material;
+        yield return new WaitForSeconds(0.1f);
+        spriteRenderer.material = originalMat;
+
     }
 }

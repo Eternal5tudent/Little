@@ -17,4 +17,7 @@ public class D_Enemy : ScriptableObject
     [Header("Combat")]
     public float playerDetectedAwaitTime = 0.8f;
     public int maxHealth;
+    public float attackRadius;
+    public LayerMask whatIsDamageable;
+    public int damage;
 }
