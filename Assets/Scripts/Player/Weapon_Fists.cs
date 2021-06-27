@@ -8,9 +8,19 @@ public class Weapon_Fists : Weapon
     [SerializeField] float damageRadius;
 
 
-    public override void Attack()
+    protected override void Attack()
     {
         base.Attack();
+        switch(attackNum)
+        {
+            case 0:
+                animator.SetTrigger("attack1");
+                break;
+            case 1:
+                animator.SetTrigger("attack2");
+                break;
+        }
+        //print(attackNum);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(damageArea.transform.position, damageRadius, whatIsDamageable);
         foreach (Collider2D collider in colliders)
         {
@@ -21,7 +31,6 @@ public class Weapon_Fists : Weapon
             }
         }
     }
-
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(damageArea.position, damageRadius);

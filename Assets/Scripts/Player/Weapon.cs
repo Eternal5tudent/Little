@@ -4,11 +4,16 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
-    [SerializeField] protected D_Weapon weaponData;
+    [SerializeField]
+    protected D_Weapon weaponData;
+    protected Animator animator;
+    [SerializeField]
+    protected SpriteRenderer spriteRenderer;
     protected int attackNum = 0;
-    bool timeToReset = false;
     protected LayerMask whatIsDamageable;
-
+    bool canAttack = true;
+    float lastTimeAttacked;
+    bool hidden = false;
     public virtual void Initialize(LayerMask whatIsDamageable)
     {
         this.whatIsDamageable = whatIsDamageable;
@@ -16,33 +21,50 @@ public abstract class Weapon : MonoBehaviour
 
     protected virtual void Start()
     {
-        attackNum = 0;
-        timeToReset = false;
-    }
-    public virtual void Attack()
-    {
-        StopCoroutine(StartReseting_Cor());
-        StartCoroutine(StartReseting_Cor());
+        animator = GetComponent<Animator>();
+        canAttack = true;
     }
 
-    public virtual void Update()
+    public void TryAttack()
     {
-        if(timeToReset)
+        if (canAttack)
         {
-            Unequip();
+            Attack();
         }
     }
 
-    public virtual void Unequip()
+    protected virtual void Attack()
     {
-        attackNum = 0;
-        timeToReset = false;
+        canAttack = false;
+        //spriteRenderer.enabled = true;       
     }
 
-    IEnumerator StartReseting_Cor()
+    private void Update()
     {
-        timeToReset = false;
-        yield return new WaitForSeconds(weaponData.resetAfterTime);
-        timeToReset = true;
+        if(Time.time - lastTimeAttacked >= weaponData.resetAfterTime)
+        {
+            if(!hidden)
+                Hide();
+        }
+    }
+
+    public virtual void Hide()
+    {
+        attackNum = 0;
+        //spriteRenderer.enabled = false;
+        animator.SetTrigger("hide");
+        hidden = true;
+        canAttack = true;
+    }
+
+    protected virtual void OnAttackFinished()
+    {
+        attackNum++;
+        //print(attackNum);
+        if (attackNum >= weaponData.chainedAttacks)
+            attackNum = 0;
+        canAttack = true;
+        lastTimeAttacked = Time.time;
+        hidden = false;
     }
 }

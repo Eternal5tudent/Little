@@ -20,7 +20,6 @@ public class EnemyAbillityState : EnemyState
         base.LogicUpdate();
         if(abilityDone)
         {
-            //todo: transition to idle state and set "shouldFlip" to false
             stateMachine.ChangeState(enemy.MoveState);
         }
     }

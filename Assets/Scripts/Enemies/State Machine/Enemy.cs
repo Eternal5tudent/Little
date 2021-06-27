@@ -127,7 +127,7 @@ public class Enemy : MonoBehaviour, IDamageable
     public void TakeDamage(int damage)
     {
         CurrentHealth--;
-        Debug.Log(name + ": ouch!");
+        //Debug.Log(name + ": ouch!");
         onDamage?.Invoke();
         if (CurrentHealth <= 0)
             onDeath?.Invoke();

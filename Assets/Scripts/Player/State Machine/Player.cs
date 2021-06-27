@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Player : MonoBehaviour, IDamageable
+public class Player : MonoBehaviour, IDamageable, IFighter
 {
     [SerializeField] PlayerData playerData;
     [SerializeField] Transform groundedCheck;
@@ -14,6 +14,7 @@ public class Player : MonoBehaviour, IDamageable
     //todo: this is not the way
     [SerializeField] Weapon fistsWeapon;
     [SerializeField] LayerMask enemymask;
+    public Weapon CurrentWeapon { get; private set; }
 
     #region States
     public PlayerStateMachine StateMachine { get; private set; }
@@ -74,9 +75,10 @@ public class Player : MonoBehaviour, IDamageable
         FacingDirection = 1;
         StateMachine.Initialize(IdleState);
         //todo: this is not the way
-        fistsWeapon = Instantiate(fistsWeapon.gameObject, transform.position, Quaternion.identity).GetComponent<Weapon_Fists>();
+        fistsWeapon = Instantiate(fistsWeapon.gameObject, transform.position, Quaternion.identity, transform).GetComponent<Weapon_Fists>();
         fistsWeapon.Initialize(enemymask);
-        fistsWeapon.gameObject.SetActive(false);
+        CurrentWeapon = fistsWeapon;
+
     }
 
     private void Update()
@@ -88,9 +90,7 @@ public class Player : MonoBehaviour, IDamageable
         if (Input.GetButtonDown("Fire1"))
         {
             fistsWeapon.transform.position = transform.position;
-            fistsWeapon.gameObject.SetActive(true);
-            fistsWeapon.Attack();
-            Debug.Log("Attacked");
+            fistsWeapon.TryAttack();
         }    
     }
 
@@ -111,6 +111,7 @@ public class Player : MonoBehaviour, IDamageable
     {
         Rb.velocity = new Vector2(velocity, CurrentVelocity.y);
     }
+
     public void SetVelocityY(float velocity)
     {
         Rb.velocity = new Vector2(CurrentVelocity.x, velocity);
@@ -132,6 +133,7 @@ public class Player : MonoBehaviour, IDamageable
         Gizmos.DrawWireSphere(groundedCheck.position, playerData.groundCheckRadius);
         Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.right * playerData.wallCheckDistance);
     }
+
     public void ControlPlayer()
     { 
         if(speedIsConserved)
@@ -147,6 +149,7 @@ public class Player : MonoBehaviour, IDamageable
     {
         StateMachine.CurrentState.AnimationStartedTrigger();
     }
+
     public virtual void AnimationFinishedTrigger()
     {
         StateMachine.CurrentState.AnimationFinishedTrigger();
@@ -187,5 +190,10 @@ public class Player : MonoBehaviour, IDamageable
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.material = originalMat;
 
+    }
+
+    public void OnWeaponAttackFinished()
+    {
+        spriteRenderer.enabled = true;
     }
 }

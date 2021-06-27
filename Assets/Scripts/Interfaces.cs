@@ -9,3 +9,8 @@ public interface IDamageable
     void TakeDamage(int damage);
     void Die();
 }
+
+public interface IFighter
+{
+    void OnWeaponAttackFinished();
+}
