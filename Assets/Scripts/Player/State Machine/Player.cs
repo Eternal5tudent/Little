@@ -76,7 +76,7 @@ public class Player : MonoBehaviour, IDamageable, IFighter
         StateMachine.Initialize(IdleState);
         //todo: this is not the way
         fistsWeapon = Instantiate(fistsWeapon.gameObject, transform.position, Quaternion.identity, transform).GetComponent<Weapon_Fists>();
-        fistsWeapon.Initialize(enemymask);
+        fistsWeapon.Initialize(enemymask, this);
         CurrentWeapon = fistsWeapon;
 
     }
@@ -85,11 +85,13 @@ public class Player : MonoBehaviour, IDamageable, IFighter
     {
         StateMachine.CurrentState.LogicUpdate();
         if (GrabToggled && !IsTouchingWall)
-            InputHandler.ResetWallGrab();
+        { 
+            InputHandler.ResetWallGrab(); 
+        }
         //todo: this is not the way
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0))
         {
-            fistsWeapon.transform.position = transform.position;
+            //fistsWeapon.transform.position = transform.position;
             fistsWeapon.TryAttack();
         }    
     }
@@ -192,8 +194,15 @@ public class Player : MonoBehaviour, IDamageable, IFighter
 
     }
 
-    public void OnWeaponAttackFinished()
+    public void OnMeleeWeaponAttack()
     {
+        IEnumerator OnMeleeWeaponAttack_Cor()
+        {
+            SetVelocityX(FacingDirection * 4f);
+            yield return new WaitForSeconds(0.05f);
+            SetVelocityX(0f);
+        }
         spriteRenderer.enabled = true;
+        StartCoroutine(OnMeleeWeaponAttack_Cor());
     }
 }

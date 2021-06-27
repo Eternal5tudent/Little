@@ -12,5 +12,5 @@ public interface IDamageable
 
 public interface IFighter
 {
-    void OnWeaponAttackFinished();
+    void OnMeleeWeaponAttack();
 }

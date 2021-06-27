@@ -14,13 +14,18 @@ public class Weapon_Fists : Weapon
         switch(attackNum)
         {
             case 0:
-                animator.SetTrigger("attack1");
-                break;
-            case 1:
-                animator.SetTrigger("attack2");
+                animator.SetBool("attack1", true);
+                break;                    
+            case 1:                       
+                animator.SetBool("attack2", true);
                 break;
         }
-        //print(attackNum);
+    }
+
+    protected override void OnAttackFinished()
+    {
+        base.OnAttackFinished();
+        fighter.OnMeleeWeaponAttack();
         Collider2D[] colliders = Physics2D.OverlapCircleAll(damageArea.transform.position, damageRadius, whatIsDamageable);
         foreach (Collider2D collider in colliders)
         {
@@ -29,6 +34,16 @@ public class Weapon_Fists : Weapon
             {
                 damageable.TakeDamage(weaponData.damage);
             }
+        }
+        switch(attackNum)
+        {
+            case 0:
+                animator.SetBool("attack2", false);
+                break;
+            case 1:
+                animator.SetBool("attack1", false);
+                break;
+
         }
     }
     private void OnDrawGizmos()

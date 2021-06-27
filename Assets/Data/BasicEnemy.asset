@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BasicEnemy
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  idleTime: 1
+  idleTime: 0.8
   groundCheckRay: 0.42
   wallCheckRay: 0.71
   playerCheckRay: 0.78
@@ -24,7 +24,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   playerDetectedAwaitTime: 0.8
-  maxHealth: 2
+  maxHealth: 3
   attackRadius: 1.06
   whatIsDamageable:
     serializedVersion: 2

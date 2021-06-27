@@ -13,14 +13,17 @@ public abstract class Weapon : MonoBehaviour
     protected LayerMask whatIsDamageable;
     bool canAttack = true;
     float lastTimeAttacked;
-    bool hidden = false;
-    public virtual void Initialize(LayerMask whatIsDamageable)
+    bool idling = false;
+    protected IFighter fighter;
+    public virtual void Initialize(LayerMask whatIsDamageable, IFighter fighter)
     {
         this.whatIsDamageable = whatIsDamageable;
+        this.fighter = fighter;
     }
 
     protected virtual void Start()
     {
+        lastTimeAttacked = Time.time;  
         animator = GetComponent<Animator>();
         canAttack = true;
     }
@@ -36,24 +39,25 @@ public abstract class Weapon : MonoBehaviour
     protected virtual void Attack()
     {
         canAttack = false;
-        //spriteRenderer.enabled = true;       
+        if(idling)
+            animator.SetBool("idle", false);
     }
 
     private void Update()
     {
         if(Time.time - lastTimeAttacked >= weaponData.resetAfterTime)
         {
-            if(!hidden)
-                Hide();
+            if(!idling)
+                Idle();
         }
     }
 
-    public virtual void Hide()
+    public virtual void Idle()
     {
         attackNum = 0;
         //spriteRenderer.enabled = false;
-        animator.SetTrigger("hide");
-        hidden = true;
+        animator.SetBool("idle", true);
+        idling = true;
         canAttack = true;
     }
 
@@ -65,6 +69,6 @@ public abstract class Weapon : MonoBehaviour
             attackNum = 0;
         canAttack = true;
         lastTimeAttacked = Time.time;
-        hidden = false;
+        idling = false;
     }
 }

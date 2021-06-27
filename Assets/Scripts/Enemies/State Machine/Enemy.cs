@@ -8,15 +8,22 @@ public class Enemy : MonoBehaviour, IDamageable
     [SerializeField] D_Enemy enemyData;
     [SerializeField] Transform groundedCheck;
     [SerializeField] Transform wallCheck;
+    [SerializeField] Material hitMaterial;
     [SerializeField] UnityEvent onDamage;
     [SerializeField] UnityEvent onDeath;
+    private Material originalMat;
 
     #region Condition variables
-    private Material originalMaterial;
     public int FacingDirection { get; private set; }
     public Vector2 CurrentVelocity { get { return Rb.velocity; } }
     public int CurrentHealth { get; protected set; }
     public int MaxHealth { get; protected set; }
+    #endregion
+
+    #region Components
+    public Rigidbody2D Rb { get; private set; }
+    public Animator Anim { get; private set; }
+    public SpriteRenderer spriteRenderer { get; private set; }
     #endregion
 
     #region Unity
@@ -32,10 +39,13 @@ public class Enemy : MonoBehaviour, IDamageable
 
     protected virtual void Start()
     {
+        
         MaxHealth = enemyData.maxHealth;
         CurrentHealth = MaxHealth;
         Rb = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalMat = spriteRenderer.material;
         FacingDirection = 1;
         StateMachine.Initialize(MoveState);
     }
@@ -67,11 +77,6 @@ public class Enemy : MonoBehaviour, IDamageable
     public EnemyMoveState MoveState { get; protected set; }
     public EnemyPlayerDetectedState PlayerDetectedState { get; protected set; }
     public EnemyAttackState AttackState { get; protected set; }
-    #endregion
-
-    #region Components
-    public Rigidbody2D Rb { get; private set; }
-    public Animator Anim { get; private set; }
     #endregion
 
     #region Control
@@ -136,6 +141,17 @@ public class Enemy : MonoBehaviour, IDamageable
     public void Die()
     {
         onDeath?.Invoke();
+    }
+    public void EnableDamageShader()
+    {
+        StartCoroutine(EnableDamageShader_Cor());
+    }
+
+    IEnumerator EnableDamageShader_Cor()
+    {
+        spriteRenderer.material = hitMaterial;
+        yield return new WaitForSeconds(0.1f);
+        spriteRenderer.material = originalMat;
     }
     #endregion
 
