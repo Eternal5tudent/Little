@@ -25,7 +25,6 @@ public class Weapon_Fists : Weapon
     protected override void OnAttackFinished()
     {
         base.OnAttackFinished();
-        fighter.OnMeleeWeaponAttack();
         Collider2D[] colliders = Physics2D.OverlapCircleAll(damageArea.transform.position, damageRadius, whatIsDamageable);
         foreach (Collider2D collider in colliders)
         {
@@ -45,6 +44,7 @@ public class Weapon_Fists : Weapon
                 break;
 
         }
+        fighter.OnMeleeWeaponAttack(colliders.Length > 0);
     }
     private void OnDrawGizmos()
     {

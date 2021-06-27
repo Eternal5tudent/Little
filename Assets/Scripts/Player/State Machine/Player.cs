@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour, IDamageable, IFighter
 {
+    [SerializeField] Transform weaponPos;
     [SerializeField] PlayerData playerData;
     [SerializeField] Transform groundedCheck;
     [SerializeField] Transform wallCheck;
@@ -75,7 +76,7 @@ public class Player : MonoBehaviour, IDamageable, IFighter
         FacingDirection = 1;
         StateMachine.Initialize(IdleState);
         //todo: this is not the way
-        fistsWeapon = Instantiate(fistsWeapon.gameObject, transform.position, Quaternion.identity, transform).GetComponent<Weapon_Fists>();
+        fistsWeapon = Instantiate(fistsWeapon.gameObject, weaponPos.position, Quaternion.identity, transform).GetComponent<Weapon_Fists>();
         fistsWeapon.Initialize(enemymask, this);
         CurrentWeapon = fistsWeapon;
 
@@ -194,15 +195,19 @@ public class Player : MonoBehaviour, IDamageable, IFighter
 
     }
 
-    public void OnMeleeWeaponAttack()
+    public void OnMeleeWeaponAttack(bool hit)
     {
         IEnumerator OnMeleeWeaponAttack_Cor()
         {
+            if (hit)
+                Time.timeScale = 0.05f;
+            yield return new WaitForSecondsRealtime(0.1f);
+            Time.timeScale = 1;
             SetVelocityX(FacingDirection * 4f);
             yield return new WaitForSeconds(0.05f);
             SetVelocityX(0f);
         }
-        spriteRenderer.enabled = true;
+       
         StartCoroutine(OnMeleeWeaponAttack_Cor());
     }
 }
