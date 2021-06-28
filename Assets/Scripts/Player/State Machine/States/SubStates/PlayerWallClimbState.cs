@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerWallClimbState : PlayerWallState
 {
     bool detectingLedge = true;
+    public bool enteredGrounded = false;
     public PlayerWallClimbState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -18,6 +19,11 @@ public class PlayerWallClimbState : PlayerWallState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        if (player.IsGrounded && !player.GrabToggled && !enteredGrounded)
+        {
+            stateMachine.ChangeState(player.IdleState);
+            player.InputHandler.ResetWallGrab();
+        }
         player.SetVelocityY(playerData.wallClimbSpeed);
         if(player.AxisInput.y <= 0)
         {
@@ -33,5 +39,11 @@ public class PlayerWallClimbState : PlayerWallState
     {
         base.PhysicsUpdate();
         detectingLedge = player.CheckLedge();
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        enteredGrounded = false;
     }
 }

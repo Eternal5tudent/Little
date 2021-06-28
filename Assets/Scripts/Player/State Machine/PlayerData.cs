@@ -10,6 +10,7 @@ public class PlayerData : ScriptableObject
     public float jumpPower = 15;
     public float wallSlideSpeed = 3f;
     public float wallClimbSpeed = 2f;
+    public float dropForce = 30f;
 
     [Header("Surroundings")]
     public float groundCheckRadius = 0.3f;
@@ -18,4 +19,10 @@ public class PlayerData : ScriptableObject
 
     [Header("Combat")]
     public int maxHealth = 3;
+
+    [Header("SFX")]
+    public AudioClip footstep;
+    public AudioClip hit_hurt;
+    public AudioClip slide;
+    public AudioClip jump;
 }

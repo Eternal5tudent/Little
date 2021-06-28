@@ -3,7 +3,10 @@ guid: 088674fe6118d564e963fdb1805ffe30
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - sfxPlayer: {fileID: 5279681805745393034, guid: 00b26b501290aa14f9bded97dfca0ee6, type: 3}
+  - sfxLoopedPlayer: {fileID: 5279681805745393034, guid: 77b2bdf36ab9ffc459742fac96fd3857, type: 3}
+  - musicPlayer: {fileID: 5279681805745393034, guid: 3d2ca3e3c11b8b74f93c5855975c8f1a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

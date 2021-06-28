@@ -40,12 +40,19 @@ public class PlayerGroundedState : PlayerState
         {
             stateMachine.ChangeState(player.JumpState);
         }
-        else if (!player.IsGrounded)
-            stateMachine.ChangeState(player.AirState);
         else if (player.IsTouchingWall && player.GrabToggled)
         {
             stateMachine.ChangeState(player.WallGrabState);
         }
+        else if (player.IsTouchingWall && player.InputHandler.AxisInput.y > 0)
+        {
+            player.WallClimbState.enteredGrounded = true;
+            stateMachine.ChangeState(player.WallClimbState);
+        }
+        else if (!player.IsGrounded)
+        {
+            stateMachine.ChangeState(player.AirState);
+        }     
     }
 
     public override void PhysicsUpdate()

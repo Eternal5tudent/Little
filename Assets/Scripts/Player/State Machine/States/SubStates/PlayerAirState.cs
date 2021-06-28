@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAirState : PlayerState
 {
+    float dropForce;
     public PlayerAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -16,6 +17,7 @@ public class PlayerAirState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        dropForce = playerData.dropForce;
     }
 
     public override void Exit()
@@ -28,6 +30,14 @@ public class PlayerAirState : PlayerState
         base.LogicUpdate();
         player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);
         player.ControlPlayer();
+        if(player.AxisInput.y < 0)
+        {
+            if(player.CurrentVelocity.y > -15f)
+            {
+                player.Rb.AddForce(Vector2.down * dropForce * Time.deltaTime, ForceMode2D.Impulse);
+            }        
+        }
+
         if (player.AxisInput.x * player.FacingDirection == -1)
         {
             player.Flip();
@@ -48,6 +58,9 @@ public class PlayerAirState : PlayerState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-
+        if (player.CurrentVelocity.y < -30f)
+        {
+            player.SetVelocityY(-30f);
+        }
     }
 }

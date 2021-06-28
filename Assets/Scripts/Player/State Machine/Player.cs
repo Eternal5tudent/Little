@@ -14,7 +14,7 @@ public class Player : MonoBehaviour, IDamageable, IFighter
     [SerializeField] UnityEvent OnDeath;   
     //todo: this is not the way
     [SerializeField] Weapon fistsWeapon;
-    [SerializeField] LayerMask enemymask;
+    [SerializeField] LayerMask whatisEnemy;
     public Weapon CurrentWeapon { get; private set; }
 
     #region States
@@ -34,10 +34,12 @@ public class Player : MonoBehaviour, IDamageable, IFighter
     public Animator Anim { get; private set; }
     public SpriteRenderer spriteRenderer { get; private set; }
     public InputManager InputHandler { get; private set; }
+    public AudioManager audioManager { get; private set; }
     #endregion
 
-    #region Condition variables
+    #region Variables
     private Material originalMat;
+    private Material flashMat;
     public int FacingDirection { get; private set; }
     public Vector2 AxisInput { get { return InputHandler.AxisInput; } }
     public bool GrabToggled { get { return InputHandler.GrabWallToggle; } }
@@ -72,12 +74,14 @@ public class Player : MonoBehaviour, IDamageable, IFighter
         Rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalMat = spriteRenderer.material;
+        flashMat = VFXManager.Instance.flashMaterial;
         Anim = GetComponent<Animator>();
         FacingDirection = 1;
         StateMachine.Initialize(IdleState);
+        audioManager = AudioManager.Instance;
         //todo: this is not the way
         fistsWeapon = Instantiate(fistsWeapon.gameObject, weaponPos.position, Quaternion.identity, transform).GetComponent<Weapon_Fists>();
-        fistsWeapon.Initialize(enemymask, this);
+        fistsWeapon.Initialize(whatisEnemy, this);
         CurrentWeapon = fistsWeapon;
 
     }
@@ -110,6 +114,7 @@ public class Player : MonoBehaviour, IDamageable, IFighter
     }
     #endregion
 
+    #region Character Control
     public void SetVelocityX(float velocity)
     {
         Rb.velocity = new Vector2(velocity, CurrentVelocity.y);
@@ -180,16 +185,18 @@ public class Player : MonoBehaviour, IDamageable, IFighter
     {
         OnDeath?.Invoke();
     }
+    #endregion
 
-    public void EnableHitMaterial(Material material)
+    #region Effects
+    public void EnableHitMaterial()
     {
         if(gameObject.activeInHierarchy)
-            StartCoroutine(EnableHitMaterial_Cor(material));
+            StartCoroutine(EnableHitMaterial_Cor());
     }
 
-    private IEnumerator EnableHitMaterial_Cor(Material material)
+    private IEnumerator EnableHitMaterial_Cor()
     {
-        spriteRenderer.material = material;
+        spriteRenderer.material = flashMat;
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.material = originalMat;
 
@@ -210,4 +217,19 @@ public class Player : MonoBehaviour, IDamageable, IFighter
        
         StartCoroutine(OnMeleeWeaponAttack_Cor());
     }
+
+    public void PlaySound_Footsteps()
+    {
+        audioManager.PlaySFX(playerData.footstep);
+    }
+    public void PlaySound_Hurt()
+    {
+        audioManager.PlaySFX(playerData.hit_hurt);
+    }
+
+    public void PlaySound_Jump()
+    {
+        audioManager.PlaySFX(playerData.jump);
+    }
+    #endregion
 }

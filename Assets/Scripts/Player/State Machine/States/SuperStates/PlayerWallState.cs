@@ -26,12 +26,7 @@ public class PlayerWallState : PlayerState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        if (player.IsGrounded && !player.GrabToggled)
-        {
-            stateMachine.ChangeState(player.IdleState);
-            player.InputHandler.ResetWallGrab();
-        }
-        else if (!player.IsTouchingWall || player.AxisInput.x * player.FacingDirection == -1)
+        if (!player.IsTouchingWall || player.AxisInput.x * player.FacingDirection == -1)
         {
             stateMachine.ChangeState(player.AirState);
             player.InputHandler.ResetWallGrab();

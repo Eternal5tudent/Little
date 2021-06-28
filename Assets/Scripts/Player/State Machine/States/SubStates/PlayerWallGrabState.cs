@@ -18,6 +18,11 @@ public class PlayerWallGrabState : PlayerWallState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        if (player.IsGrounded && !player.GrabToggled)
+        {
+            stateMachine.ChangeState(player.IdleState);
+            player.InputHandler.ResetWallGrab();
+        }
         player.transform.position = enterPosition;
         player.SetVelocityX(0);
         player.SetVelocityY(0);

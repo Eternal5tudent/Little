@@ -11,6 +11,7 @@ public class PlayerJumpState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
+        player.PlaySound_Jump();
         player.SetVelocityY(playerData.jumpPower); 
     }
 

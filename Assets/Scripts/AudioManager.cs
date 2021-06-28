@@ -14,11 +14,16 @@ public class AudioManager : Singleton<AudioManager>
             this.obj = obj;
         }
     }
-    private enum playerType { Music, SFX }
+    private enum playerType { Music, SFX, SFXLooped }
     [SerializeField] GameObject sfxPlayer;
+    [SerializeField] GameObject sfxLoopedPlayer;
     [SerializeField] GameObject musicPlayer;
     private readonly List<AudioPlayer> musicSources = new List<AudioPlayer>();
     private readonly List<AudioPlayer> sfxSources = new List<AudioPlayer>();
+    private readonly List<AudioPlayer> sfxLoopedSources = new List<AudioPlayer>();
+    private readonly Dictionary<int, AudioPlayer> playingLoopedSFX = new Dictionary<int, AudioPlayer>();
+    List<int> uniqueAudioIDUsed = new List<int>();
+    int lastAudioID = 0;
 
     private void Start()
     {
@@ -34,6 +39,11 @@ public class AudioManager : Singleton<AudioManager>
         GameObject newMusicPlayer = Instantiate(musicPlayer, transform);
         newMusicPlayer.SetActive(false);
         musicSources.Add(new AudioPlayer(newMusicPlayer.GetComponent<AudioSource>(), newMusicPlayer));
+
+        //Generate one SFX Looped audio source
+        GameObject newSfxLoopedPlayer = Instantiate(sfxLoopedPlayer, transform);
+        newSfxLoopedPlayer.SetActive(false);
+        sfxLoopedSources.Add(new AudioPlayer(newSfxLoopedPlayer.GetComponent<AudioSource>(), newSfxLoopedPlayer));
     }
 
     private AudioPlayer GetAudioPlayer(playerType type)
@@ -54,6 +64,14 @@ public class AudioManager : Singleton<AudioManager>
                 newMusicPlayer.SetActive(false);
                 AudioPlayer newAudioPlayer = new AudioPlayer(newMusicPlayer.GetComponent<AudioSource>(), newMusicPlayer);
                 musicSources.Add(newAudioPlayer);
+                return newAudioPlayer;
+            }
+            else if (type == playerType.SFXLooped)
+            {
+                GameObject newSfxLoopedPlayer = Instantiate(sfxLoopedPlayer, transform);
+                newSfxLoopedPlayer.SetActive(false);
+                AudioPlayer newAudioPlayer = new AudioPlayer(newSfxLoopedPlayer.GetComponent<AudioSource>(), newSfxLoopedPlayer);
+                sfxSources.Add(newAudioPlayer);
                 return newAudioPlayer;
             }
             throw new System.Exception("Can't create new audio player");
@@ -78,6 +96,16 @@ public class AudioManager : Singleton<AudioManager>
                 }
             }
         }
+        else if (type == playerType.SFXLooped)
+        {
+            foreach (AudioPlayer player in sfxLoopedSources)
+            {
+                if (!player.obj.activeInHierarchy)
+                {
+                    return player;
+                }
+            }
+        }
         return GetNewAudioPlayer(type);
     }
 
@@ -88,6 +116,27 @@ public class AudioManager : Singleton<AudioManager>
         player.source.PlayOneShot(clip);
         StartCoroutine(DisableGameObject(clip.length, player.obj));
     }
+    public void PlaySFXLooped(AudioClip clip, int uniqueID)
+    {
+        AudioPlayer player = GetAudioPlayer(playerType.SFXLooped);
+        player.obj.SetActive(true);
+        player.source.clip = clip;
+        player.source.Play();
+        playingLoopedSFX.Add(uniqueID, player);
+    }
+
+    public void StopSFXLooped(int uniqueID)
+    {
+        bool audioPlayerExists = playingLoopedSFX.TryGetValue(uniqueID, out AudioPlayer player);
+        if(audioPlayerExists)
+        {
+            player.source.Stop();
+            player.obj.SetActive(false);
+            playingLoopedSFX.Remove(uniqueID);
+        }
+       
+    }
+
     public void PlayMusic(AudioClip clip)
     {
         AudioPlayer player = GetAudioPlayer(playerType.Music);
@@ -100,5 +149,18 @@ public class AudioManager : Singleton<AudioManager>
     {
         yield return new WaitForSeconds(timer);
         obj.SetActive(false);
+    }
+
+    public int GetUniqueAudioID()
+    {
+        for(int i = 0; i<500; i++)
+        {
+            if(!uniqueAudioIDUsed.Contains(i))
+            {
+                return i;
+            }
+        }
+        Debug.LogError("Couldn't find a free unique audio id!");
+        return Random.Range(500, 1000);
     }
 }
