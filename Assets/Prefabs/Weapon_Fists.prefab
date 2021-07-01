@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481693253723189344}
   m_LocalRotation: {x: -0, y: -0, z: -0.5854581, w: 0.8107027}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.68, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 203112333679919451}
@@ -56,8 +56,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4179213731003400207}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.23958, z: 0}
-  m_LocalScale: {x: 0.65279, y: 0.65279, z: 0.65279}
+  m_LocalPosition: {x: -0.035815, y: -0.23958, z: 0}
+  m_LocalScale: {x: 0.70116174, y: 0.70116174, z: 0.70116174}
   m_Children:
   - {fileID: 467378953982454529}
   - {fileID: 6314131190310001991}
@@ -76,10 +76,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b090d2c31fbcc46b32820d083fb715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: e5380b6a1c0afa540b4fae73d0642825, type: 2}
-  spriteRenderer: {fileID: 4953582529577550823}
-  damageArea: {fileID: 467378953982454529}
-  damageRadius: 1.7
+  weaponData: {fileID: 11400000, guid: 5ee1edb65de154442a7aa03d0ad002ba, type: 2}
+  meleeData: {fileID: 11400000, guid: 1f049a7a0b659954a99cc9835c54c684, type: 2}
+  attackPos: {fileID: 467378953982454529}
 --- !u!95 &7021571132240007418
 Animator:
   serializedVersion: 3
@@ -123,13 +122,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6817619939083574096}
-  m_LocalRotation: {x: -0, y: -0, z: 0.36561012, w: 0.9307681}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.74, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 203112333679919451}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 42.89}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4953582529577550823
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -170,12 +169,12 @@ SpriteRenderer:
   m_SortingLayerID: -765726449
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a8c5bbd8516a0de4a91091c9bf04bad1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96658f28a1270fa4e8d706578b31bff0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

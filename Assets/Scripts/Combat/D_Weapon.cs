@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newWeapon", menuName = "Data/Weapon")]
 public class D_Weapon : ScriptableObject
 {
-    public int chainedAttacks = 1;
-    public float resetAfterTime = 1;
+    public float attackCooldown;
     public int damage = 1;
+    public float idleAfterSecs = 1f;
 }

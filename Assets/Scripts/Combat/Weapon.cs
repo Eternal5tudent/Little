@@ -1,74 +1,74 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public abstract class Weapon : MonoBehaviour
 {
-    [SerializeField]
-    protected D_Weapon weaponData;
-    protected Animator animator;
-    [SerializeField]
-    protected SpriteRenderer spriteRenderer;
-    protected int attackNum = 0;
-    protected LayerMask whatIsDamageable;
-    bool canAttack = true;
-    float lastTimeAttacked;
-    bool idling = false;
-    protected IFighter fighter;
-    public virtual void Initialize(LayerMask whatIsDamageable, IFighter fighter)
+    [SerializeField] protected D_Weapon weaponData;
+    #region State Machine
+    public WeaponStateMachine StateMachine { get; private set; }
+    public WeaponIdleState IdleState { get; private set; }
+    public Action OnHitEnemy;
+    #endregion
+
+    #region Components 
+    public Animator animator { get; private set; }
+    #endregion
+
+    public LayerMask whatIsEnemy { get; private set; }
+    protected bool attackFinished = true;
+    protected bool CooldownReady { get { return (Time.time - lastAttackTime >= weaponData.attackCooldown); } }
+    private float lastAttackTime = 0;
+
+    protected virtual void Awake()
     {
-        this.whatIsDamageable = whatIsDamageable;
-        this.fighter = fighter;
+        animator = GetComponent<Animator>();
+        #region States Initialize
+        StateMachine = new WeaponStateMachine();
+        IdleState = new WeaponIdleState(this, StateMachine, weaponData, "idle");
+        #endregion
     }
 
     protected virtual void Start()
     {
-        lastTimeAttacked = Time.time;  
-        animator = GetComponent<Animator>();
-        canAttack = true;
+        StateMachine.Initialize(IdleState);
+    }
+
+    protected virtual void Update()
+    {
+        StateMachine.CurrentState.LogicUpdate();
+    }
+
+    public virtual void FixedUpdate()
+    {
+        StateMachine.CurrentState.PhysicsUpdate();
     }
 
     public void TryAttack()
     {
-        if (canAttack)
+        if (attackFinished && CooldownReady)
         {
             Attack();
         }
     }
 
-    protected virtual void Attack()
+    public abstract void Attack();
+
+    public virtual void OnAnimationEnd()
     {
-        canAttack = false;
-        if(idling)
-            animator.SetBool("idle", false);
+        StateMachine.CurrentState.OnAnimationEnd();
     }
 
-    private void Update()
+    public void SetAttackTime()
     {
-        if(Time.time - lastTimeAttacked >= weaponData.resetAfterTime)
-        {
-            if(!idling)
-                Idle();
-        }
+        lastAttackTime = Time.time;
+        attackFinished = true;
     }
 
-    public virtual void Idle()
+    public void SetEnemy(LayerMask whatIsEnemy)
     {
-        attackNum = 0;
-        //spriteRenderer.enabled = false;
-        animator.SetBool("idle", true);
-        idling = true;
-        canAttack = true;
+        this.whatIsEnemy = whatIsEnemy;
     }
 
-    protected virtual void OnAttackFinished()
-    {
-        attackNum++;
-        //print(attackNum);
-        if (attackNum >= weaponData.chainedAttacks)
-            attackNum = 0;
-        canAttack = true;
-        lastTimeAttacked = Time.time;
-        idling = false;
-    }
 }

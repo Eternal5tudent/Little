@@ -14,7 +14,7 @@ public class Player : MonoBehaviour, IDamageable, IFighter
     [SerializeField] UnityEvent OnDeath;   
     //todo: this is not the way
     [SerializeField] Weapon fistsWeapon;
-    [SerializeField] LayerMask whatisEnemy;
+    [SerializeField] LayerMask whatIsEnemy;
     public Weapon CurrentWeapon { get; private set; }
 
     #region States
@@ -81,8 +81,9 @@ public class Player : MonoBehaviour, IDamageable, IFighter
         audioManager = AudioManager.Instance;
         //todo: this is not the way
         fistsWeapon = Instantiate(fistsWeapon.gameObject, weaponPos.position, Quaternion.identity, transform).GetComponent<Weapon_Fists>();
-        fistsWeapon.Initialize(whatisEnemy, this);
         CurrentWeapon = fistsWeapon;
+        fistsWeapon.OnHitEnemy += () => StopTime(0.05f);
+        fistsWeapon.SetEnemy(whatIsEnemy);
 
     }
 
@@ -194,6 +195,18 @@ public class Player : MonoBehaviour, IDamageable, IFighter
             StartCoroutine(EnableHitMaterial_Cor());
     }
 
+    //todo: this should be done in a game manager
+    public void StopTime(float seconds)
+    {
+        IEnumerator StopTime_Cor()
+        {
+            Time.timeScale = 0;
+            yield return new WaitForSecondsRealtime(seconds);
+            Time.timeScale = 1;
+        }
+        StartCoroutine(StopTime_Cor());
+    }
+
     private IEnumerator EnableHitMaterial_Cor()
     {
         spriteRenderer.material = flashMat;
@@ -222,6 +235,7 @@ public class Player : MonoBehaviour, IDamageable, IFighter
     {
         audioManager.PlaySFX(playerData.footstep);
     }
+
     public void PlaySound_Hurt()
     {
         audioManager.PlaySFX(playerData.hit_hurt);
