@@ -11,6 +11,7 @@ public class PlayerData : ScriptableObject
     public float wallSlideSpeed = 3f;
     public float wallClimbSpeed = 2f;
     public float dropForce = 30f;
+    public float wallJumpForce = 8;
 
     [Header("Surroundings")]
     public float groundCheckRadius = 0.3f;

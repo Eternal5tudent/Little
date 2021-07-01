@@ -80,7 +80,7 @@ public class Player : MonoBehaviour, IDamageable, IFighter
         StateMachine.Initialize(IdleState);
         audioManager = AudioManager.Instance;
         //todo: this is not the way
-        fistsWeapon = Instantiate(fistsWeapon.gameObject, weaponPos.position, Quaternion.identity, transform).GetComponent<Weapon_Fists>();
+        fistsWeapon = Instantiate(fistsWeapon.gameObject, weaponPos.position, Quaternion.identity, transform).GetComponent<Weapon>();
         CurrentWeapon = fistsWeapon;
         fistsWeapon.OnHitEnemy += () => StopTime(0.05f);
         fistsWeapon.SetEnemy(whatIsEnemy);
@@ -95,7 +95,7 @@ public class Player : MonoBehaviour, IDamageable, IFighter
             InputHandler.ResetWallGrab(); 
         }
         //todo: this is not the way
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Fire1"))
         {
             //fistsWeapon.transform.position = transform.position;
             fistsWeapon.TryAttack();

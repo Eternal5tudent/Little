@@ -20,7 +20,7 @@ public class PlayerWallJumpState : PlayerAbilityState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-        player.SetVelocity(new Vector2(player.FacingDirection * 7, 14));
+        player.SetVelocity(new Vector2(player.FacingDirection * playerData.wallJumpForce, playerData.wallJumpForce * 2));
         timer += Time.fixedDeltaTime;
         if (timer >= duration)
         {

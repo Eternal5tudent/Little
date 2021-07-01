@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,7 +23,6 @@ public class AudioManager : Singleton<AudioManager>
     private readonly List<AudioPlayer> sfxLoopedSources = new List<AudioPlayer>();
     private readonly Dictionary<int, AudioPlayer> playingLoopedSFX = new Dictionary<int, AudioPlayer>();
     List<int> uniqueAudioIDUsed = new List<int>();
-    int lastAudioID = 0;
 
     private void Start()
     {
