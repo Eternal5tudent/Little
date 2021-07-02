@@ -153,6 +153,11 @@ public class Enemy : MonoBehaviour, IDamageable
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.material = originalMat;
     }
+
+    public void PlayDeathSound()
+    {
+        AudioManager.Instance.PlaySFX(enemyData.deathSound);
+    }
     #endregion
 
 }

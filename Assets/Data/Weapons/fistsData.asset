@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aacd475b22a1a5240b29ca99fb79c28c, type: 3}
+  m_Name: fistsData
+  m_EditorClassIdentifier: 
+  attackRadius: 0.57
+  rightFistAttackSound: {fileID: 8300000, guid: 5589c8700a68dbc4c831cb34eee72fdd, type: 3}
+  leftFistAttackSound: {fileID: 8300000, guid: a62c0665cc2fdc1448e67d5a781b0f76, type: 3}
+  impactSound: {fileID: 8300000, guid: be696754c88b1ef4ab5eacb1f2648d50, type: 3}

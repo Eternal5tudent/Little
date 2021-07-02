@@ -24,7 +24,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   maxHealth: 3
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 256
+  StartingWeapon: {fileID: 1845785741909306932, guid: ea54103ba2f17984a93808c7f970c75b, type: 3}
   footstep: {fileID: 8300000, guid: 9a53f04a624808648909c8c06ed13e6c, type: 3}
   hit_hurt: {fileID: 8300000, guid: 67be52175ce8c3e4ebd61bf2d56c4d45, type: 3}
   slide: {fileID: 8300000, guid: e5445e95578d4614f87d894fd68094e2, type: 3}
   jump: {fileID: 8300000, guid: c7e1fbf93eff63e40a2698bd6248cdb0, type: 3}
+  equipWeapon: {fileID: 8300000, guid: db718791f81237b46b5a86c2cf63a58e, type: 3}

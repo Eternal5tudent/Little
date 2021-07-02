@@ -18,6 +18,7 @@ public class State_Bow_Attack : WeaponState
 
     public void Attack()
     {
+        AudioManager.Instance.PlaySFX(weaponData.attackSound);
         bow.LaunchArrow();
     }
 

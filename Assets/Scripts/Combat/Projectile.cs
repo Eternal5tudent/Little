@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] float speed = 10;
     [SerializeField] float disableAfterSeconds = 1f;
+    [SerializeField] AudioClip impactSound;
 
     LayerMask whatIsEnemy;
     public Action onHit;
@@ -30,6 +31,7 @@ public class Projectile : MonoBehaviour
                 IDamageable damageable = hitObject.collider.GetComponent<IDamageable>();
                 if (damageable != null)
                 {
+                    AudioManager.Instance.PlaySFX(impactSound);
                     damageable.TakeDamage(damage);
                     onHit?.Invoke();
                     gameObject.SetActive(false);

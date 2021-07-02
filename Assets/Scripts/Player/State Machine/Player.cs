@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Player : MonoBehaviour, IDamageable, IFighter
+public class Player : Singleton<Player>, IDamageable, IFighter
 {
     [SerializeField] Transform weaponPos;
     [SerializeField] PlayerData playerData;
@@ -12,10 +12,6 @@ public class Player : MonoBehaviour, IDamageable, IFighter
     [SerializeField] Transform ledgeCheck;
     [SerializeField] UnityEvent OnDamage;
     [SerializeField] UnityEvent OnDeath;   
-    //todo: this is not the way
-    [SerializeField] Weapon fistsWeapon;
-    [SerializeField] LayerMask whatIsEnemy;
-    public Weapon CurrentWeapon { get; private set; }
 
     #region States
     public PlayerStateMachine StateMachine { get; private set; }
@@ -48,13 +44,15 @@ public class Player : MonoBehaviour, IDamageable, IFighter
     public bool IsTouchingWall { get; private set; }
     public int MaxHealth { get; private set; }
     public int CurrentHealth { get; private set; }
-
     private bool speedIsConserved = false;
+    public Weapon CurrentWeapon { get; private set; }
+
     #endregion
 
     #region Unity
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         StateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
         MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
@@ -79,12 +77,7 @@ public class Player : MonoBehaviour, IDamageable, IFighter
         FacingDirection = 1;
         StateMachine.Initialize(IdleState);
         audioManager = AudioManager.Instance;
-        //todo: this is not the way
-        fistsWeapon = Instantiate(fistsWeapon.gameObject, weaponPos.position, Quaternion.identity, transform).GetComponent<Weapon>();
-        CurrentWeapon = fistsWeapon;
-        fistsWeapon.OnHitEnemy += () => StopTime(0.05f);
-        fistsWeapon.SetEnemy(whatIsEnemy);
-
+        EquipWeapon(playerData.StartingWeapon);
     }
 
     private void Update()
@@ -98,7 +91,7 @@ public class Player : MonoBehaviour, IDamageable, IFighter
         if (Input.GetButtonDown("Fire1"))
         {
             //fistsWeapon.transform.position = transform.position;
-            fistsWeapon.TryAttack();
+            CurrentWeapon.TryAttack();
         }    
     }
 
@@ -185,6 +178,18 @@ public class Player : MonoBehaviour, IDamageable, IFighter
     public void Die()
     {
         OnDeath?.Invoke();
+    }
+
+    public void EquipWeapon(Weapon newWeapon)
+    {
+        newWeapon = Instantiate(newWeapon.gameObject, weaponPos.position, transform.rotation, transform).GetComponent<Weapon>();
+        if(CurrentWeapon!=null)
+        {
+            audioManager.PlaySFX(playerData.equipWeapon);
+            Destroy(CurrentWeapon.gameObject);
+        }
+        CurrentWeapon = newWeapon;
+        CurrentWeapon.SetEnemy(playerData.whatIsEnemy);
     }
     #endregion
 

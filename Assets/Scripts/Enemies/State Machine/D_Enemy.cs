@@ -20,4 +20,6 @@ public class D_Enemy : ScriptableObject
     public float attackRadius;
     public LayerMask whatIsDamageable;
     public int damage;
+    [Header("Sounds")]
+    public AudioClip deathSound;
 }

@@ -92,7 +92,7 @@ SortingGroup:
   m_GameObject: {fileID: 1963494769858730815}
   m_Enabled: 1
   m_SortingLayerID: -936378195
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
 --- !u!1 &2231246981900170529
 GameObject:
@@ -141,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   disableAfterSeconds: 1
+  impactSound: {fileID: 8300000, guid: 7d2513f011c001247ad83aecd6a2e99a, type: 3}
 --- !u!1 &5408329733062073898
 GameObject:
   m_ObjectHideFlags: 0

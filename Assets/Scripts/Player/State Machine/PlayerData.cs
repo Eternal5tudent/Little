@@ -20,10 +20,13 @@ public class PlayerData : ScriptableObject
 
     [Header("Combat")]
     public int maxHealth = 3;
+    public LayerMask whatIsEnemy;
+    public Weapon StartingWeapon;
 
     [Header("SFX")]
     public AudioClip footstep;
     public AudioClip hit_hurt;
     public AudioClip slide;
     public AudioClip jump;
+    public AudioClip equipWeapon;
 }

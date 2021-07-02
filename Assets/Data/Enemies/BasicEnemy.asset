@@ -30,3 +30,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   damage: 1
+  deathSound: {fileID: 8300000, guid: f9572d5ed1f10734c82c30e84ea37e00, type: 3}

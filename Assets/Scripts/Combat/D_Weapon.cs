@@ -8,4 +8,5 @@ public class D_Weapon : ScriptableObject
     public float attackCooldown;
     public int damage = 1;
     public float idleAfterSecs = 1f;
+    public AudioClip attackSound;
 }

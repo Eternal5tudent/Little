@@ -15,3 +15,4 @@ MonoBehaviour:
   attackCooldown: 0.08
   damage: 1
   idleAfterSecs: 1
+  attackSound: {fileID: 8300000, guid: 9a17108b92b35a040959a76f47717fec, type: 3}
