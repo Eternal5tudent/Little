@@ -11,8 +11,10 @@ namespace Dialogue_Udemy
         [SerializeField] bool isPlayerSpeaking = false;
         [SerializeField] string text;
         [SerializeField] List<string> children = new List<string>();
-        [SerializeField] Rect rect = new Rect(0, 0, 200, 125);
-        public Vector2 scrollPos;
+        Rect rect = new Rect(0, 0, 200, 125);
+        [HideInInspector] public Vector2 scrollPos;
+        public int ChildCount { get { return children.Count; } }
+
 #if UNITY_EDITOR
         public Rect GetRect()
         {
@@ -38,6 +40,11 @@ namespace Dialogue_Udemy
         public string GetText()
         {
             return text;
+        }
+
+        public string GetFirstChild()
+        {
+            return children[0];
         }
 
         public List<string> GetChildren()

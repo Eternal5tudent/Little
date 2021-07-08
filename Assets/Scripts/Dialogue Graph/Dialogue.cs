@@ -49,6 +49,18 @@ namespace Dialogue_Udemy
             }
         }
 
+        public DialogueNode GetNextNode(DialogueNode parentNode)
+        {
+            if (nodeLookup.ContainsKey(parentNode.GetFirstChild()))
+            {
+                return nodeLookup[parentNode.GetFirstChild()];
+            }
+            else
+            {
+                return null;
+            }
+        }
+
 #if UNITY_EDITOR
         public void CreateNode(DialogueNode parent)
         {
@@ -113,7 +125,7 @@ namespace Dialogue_Udemy
 
         }
 
-        public DialogueNode GetFistNode()
+        public DialogueNode GetFirstNode()
         {
             return nodes[0];
         }
