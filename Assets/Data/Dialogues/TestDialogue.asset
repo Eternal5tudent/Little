@@ -13,15 +13,9 @@ MonoBehaviour:
   m_Name: b74845fe-2f5e-40ee-ab83-a973af8e81b1
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: Hehe yeah, planning on staying permanetely.
+  text: Shut your mouth old man
   children:
-  - 7a09fdc5-5930-4f85-9e61-ad47995f8122
-  rect:
-    serializedVersion: 2
-    x: 359
-    y: 417
-    width: 200
-    height: 125
+  - a00cda00-0655-49fd-9f17-70f500e12713
   scrollPos: {x: 0, y: 0}
 --- !u!114 &-8200765687862441201
 MonoBehaviour:
@@ -36,15 +30,9 @@ MonoBehaviour:
   m_Name: d01ee1f5-3410-48c4-ba90-faf639ae6035
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: Yeah
+  text: No, I'm on vacation
   children:
   - 7a09fdc5-5930-4f85-9e61-ad47995f8122
-  rect:
-    serializedVersion: 2
-    x: 796
-    y: 157
-    width: 200
-    height: 125
   scrollPos: {x: 0, y: 0}
 --- !u!114 &-5709543442766240167
 MonoBehaviour:
@@ -62,12 +50,6 @@ MonoBehaviour:
   text: Are you planning on staying?
   children:
   - d01ee1f5-3410-48c4-ba90-faf639ae6035
-  rect:
-    serializedVersion: 2
-    x: 578
-    y: 157
-    width: 200
-    height: 125
   scrollPos: {x: 0, y: 0}
 --- !u!114 &-3429200288444771571
 MonoBehaviour:
@@ -85,12 +67,6 @@ MonoBehaviour:
   text: Hello kind sir, I just arrived here.
   children:
   - b06448cc-98ee-4096-9c87-e3989cd88a2b
-  rect:
-    serializedVersion: 2
-    x: 358
-    y: 285
-    width: 200
-    height: 125
   scrollPos: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -111,7 +87,26 @@ MonoBehaviour:
   - {fileID: -5709543442766240167}
   - {fileID: -8200765687862441201}
   - {fileID: 8899500897891904716}
+  - {fileID: 2422768065462350249}
+  - {fileID: 1433963962395623348}
   newNodeOffset: {x: 250, y: 0}
+--- !u!114 &1433963962395623348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: b723d5c6-a23c-4678-90ee-09816e8659ca
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I had to beat an old lady with a stick.
+  children:
+  - 7a09fdc5-5930-4f85-9e61-ad47995f8122
+  scrollPos: {x: 0, y: 0}
 --- !u!114 &2213668791865960533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,12 +124,23 @@ MonoBehaviour:
   children:
   - e6d9665f-3faa-45c8-84b4-976344360f6b
   - b74845fe-2f5e-40ee-ab83-a973af8e81b1
-  rect:
-    serializedVersion: 2
-    x: 74
-    y: 363
-    width: 200
-    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &2422768065462350249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: a00cda00-0655-49fd-9f17-70f500e12713
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Where did you get that language from?
+  children:
+  - b723d5c6-a23c-4678-90ee-09816e8659ca
   scrollPos: {x: 0, y: 0}
 --- !u!114 &8899500897891904716
 MonoBehaviour:
@@ -149,12 +155,6 @@ MonoBehaviour:
   m_Name: 7a09fdc5-5930-4f85-9e61-ad47995f8122
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Alright, it will be nice to have you here
+  text: Understandable, have a nice day.
   children: []
-  rect:
-    serializedVersion: 2
-    x: 1011
-    y: 356
-    width: 200
-    height: 125
   scrollPos: {x: 0, y: 0}

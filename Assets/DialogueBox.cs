@@ -15,6 +15,8 @@ public class DialogueBox : MonoBehaviour
     DialogueNode currentNode;
     string currentSentence;
 
+    private Animator animator;
+
     private void Start()
     {
         currentNode = currentDialogue.GetFirstNode();
@@ -22,6 +24,8 @@ public class DialogueBox : MonoBehaviour
         dialogueText.text = currentSentence;
         StartCoroutine(DisplayText_Cor(currentSentence));
         RenderAnswers();
+        animator = GetComponent<Animator>();
+        animator.SetBool("open", true);
     }
 
     public void ChangeSentence()
@@ -95,5 +99,6 @@ public class DialogueBox : MonoBehaviour
     public void CloseBox()
     {
         Debug.Log("Closing Dialogue Box");
+        animator.SetBool("open", false);
     }
 }
