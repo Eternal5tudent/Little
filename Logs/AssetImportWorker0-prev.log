@@ -15,11 +15,11 @@ C:/Users/stavr/Documents/Game dev/Unity projects/Little
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53331
+62095
 Successfully changed project path to: C:/Users/stavr/Documents/Game dev/Unity projects/Little
 C:/Users/stavr/Documents/Game dev/Unity projects/Little
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 101.39 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 141.60 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.11f1 (99c7afb366b3)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -36,1919 +36,375 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56208
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56856
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003513 seconds.
+Registered in 0.008162 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 95.58 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 159.73 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.544 seconds
+- Completed reload, in  6.601 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007154 seconds.
+Registered in 0.011683 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 149.03 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 179.26 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.010 seconds
+- Completed reload, in  3.711 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 1.10 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 1.51 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3435 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 148.8 MB.
 System memory in use after: 148.9 MB.
 
 Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 3870.
-Total: 6.037600 ms (FindLiveObjects: 0.551100 ms CreateObjectMapping: 0.280700 ms MarkObjects: 4.911200 ms  DeleteObjects: 0.292400 ms)
+Total: 7.871900 ms (FindLiveObjects: 0.749700 ms CreateObjectMapping: 0.277400 ms MarkObjects: 6.456000 ms  DeleteObjects: 0.385500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Data/Dialogues/TestDialogue.asset
-  artifactKey: Guid(ef1ef0503ba936a429a3bd297d16a5b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Dialogues/TestDialogue.asset using Guid(ef1ef0503ba936a429a3bd297d16a5b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e64c8e7bd038ee397ad921a90f47ab90') in 0.080287 seconds
-  Import took 0.090414 seconds .
+  path: Assets/Art/Animations/UI/Dialogue Box.controller
+  artifactKey: Guid(308a084e0d4cecb4794413838a2ac3bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Animations/UI/Dialogue Box.controller using Guid(308a084e0d4cecb4794413838a2ac3bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9f11ed0af36a83677f6c98040a89897') in 0.103448 seconds
+  Import took 0.119131 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.009971 seconds.
+Registered in 0.014004 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.68 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.679 seconds
+- Completed reload, in  3.320 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 140.4 MB.
 System memory in use after: 140.5 MB.
 
 Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3874.
-Total: 5.376000 ms (FindLiveObjects: 0.481800 ms CreateObjectMapping: 0.162300 ms MarkObjects: 4.489600 ms  DeleteObjects: 0.240200 ms)
+Total: 8.278100 ms (FindLiveObjects: 0.900900 ms CreateObjectMapping: 0.226900 ms MarkObjects: 6.804900 ms  DeleteObjects: 0.341400 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.013791 seconds.
+Registered in 0.014224 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.077 seconds
+- Completed reload, in  3.213 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 140.5 MB.
 System memory in use after: 140.6 MB.
 
 Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3878.
-Total: 6.263000 ms (FindLiveObjects: 0.730900 ms CreateObjectMapping: 0.317900 ms MarkObjects: 4.990300 ms  DeleteObjects: 0.220900 ms)
+Total: 8.569100 ms (FindLiveObjects: 0.824700 ms CreateObjectMapping: 0.237000 ms MarkObjects: 7.131700 ms  DeleteObjects: 0.372300 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007372 seconds.
+Registered in 0.014328 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.934 seconds
+- Completed reload, in  3.046 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.48 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 140.5 MB.
 System memory in use after: 140.6 MB.
 
 Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3882.
-Total: 4.498300 ms (FindLiveObjects: 0.618600 ms CreateObjectMapping: 0.232700 ms MarkObjects: 3.441100 ms  DeleteObjects: 0.204300 ms)
+Total: 9.553900 ms (FindLiveObjects: 0.891700 ms CreateObjectMapping: 0.345300 ms MarkObjects: 7.945200 ms  DeleteObjects: 0.367300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 400.008128 seconds.
+  path: Assets/Art/Animations/UI/DialogueBox - Close.anim
+  artifactKey: Guid(f68aa5bb5caa8084dbf5166fcedea634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Animations/UI/DialogueBox - Close.anim using Guid(f68aa5bb5caa8084dbf5166fcedea634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a36679cdb721753137329c51e0635d35') in 0.065749 seconds
+  Import took 0.081028 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.037090 seconds.
+  path: Assets/Art/Animations/UI/DialogueBox - Close.anim
+  artifactKey: Guid(f68aa5bb5caa8084dbf5166fcedea634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Animations/UI/DialogueBox - Close.anim using Guid(f68aa5bb5caa8084dbf5166fcedea634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a36679cdb721753137329c51e0635d35') in 0.008600 seconds
+  Import took 0.020014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.922393 seconds.
+  path: Assets/Art/Animations/UI/DialogueBox - Open.anim
+  artifactKey: Guid(6297c218146430b4a97daafe3b17e2b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Animations/UI/DialogueBox - Open.anim using Guid(6297c218146430b4a97daafe3b17e2b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a07f02c90ebbbc3faee975d7cca85596') in 0.023644 seconds
+  Import took 0.037080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.030670 seconds.
+  path: Assets/Art/Animations/UI/DialogueBox - Open.anim
+  artifactKey: Guid(6297c218146430b4a97daafe3b17e2b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Animations/UI/DialogueBox - Open.anim using Guid(6297c218146430b4a97daafe3b17e2b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a07f02c90ebbbc3faee975d7cca85596') in 0.009712 seconds
+  Import took 0.021915 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.010912 seconds.
+Registered in 0.012856 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.83 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.694 seconds
+- Completed reload, in  3.200 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.73 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 140.5 MB.
 System memory in use after: 140.6 MB.
 
 Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3886.
-Total: 5.696800 ms (FindLiveObjects: 0.568700 ms CreateObjectMapping: 0.181900 ms MarkObjects: 4.688000 ms  DeleteObjects: 0.255700 ms)
+Total: 9.039100 ms (FindLiveObjects: 0.863200 ms CreateObjectMapping: 0.431300 ms MarkObjects: 7.368900 ms  DeleteObjects: 0.370800 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.008043 seconds.
+Registered in 0.012516 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.70 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.903 seconds
+- Completed reload, in  2.909 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.49 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 140.6 MB.
 System memory in use after: 140.7 MB.
 
 Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3890.
-Total: 5.595300 ms (FindLiveObjects: 0.495400 ms CreateObjectMapping: 0.159600 ms MarkObjects: 4.687400 ms  DeleteObjects: 0.250500 ms)
+Total: 8.433800 ms (FindLiveObjects: 0.750300 ms CreateObjectMapping: 0.154700 ms MarkObjects: 7.197400 ms  DeleteObjects: 0.328000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.011092 seconds.
+Registered in 0.017015 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.63 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.002 seconds
+- Completed reload, in  3.393 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.10 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 140.6 MB.
 System memory in use after: 140.7 MB.
 
 Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3894.
-Total: 4.229700 ms (FindLiveObjects: 0.526300 ms CreateObjectMapping: 0.141000 ms MarkObjects: 3.370700 ms  DeleteObjects: 0.189700 ms)
+Total: 8.220800 ms (FindLiveObjects: 0.755800 ms CreateObjectMapping: 0.141100 ms MarkObjects: 6.392400 ms  DeleteObjects: 0.924000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1882.061736 seconds.
-  path: Assets/Prefabs/Prototype enemy.prefab
-  artifactKey: Guid(3ae3a93b9196dfb49bf0a815723e5240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Prototype enemy.prefab using Guid(3ae3a93b9196dfb49bf0a815723e5240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e88e840d75fc06de54b04ca20639ce7e') in 0.470188 seconds
-  Import took 0.480182 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.769515 seconds.
-  path: Assets/Prefabs/Answer.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Answer.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae54437b787596729f849075a04bed2a') in 0.046147 seconds
-  Import took 0.058077 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.947262 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14663eff8b67e19093a567728d093bd7') in 0.016405 seconds
-  Import took 0.026394 seconds .
+  Time since last request: 102.750250 seconds.
+  path: Assets/Data/Enemies
+  artifactKey: Guid(fc67aa3a22c5eb144a30ac3542ac9609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Enemies using Guid(fc67aa3a22c5eb144a30ac3542ac9609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c0518662a443fd908717c23c632f35b') in 0.035377 seconds
+  Import took 0.052399 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.010859 seconds.
+Registered in 0.015728 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.10 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.85 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.813 seconds
+- Completed reload, in  3.667 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.62 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 145.9 MB.
-System memory in use after: 146.0 MB.
+System memory in use before: 140.6 MB.
+System memory in use after: 140.7 MB.
 
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 3945.
-Total: 5.075500 ms (FindLiveObjects: 0.535500 ms CreateObjectMapping: 0.260200 ms MarkObjects: 4.078700 ms  DeleteObjects: 0.199100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 63.998210 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8542ce16377b89651dfeae42046a9c48') in 0.070639 seconds
-  Import took 0.082708 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.918205 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa19c55d9c827b6f5058b7d27a5cd526') in 0.108821 seconds
-  Import took 0.118230 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.418719 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a6b70ecb0fbf9634b18d0dc430301e5') in 0.037262 seconds
-  Import took 0.049163 seconds .
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3898.
+Total: 13.732600 ms (FindLiveObjects: 1.524200 ms CreateObjectMapping: 0.414800 ms MarkObjects: 11.251500 ms  DeleteObjects: 0.531900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.008186 seconds.
+Registered in 0.021379 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.47 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.256 seconds
+- Completed reload, in  3.585 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 3.13 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.0 MB.
-System memory in use after: 146.0 MB.
+System memory in use before: 140.6 MB.
+System memory in use after: 140.7 MB.
 
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 3949.
-Total: 5.785000 ms (FindLiveObjects: 0.623300 ms CreateObjectMapping: 0.257600 ms MarkObjects: 4.677300 ms  DeleteObjects: 0.224200 ms)
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3902.
+Total: 11.594500 ms (FindLiveObjects: 1.697500 ms CreateObjectMapping: 0.935200 ms MarkObjects: 8.585200 ms  DeleteObjects: 0.373200 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006919 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.010 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.0 MB.
-System memory in use after: 146.1 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3953.
-Total: 5.505700 ms (FindLiveObjects: 0.512900 ms CreateObjectMapping: 0.158100 ms MarkObjects: 4.581000 ms  DeleteObjects: 0.251300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007111 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.019 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.17 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.0 MB.
-System memory in use after: 146.1 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3957.
-Total: 5.729500 ms (FindLiveObjects: 0.771900 ms CreateObjectMapping: 0.310800 ms MarkObjects: 4.412800 ms  DeleteObjects: 0.231800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 187.225541 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eacaade600f5183550ed3f72fd1cfd8') in 0.139139 seconds
-  Import took 0.149777 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.176958 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c908c98035d74f4817c2344774fabac') in 0.046823 seconds
-  Import took 0.057973 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.531024 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1dfb8cf9f389d90395dc12f9dea6aee') in 0.046324 seconds
-  Import took 0.055481 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.853907 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29e91ca3a7f7abb155e06db82d78ac37') in 0.045802 seconds
-  Import took 0.056277 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.681159 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e344febfa274210bf35e444709ceab0d') in 0.038522 seconds
-  Import took 0.049365 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.185482 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fddb8c78a77ed0beb80d84d447afc2d') in 0.043106 seconds
-  Import took 0.055212 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.414291 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf106bdec38340ee2087c3f498578df1') in 0.045689 seconds
-  Import took 0.057537 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.095153 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dc66a34b5e273217a76aeaa4ec44cd2') in 0.036469 seconds
-  Import took 0.048265 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.794823 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6aade14a9461a8ed2dcfa250784fb458') in 0.051118 seconds
-  Import took 0.063845 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.618994 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01d88ffb915498dcd58be8c65e808c48') in 0.040209 seconds
-  Import took 0.049693 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.587260 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7aa4039a25c2c79a7852f6f6a54fe5d3') in 0.047879 seconds
-  Import took 0.059400 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.423987 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2502846ebac532ded970a1ef5b48770') in 0.034062 seconds
-  Import took 0.044394 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 34.134827 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce2647c0bd434173ad6181006fef58e3') in 0.032591 seconds
-  Import took 0.045715 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.558298 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c438e756a45d14320b4c89c82ef0e874') in 0.046408 seconds
-  Import took 0.057331 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.079643 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2071de72c8dd2cdb52d793b30303622') in 0.036296 seconds
-  Import took 0.045916 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.139103 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b67838e5f8bcd101c70e4d926471fa1d') in 0.045429 seconds
-  Import took 0.059186 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.576655 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '771282dc553a87c6a879374536612030') in 0.037200 seconds
-  Import took 0.049695 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.522513 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eca182c090ae33d603c745815fc8615f') in 0.040926 seconds
-  Import took 0.049598 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.040395 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06f9a94d46a3c03ccfb6260759a73db6') in 0.038254 seconds
-  Import took 0.048309 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.962762 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcd70b08d24ef1c75310cbfce8a45787') in 0.041284 seconds
-  Import took 0.051595 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.974610 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2acec0a8d9667866b4e87259a15b06e1') in 0.040083 seconds
-  Import took 0.050661 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.021691 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10c2515505b6f1bec009cfd113413249') in 0.041198 seconds
-  Import took 0.050443 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.291852 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88da61b96a9a3e108383cf1afc3ac56c') in 0.039395 seconds
-  Import took 0.049871 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.544537 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54c545537e882ea7dbbe83c04ffad602') in 0.039911 seconds
-  Import took 0.051413 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 158.701718 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4895ec1cb384d9560bd60e831e4a7db7') in 0.039846 seconds
-  Import took 0.050332 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.013548 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e1e709780a574ef7fcbe7c14f5e57a8') in 0.035879 seconds
-  Import took 0.046239 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.148952 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9146321198fbfd2798d8afaa6998b031') in 0.038801 seconds
-  Import took 0.048496 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.096249 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e5f6d4a9a14efe02f2cda759bca0502') in 0.040818 seconds
-  Import took 0.051675 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.400658 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9436856e517325c153b900a5b5a6d96a') in 0.045365 seconds
-  Import took 0.055505 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.779362 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20ca2f301d50e8a3ff4e3374302b8228') in 0.035307 seconds
-  Import took 0.045258 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.422884 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd624ed26fb9177392072b410b93a16a6') in 0.047123 seconds
-  Import took 0.058712 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.129543 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '977d7c1c49ab4cdee0456387e571bcba') in 0.038763 seconds
-  Import took 0.052298 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.213056 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06262c25f499126c1014816ff349afff') in 0.044664 seconds
-  Import took 0.053911 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.981471 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '428f46e9ca5d94502d4ee49128364379') in 0.039322 seconds
-  Import took 0.049254 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.034163 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dff9604fa86dbcf2e908b8678712052b') in 0.040851 seconds
-  Import took 0.056136 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.312840 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee4f9d72f639ec79513d10174205ecc9') in 0.045249 seconds
-  Import took 0.055731 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.610638 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0948e7d2a1fcd19134d780fd1a67e099') in 0.038938 seconds
-  Import took 0.049863 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.395489 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c40829ff65735cf30334255bf70c0a16') in 0.044863 seconds
-  Import took 0.054170 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.625355 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5081ae3a7c8f5a35b63380b8aed3a1c') in 0.047128 seconds
-  Import took 0.056055 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.025604 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35bf603b3eaad47d30ff56ea52f6dccd') in 0.037917 seconds
-  Import took 0.049644 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2095.461311 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96ef3782ea9757869df7ec6677d94062') in 0.013799 seconds
-  Import took 0.024096 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.453639 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c80efb9139d19b139e5868a776ac061f') in 0.008885 seconds
-  Import took 0.021488 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.784150 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46b5ac7880c3e9fcd43720391ba4cd72') in 0.009096 seconds
-  Import took 0.019151 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.705042 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d5b0b4f09bfb111652696ed78ec3ebd') in 0.015176 seconds
-  Import took 0.024931 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.861180 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cf89cb7c2208488a91c450a79d36e4a') in 0.014562 seconds
-  Import took 0.028091 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.242985 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a1f16243792792e7b7eb4c1713f18d2') in 0.011518 seconds
-  Import took 0.023047 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.774433 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4bfcffc6f1f4efb9b96a06d41f536b5') in 0.008009 seconds
-  Import took 0.018272 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.098406 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bb2834b9a95450b8a21797d72992324') in 0.007657 seconds
-  Import took 0.017148 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.685468 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb71a7f571b6bbdb36c68aaed82498ec') in 0.009439 seconds
-  Import took 0.020837 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.959301 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbf01df4bd570f9d1735c94e791e7d5c') in 0.009262 seconds
-  Import took 0.020531 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.675887 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd75c502033ad7efa4bd653696b0330a1') in 0.008711 seconds
-  Import took 0.021631 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.676274 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ead859cba54d4dc4e2593f5b8d7fc55') in 0.009710 seconds
-  Import took 0.022237 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.506477 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5822feb67a703a37439ceb190daa1f9') in 0.009305 seconds
-  Import took 0.017258 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.121622 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01cac1f3c1720ff623f0a661a312d161') in 0.009530 seconds
-  Import took 0.021805 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.084119 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '779ea942c26e76e9b4dcf7965624c638') in 0.008138 seconds
-  Import took 0.019808 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.061196 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'defcf6f7b96cc5d9bef66b22858379fc') in 0.009331 seconds
-  Import took 0.019863 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.242429 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a24f515e0923f85bf14044c99fde4e7a') in 0.008756 seconds
-  Import took 0.020124 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.277178 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '935f65cafcc1d6662f8436ce3e1a5dc2') in 0.008516 seconds
-  Import took 0.019043 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.672724 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a30098400703c0eca939a8539d87145') in 0.009279 seconds
-  Import took 0.019675 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.486112 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da435fb89146cd0d0402f43ce335cf6f') in 0.010270 seconds
-  Import took 0.021210 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.771737 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '337e883fde1530c7f6f88d39d46145b4') in 0.009346 seconds
-  Import took 0.020935 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.765587 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11167f91bad2764ec371ef5b41fc0c42') in 0.068205 seconds
-  Import took 0.078857 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.159069 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78fda996d885441fef6bb546ba9f7223') in 0.050755 seconds
-  Import took 0.060327 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.807386 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfff4bf7c8be7fc5747bdeb45206750d') in 0.043618 seconds
-  Import took 0.056463 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.646220 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa3344e463b9911cd3e409b5210f8111') in 0.037837 seconds
-  Import took 0.049276 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.264768 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2bfef15fdd8404365b08e9d56a2d81e') in 0.052781 seconds
-  Import took 0.064703 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.060502 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b509c4ee1c8c3f8e0172a2c9e45d887') in 0.042211 seconds
-  Import took 0.051234 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.122397 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69f48d19bd53779772c3fe4b100eede1') in 0.037075 seconds
-  Import took 0.047903 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.316249 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cab273605ee095d84deb11e3065408a8') in 0.054551 seconds
-  Import took 0.064472 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.621668 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1844830681b1ea2cd079ef143ec5bc20') in 0.047545 seconds
-  Import took 0.060117 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.883123 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ae9c39b3d612ec7d3542c9ceb106bc4') in 0.039846 seconds
-  Import took 0.051561 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.641950 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1012bd630827b3a2b66720c816a16aa') in 0.040248 seconds
-  Import took 0.051903 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.407395 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0292ce22ce87d4af09dbfea2533fd641') in 0.039859 seconds
-  Import took 0.049548 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.488461 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b10a115a0e579ee1227b93213a13ee86') in 0.042145 seconds
-  Import took 0.054975 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.388838 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dd926f32d4ab6ce95f3971141acd5b6') in 0.045987 seconds
-  Import took 0.057904 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.374026 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22567377ba1db60dc927aa4829ff866e') in 0.040876 seconds
-  Import took 0.053430 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.133364 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd56fcedbc725eabef1a529b930b42827') in 0.043939 seconds
-  Import took 0.055722 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.657614 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd49784225ec2f04e3c81930b85b0d03b') in 0.044271 seconds
-  Import took 0.055474 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.835302 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e93ffa5b8fd00d43014a4bd458a6bf83') in 0.041778 seconds
-  Import took 0.054473 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.716351 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18c74a68c4b211ec8b763243ff2019be') in 0.041989 seconds
-  Import took 0.054252 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.632468 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e28a316e01e9ba3fa8940fb73d1e250') in 0.038899 seconds
-  Import took 0.047388 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.449116 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a231adda893b067e7db40a9950e0f1d') in 0.038126 seconds
-  Import took 0.048098 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.756328 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b896fd1f0e73b887cf5e8d8b59d2d911') in 0.038328 seconds
-  Import took 0.048368 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.452491 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '964456a10b66657cd253c5ec936ce69d') in 0.032996 seconds
-  Import took 0.044023 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.782687 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffdcc15c1e51d14e4b198e841f9d580d') in 0.038514 seconds
-  Import took 0.048459 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.088664 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84b097a17d36294ab20ff9d21cd55fa7') in 0.048136 seconds
-  Import took 0.060809 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.095052 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7340585c5f83843c27edf45a3212f2c7') in 0.046415 seconds
-  Import took 0.057655 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.365362 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0514247ba2dadbb98bf0c1214972e1dd') in 0.049013 seconds
-  Import took 0.060230 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.541257 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efd15fa185772e016b3d6196985eb432') in 0.043590 seconds
-  Import took 0.056223 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.627819 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e353fff96093ab3898bd61df9fe1aa37') in 0.050683 seconds
-  Import took 0.061822 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.620366 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cba06abf42c88a52c91cccec49072cc') in 0.041318 seconds
-  Import took 0.052901 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.870607 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fec5ea4787beac659c8c20bd1ac30fb') in 0.010011 seconds
-  Import took 0.021822 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.374241 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d941f95e8b4787c3617125c400a086c') in 0.013486 seconds
-  Import took 0.023324 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.646168 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f67082e40cf37eae7e1d749f2d31e35') in 0.009157 seconds
-  Import took 0.018506 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.878628 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f21afb83741c8dbe30a34f02baf76538') in 0.008317 seconds
-  Import took 0.019247 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.886516 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6f296b0214fe366e072c268a4110b60') in 0.008901 seconds
-  Import took 0.020981 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.254105 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd839f48a68ca1b00059fd41850e3863') in 0.010055 seconds
-  Import took 0.022097 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.986754 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f9be5b793c63bb1d9f9f8c8bb5c184c') in 0.014650 seconds
-  Import took 0.025549 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 129.228012 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b8b4b67e49f0c7f2f5717c73de23f31') in 0.011387 seconds
-  Import took 0.020945 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.754604 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6fdb34c0f7698def1ca8ee7a9ecd61b') in 0.008276 seconds
-  Import took 0.018846 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.720143 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc7e7405c651480c544c8c436fad972b') in 0.013923 seconds
-  Import took 0.023770 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.704870 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b35b8cb83bb9f6e45cb4035600809bf') in 0.009438 seconds
-  Import took 0.018284 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.433997 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbee1239da776c08d6b7f0f9f02b3be2') in 0.013846 seconds
-  Import took 0.025178 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.096739 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46391c9c8bc16718170b2d7e786184e1') in 0.009095 seconds
-  Import took 0.019284 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.863041 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecd609ba0981cc4dc2b6e3e0bf6cbd06') in 0.008932 seconds
-  Import took 0.020329 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.485154 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f128716e9e30590b79ec849a9cbc9fd') in 0.009711 seconds
-  Import took 0.018378 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.650311 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbf0106b19cbb1abb19fed510685ec63') in 0.008519 seconds
-  Import took 0.020360 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.103526 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bb92af92aa54611c6a38429faf0877c') in 0.008438 seconds
-  Import took 0.020400 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.876987 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c186fb164f03c4b2b9c8bd21235d2d3c') in 0.044331 seconds
-  Import took 0.055927 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.012828 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bb505a18702aeba502f95f39c889798') in 0.041572 seconds
-  Import took 0.052428 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.678660 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec316d7ffd1fc65a42b9bc4372015d14') in 0.035950 seconds
-  Import took 0.046172 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.431575 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '376c6742b0742c4df8d5972a00c442af') in 0.043734 seconds
-  Import took 0.057572 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.001221 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21b08908534d4a12c1febe2f254497bc') in 0.041918 seconds
-  Import took 0.054337 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.439725 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '558dab020fbe2bcfe862ee88cab2ebc6') in 0.040695 seconds
-  Import took 0.051602 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.197209 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43383d919fd5e4d72c6c53d66ff69d29') in 0.051300 seconds
-  Import took 0.062496 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.063318 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb24b7cb9d83e5f27c6627da164bdad9') in 0.032860 seconds
-  Import took 0.044687 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.295405 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c57f2f540a03e717abf0a4d98a66c421') in 0.009754 seconds
-  Import took 0.021182 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.960360 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9ad923ca80ab768581bd5feb5e2d93d') in 0.009055 seconds
-  Import took 0.019733 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.549133 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4a04fc16220b1d1428262fee38e1cc6') in 0.008362 seconds
-  Import took 0.018384 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.311823 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd87ca1c25ea81d3a17d301c01185ff20') in 0.009379 seconds
-  Import took 0.018324 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.007597 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef778ce313850814b1916726f693e77d') in 0.008796 seconds
-  Import took 0.019139 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.302948 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c08e48e7efb60d2afec60123edff65fe') in 0.008657 seconds
-  Import took 0.022029 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.809288 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b17153e4339a245d2aa5399c30a2cc12') in 0.010044 seconds
-  Import took 0.024386 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.878074 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35d1575c876ecffe5241233a82d1a6b1') in 0.042201 seconds
-  Import took 0.055655 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.754256 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9557b096469ff71b1e2a43729c9f54a') in 0.043967 seconds
-  Import took 0.057458 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.676325 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57ce919131f40e79d0b858882709d5f1') in 0.033812 seconds
-  Import took 0.042509 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.300505 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '970a3f1decbef0aaab4e6fba5b85fb64') in 0.040275 seconds
-  Import took 0.050685 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.062040 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0187ff72332727f423ca60378e96c515') in 0.039829 seconds
-  Import took 0.051097 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.139194 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8985daa26eb28ceed6fd99295cc416d') in 0.035496 seconds
-  Import took 0.044937 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.177375 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04ec4fc38aababcfad70769f24fe3936') in 0.040576 seconds
-  Import took 0.053167 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.231346 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0847fafa7c7dee5629aca9f392aac50') in 0.043524 seconds
-  Import took 0.055744 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.302010 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fc8599b4cb1fcfb7b4364032f2eda84') in 0.033774 seconds
-  Import took 0.042555 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.091875 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc637f7888b4a540998cd9a1cfbe1cd8') in 0.033396 seconds
-  Import took 0.042110 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.989632 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abff1e94ad757d563c24dc7bf2cf23a5') in 0.045299 seconds
-  Import took 0.058006 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.840560 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c7f9687ca1fff3396e12e50221dd9d1') in 0.048222 seconds
-  Import took 0.058724 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.252402 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86c360c4d9f90c8e41878c4e610e0cee') in 0.033209 seconds
-  Import took 0.044691 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.829161 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e63260810f0aa0d76f7da6376adfd1') in 0.036012 seconds
-  Import took 0.045218 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 26.018380 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bcc517eb6e9cd5b74fbfd52db09be77') in 0.038210 seconds
-  Import took 0.049205 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.460996 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88e4e876002ecc21667852563fc081d4') in 0.037012 seconds
-  Import took 0.046576 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.450309 seconds.
-  path: Assets/Prefabs/AnswerButton.prefab
-  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '570796a0592449311d60f17ffd51fbb4') in 0.039548 seconds
-  Import took 0.050823 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.201018 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.092 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.15 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.0 MB.
-System memory in use after: 146.1 MB.
-
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 3961.
-Total: 5.037400 ms (FindLiveObjects: 0.671300 ms CreateObjectMapping: 0.262600 ms MarkObjects: 3.882300 ms  DeleteObjects: 0.218600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016533 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.629 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.93 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.0 MB.
-System memory in use after: 146.1 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3965.
-Total: 5.367800 ms (FindLiveObjects: 0.552800 ms CreateObjectMapping: 0.184600 ms MarkObjects: 4.403000 ms  DeleteObjects: 0.225400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010674 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.941 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3969.
-Total: 7.423900 ms (FindLiveObjects: 0.540000 ms CreateObjectMapping: 0.181500 ms MarkObjects: 6.356700 ms  DeleteObjects: 0.343000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007605 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.11 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.445 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.13 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3973.
-Total: 5.573100 ms (FindLiveObjects: 0.512400 ms CreateObjectMapping: 0.164800 ms MarkObjects: 4.644900 ms  DeleteObjects: 0.248300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010816 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.22 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.502 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.37 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3977.
-Total: 6.591900 ms (FindLiveObjects: 0.603700 ms CreateObjectMapping: 0.254300 ms MarkObjects: 5.457800 ms  DeleteObjects: 0.273300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008108 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.92 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.918 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3981.
-Total: 4.452600 ms (FindLiveObjects: 0.440600 ms CreateObjectMapping: 0.118300 ms MarkObjects: 3.678400 ms  DeleteObjects: 0.213600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011553 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.98 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.181 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.11 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3985.
-Total: 4.474000 ms (FindLiveObjects: 0.563400 ms CreateObjectMapping: 0.214800 ms MarkObjects: 3.469400 ms  DeleteObjects: 0.223700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.013900 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.83 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.125 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3989.
-Total: 4.404000 ms (FindLiveObjects: 0.467000 ms CreateObjectMapping: 0.137300 ms MarkObjects: 3.593000 ms  DeleteObjects: 0.204500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007844 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.256 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.97 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.0 MB.
-System memory in use after: 146.1 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3993.
-Total: 4.833500 ms (FindLiveObjects: 0.555500 ms CreateObjectMapping: 0.236700 ms MarkObjects: 3.836100 ms  DeleteObjects: 0.202600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009302 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.97 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.163 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3997.
-Total: 5.026700 ms (FindLiveObjects: 0.507000 ms CreateObjectMapping: 0.158300 ms MarkObjects: 4.070900 ms  DeleteObjects: 0.288500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007967 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.10 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.167 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4001.
-Total: 5.975900 ms (FindLiveObjects: 0.616100 ms CreateObjectMapping: 0.276100 ms MarkObjects: 4.828100 ms  DeleteObjects: 0.252700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012742 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.687 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.10 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4005.
-Total: 6.500700 ms (FindLiveObjects: 0.551700 ms CreateObjectMapping: 0.220100 ms MarkObjects: 5.404600 ms  DeleteObjects: 0.322100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009297 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.375 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.41 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4009.
-Total: 10.298700 ms (FindLiveObjects: 0.847400 ms CreateObjectMapping: 0.587200 ms MarkObjects: 8.620600 ms  DeleteObjects: 0.239900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007475 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.268 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4013.
-Total: 6.366100 ms (FindLiveObjects: 0.604500 ms CreateObjectMapping: 0.187500 ms MarkObjects: 5.335600 ms  DeleteObjects: 0.236000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011212 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.13 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.648 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4017.
-Total: 4.272800 ms (FindLiveObjects: 0.452400 ms CreateObjectMapping: 0.123800 ms MarkObjects: 3.492100 ms  DeleteObjects: 0.202100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010516 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.93 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.046 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4021.
-Total: 4.921200 ms (FindLiveObjects: 0.604500 ms CreateObjectMapping: 0.204300 ms MarkObjects: 3.910500 ms  DeleteObjects: 0.199800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.013664 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.10 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.609 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4025.
-Total: 6.240900 ms (FindLiveObjects: 0.613600 ms CreateObjectMapping: 0.200700 ms MarkObjects: 5.146300 ms  DeleteObjects: 0.277700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009779 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.02 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.138 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.81 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4029.
-Total: 5.084300 ms (FindLiveObjects: 0.659400 ms CreateObjectMapping: 0.170900 ms MarkObjects: 4.041100 ms  DeleteObjects: 0.207800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011813 seconds.
+Registered in 0.016119 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.960 seconds
+- Completed reload, in  3.238 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.51 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
+System memory in use before: 140.6 MB.
+System memory in use after: 140.7 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4033.
-Total: 4.484700 ms (FindLiveObjects: 0.441500 ms CreateObjectMapping: 0.110100 ms MarkObjects: 3.720700 ms  DeleteObjects: 0.210400 ms)
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3906.
+Total: 7.229900 ms (FindLiveObjects: 0.838200 ms CreateObjectMapping: 0.220300 ms MarkObjects: 5.839000 ms  DeleteObjects: 0.326400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 961.495760 seconds.
+  path: Assets/Prefabs/AnswerButton.prefab
+  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa05c1f9bb88e7bcfbe01a794b9e7b0d') in 0.271172 seconds
+  Import took 0.286667 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.795663 seconds.
+  path: Assets/Prefabs/AnswerButton.prefab
+  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05e5f4ae073a67842c7382701d0781cb') in 0.066793 seconds
+  Import took 0.084943 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.263133 seconds.
+  path: Assets/Prefabs/AnswerButton.prefab
+  artifactKey: Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AnswerButton.prefab using Guid(0878e10b265a123458a8ff203e160417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c2301882d93e5721af3614f24adb98b') in 0.068548 seconds
+  Import took 0.084571 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.011503 seconds.
+Registered in 0.018108 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.18 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.52 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.664 seconds
+- Completed reload, in  2.854 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.15 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
+System memory in use before: 140.8 MB.
+System memory in use after: 140.9 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4037.
-Total: 5.947000 ms (FindLiveObjects: 0.508400 ms CreateObjectMapping: 0.160900 ms MarkObjects: 5.023800 ms  DeleteObjects: 0.251500 ms)
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 3910.
+Total: 8.131500 ms (FindLiveObjects: 0.785000 ms CreateObjectMapping: 0.185400 ms MarkObjects: 6.786800 ms  DeleteObjects: 0.368900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007741 seconds.
+Registered in 0.012196 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.58 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.29 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.264 seconds
+- Completed reload, in  3.853 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.59 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.2 MB.
+System memory in use before: 140.8 MB.
+System memory in use after: 140.9 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4041.
-Total: 7.233100 ms (FindLiveObjects: 0.608300 ms CreateObjectMapping: 0.178800 ms MarkObjects: 6.179700 ms  DeleteObjects: 0.263900 ms)
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3914.
+Total: 5.843500 ms (FindLiveObjects: 0.517900 ms CreateObjectMapping: 0.182300 ms MarkObjects: 4.712700 ms  DeleteObjects: 0.425700 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.010059 seconds.
+Registered in 0.020241 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 3.18 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.386 seconds
+- Completed reload, in  5.469 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.2 MB.
-System memory in use after: 146.3 MB.
+System memory in use before: 140.8 MB.
+System memory in use after: 140.9 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4045.
-Total: 4.661800 ms (FindLiveObjects: 0.577500 ms CreateObjectMapping: 0.224900 ms MarkObjects: 3.603200 ms  DeleteObjects: 0.253900 ms)
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3918.
+Total: 6.334400 ms (FindLiveObjects: 0.622500 ms CreateObjectMapping: 0.174000 ms MarkObjects: 5.158600 ms  DeleteObjects: 0.376400 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

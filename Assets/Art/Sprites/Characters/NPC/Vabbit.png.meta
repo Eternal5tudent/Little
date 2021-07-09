@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 4a15e46a52a9cf64b82059904aa9bfb9
+guid: 58ba6dc9c86b6c642bd7a873acd6d9ec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7278293952112196276
-    second: Astronaut-Idle_0
+      213: 4210577824170646965
+    second: Vabbit_0
   - first:
-      213: -2670549515097149675
-    second: Astronaut-Idle_1
+      213: 2331987059618686394
+    second: Vabbit_1
   - first:
-      213: -7750676193883698509
-    second: Astronaut-Idle_2
-  - first:
-      213: 7565161091847826949
-    second: Astronaut-Idle_3
+      213: 1753895387396764418
+    second: Vabbit_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,17 +108,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Astronaut-Idle_0
+      name: Vabbit_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +138,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c458a7d663e4efa90800000000000000
-      internalID: -7278293952112196276
+      spriteID: 5bd14d4f83afe6a30800000000000000
+      internalID: 4210577824170646965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Astronaut-Idle_1
+      name: Vabbit_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
-        height: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51fea8d7d5d40fad0800000000000000
-      internalID: -2670549515097149675
+      spriteID: ab5216510e1ec5020800000000000000
+      internalID: 2331987059618686394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Astronaut-Idle_2
+      name: Vabbit_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
-        height: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,29 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ba4c760111107490800000000000000
-      internalID: -7750676193883698509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Astronaut-Idle_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50e223c5ee9dcf860800000000000000
-      internalID: 7565161091847826949
+      spriteID: 203faf2ff86175810800000000000000
+      internalID: 1753895387396764418
       vertices: []
       indices: 
       edges: []

@@ -88,7 +88,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
             InputHandler.ResetWallGrab(); 
         }
         //todo: this is not the way
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !InputManager.Instance.IsPointerOverUI)
         {
             //fistsWeapon.transform.position = transform.position;
             CurrentWeapon.TryAttack();

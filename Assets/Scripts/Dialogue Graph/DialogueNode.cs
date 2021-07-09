@@ -14,6 +14,7 @@ namespace Dialogue_Udemy
         Rect rect = new Rect(0, 0, 200, 125);
         [HideInInspector] public Vector2 scrollPos;
         public int ChildCount { get { return children.Count; } }
+        public bool IsEndingNode { get { return children.Count == 0; } }
 
 #if UNITY_EDITOR
         public Rect GetRect()

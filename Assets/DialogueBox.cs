@@ -7,56 +7,86 @@ using UnityEngine.UI;
 
 public class DialogueBox : MonoBehaviour
 {
+    [Range(0.01f, 0.1f)]
+    [SerializeField] float newCharEverySeconds = 0.5f;
     [SerializeField] TMP_Text dialogueText;
-    //todo: temporary
-    [SerializeField] Dialogue currentDialogue;
-    [SerializeField] GameObject possibleAnswers;
     [SerializeField] Button answerButtonPrefab;
-    DialogueNode currentNode;
-    string currentSentence;
+    [SerializeField] GameObject possibleAnswers;
+    [SerializeField] AudioClip typeSound;
+
+    private Dialogue currentDialogue;
+    private DialogueNode currentNode;
+    private string currentSentence;
+    AudioManager audioManager;
+    bool readyToMove = false;
 
     private Animator animator;
 
+    private void Awake()
+    {
+        NPC.OnTalk += OnNPCTalk;
+        NPC.OnPlayerLeft += CloseBox;
+    }
+
     private void Start()
     {
-        currentNode = currentDialogue.GetFirstNode();
-        currentSentence = currentNode.GetText();
-        dialogueText.text = currentSentence;
-        StartCoroutine(DisplayText_Cor(currentSentence));
-        RenderAnswers();
         animator = GetComponent<Animator>();
+        audioManager = AudioManager.Instance;
+        animator.SetBool("open", false);
+    }
+
+    private void OnNPCTalk(Dialogue dialogue)
+    {
+        if (currentDialogue == null)
+        {
+            ChangeDialogue(dialogue);
+            RenderCurrentSentence();
+        }
+    }
+
+    private void ChangeDialogue(Dialogue dialogue)
+    {
+        currentDialogue = dialogue;
+        currentNode = currentDialogue.GetFirstNode();
         animator.SetBool("open", true);
     }
 
-    public void ChangeSentence()
+    public void RenderCurrentSentence()
     {
         currentSentence = currentNode.GetText();
         dialogueText.text = currentSentence;
         StartCoroutine(DisplayText_Cor(currentSentence));
-        RenderAnswers();//
     }
 
     public void ChooseAnswer(DialogueNode answerNode)
     {
-        currentNode = currentDialogue.GetNextNode(answerNode);
-        ChangeSentence();
+        if (readyToMove)
+        {
+            currentNode = currentDialogue.GetNextNode(answerNode);
+            RenderCurrentSentence();
+        }
     }
 
-    public void RenderAnswers()
+    void DeleteExistingAnswerButtons()
     {
-        void DeleteExistingAnswerButtons()
+        for (int i = 0; i < possibleAnswers.transform.childCount; i++)
         {
-            for (int i = 0; i < possibleAnswers.transform.childCount; i++)
+            Destroy(possibleAnswers.transform.GetChild(i).gameObject);
+        }
+    }
+    public void RenderCurrentAnswers()
+    {
+        void TryCloseBox()
+        {
+            if(readyToMove)
             {
-                Destroy(possibleAnswers.transform.GetChild(i).gameObject);
+                CloseBox();
             }
         }
-
-        DeleteExistingAnswerButtons();
         int answerNum = 0;
-        foreach(DialogueNode answerNode in currentDialogue.GetAllChildren(currentNode))
+        foreach (DialogueNode answerNode in currentDialogue.GetAllChildren(currentNode))
         {
-            if(answerNode.IsPlayerSpeaking())
+            if (answerNode.IsPlayerSpeaking())
             {
                 string answer = answerNode.GetText();
                 Button button = Instantiate(answerButtonPrefab, possibleAnswers.transform);
@@ -65,40 +95,47 @@ public class DialogueBox : MonoBehaviour
                 answerNum++;
             }
         }
-        if(answerNum == 0) // Player has no answer
+        if (answerNum == 0) // Player has no answer
         {
-            if(currentNode.ChildCount > 0) // if there is another node to display
+            if (currentNode.ChildCount > 0) // if there is another node to display
             {
                 DialogueNode answerNode = currentDialogue.GetNextNode(currentNode);
                 Button button = Instantiate(answerButtonPrefab, possibleAnswers.transform);
-                button.onClick.AddListener(() => { ChangeSentence(); });
+                button.onClick.AddListener(() => { RenderCurrentSentence(); });
                 button.transform.GetChild(0).GetComponent<TMP_Text>().text = "...";
             }
             else // if this is a closing node
             {
                 Button button = Instantiate(answerButtonPrefab, possibleAnswers.transform);
-                button.onClick.AddListener(() => { CloseBox(); });
+                button.onClick.AddListener(() => { TryCloseBox(); });
                 button.transform.GetChild(0).GetComponent<TMP_Text>().text = "Close";
             }
-           
+
         }
     }
 
     IEnumerator DisplayText_Cor(string sentence)
     {
+        DeleteExistingAnswerButtons();
+        readyToMove = false;
         char[] characters = sentence.ToCharArray();
         dialogueText.maxVisibleCharacters = 0;
         foreach (char letter in characters)
         {
-            print("hey");
+            audioManager.PlaySFX(typeSound);
             dialogueText.maxVisibleCharacters += 1;
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(newCharEverySeconds);
         }
+        RenderCurrentAnswers();
+        readyToMove = true;
     }
 
     public void CloseBox()
     {
-        Debug.Log("Closing Dialogue Box");
+        StopAllCoroutines();
+        currentDialogue = null;
+        currentNode = null;
+        currentSentence = null;
         animator.SetBool("open", false);
     }
 }
