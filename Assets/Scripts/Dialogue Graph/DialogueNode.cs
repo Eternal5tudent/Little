@@ -15,12 +15,30 @@ namespace Dialogue_Udemy
         [HideInInspector] public Vector2 scrollPos;
         public int ChildCount { get { return children.Count; } }
         public bool IsEndingNode { get { return children.Count == 0; } }
+        public string GetFirstChild()
+        {
+            return children[0];
+        }
 
-#if UNITY_EDITOR
+        public List<string> GetChildren()
+        {
+            return children;
+        }
+        public bool IsPlayerSpeaking()
+        {
+            return isPlayerSpeaking;
+        }
+
         public Rect GetRect()
         {
             return rect;
         }
+        public string GetText()
+        {
+            return text;
+        }
+
+#if UNITY_EDITOR
 
         public void SetPosition(Vector2 newPosition)
         {
@@ -38,20 +56,8 @@ namespace Dialogue_Udemy
             }
         }
 
-        public string GetText()
-        {
-            return text;
-        }
+       
 
-        public string GetFirstChild()
-        {
-            return children[0];
-        }
-
-        public List<string> GetChildren()
-        {
-            return children;
-        }
 
         public void AddChild(string childID)
         {
@@ -70,16 +76,11 @@ namespace Dialogue_Udemy
 
         }
 
-        public bool IsPlayerSpeaking()
-        {
-            return isPlayerSpeaking;
-        }
-
-        internal void SetPlayerSpeaking(bool v)
+        public void SetPlayerSpeaking(bool v)
         {
             Undo.RecordObject(this, "Change Dialogue Speaker");
             isPlayerSpeaking = v;
         }
-    }
 #endif
+    }
 }

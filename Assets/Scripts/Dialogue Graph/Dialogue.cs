@@ -15,18 +15,7 @@ namespace Dialogue_Udemy
 
         Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
 
-        private void OnValidate()
-        {
-            nodeLookup.Clear();
-            if (nodes.Count == 0)
-            {
-                CreateNode(null);
-            }
-            foreach (DialogueNode node in GetAllNodes())
-            {
-                nodeLookup[node.name] = node;
-            }
-        }
+        
 
         public IEnumerable<DialogueNode> GetAllNodes()
         {
@@ -60,8 +49,23 @@ namespace Dialogue_Udemy
                 return null;
             }
         }
-
+        public DialogueNode GetFirstNode()
+        {
+            return nodes[0];
+        }
 #if UNITY_EDITOR
+        private void OnValidate()
+        {
+            nodeLookup.Clear();
+            if (nodes.Count == 0)
+            {
+                CreateNode(null);
+            }
+            foreach (DialogueNode node in GetAllNodes())
+            {
+                nodeLookup[node.name] = node;
+            }
+        }
         public void CreateNode(DialogueNode parent)
         {
             DialogueNode newNode = MakeNode(parent);
@@ -124,11 +128,16 @@ namespace Dialogue_Udemy
         {
 
         }
-
-        public DialogueNode GetFirstNode()
+#else
+        public void OnBeforeSerialize()
         {
-            return nodes[0];
+
         }
-    }
+        public void OnAfterDeserialize()
+        {
+
+        }
 #endif
+
+    }
 }
