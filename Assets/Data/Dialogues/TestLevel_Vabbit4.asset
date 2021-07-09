@@ -36,7 +36,7 @@ MonoBehaviour:
   m_Name: d6e9de96-e5ee-4ffd-b0c9-4e2a6cfa996d
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Take this bow...
+  text: There is a bow ahead of you, use it wisely!
   children: []
   rect:
     serializedVersion: 2

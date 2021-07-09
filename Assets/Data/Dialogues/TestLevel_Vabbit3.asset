@@ -24,6 +24,29 @@ MonoBehaviour:
     width: 200
     height: 125
   scrollPos: {x: 0, y: 0}
+--- !u!114 &-4073102940741915186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: 1a4fea84-868f-4e6b-83a2-665e31ee5279
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: It was a test, ofcourse you cant...
+  children:
+  - 084a0f23-2446-4dd3-9ec4-6ac9ce1a67ce
+  rect:
+    serializedVersion: 2
+    x: 523
+    y: 72
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
 --- !u!114 &-4035275080967997703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,11 +62,34 @@ MonoBehaviour:
   isPlayerSpeaking: 1
   text: Yeah
   children:
-  - d77bb1ff-b9ef-452b-9fef-265c7e44b396
+  - 1a4fea84-868f-4e6b-83a2-665e31ee5279
   rect:
     serializedVersion: 2
     x: 287
     y: 80
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &-3147949853504628255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: 084a0f23-2446-4dd3-9ec4-6ac9ce1a67ce
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: You got me...
+  children:
+  - d77bb1ff-b9ef-452b-9fef-265c7e44b396
+  rect:
+    serializedVersion: 2
+    x: 765
+    y: 86
     width: 200
     height: 125
   scrollPos: {x: 0, y: 0}
@@ -87,8 +133,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 997
-    y: 149
+    x: 1025
+    y: 169
     width: 200
     height: 125
   scrollPos: {x: 0, y: 0}
@@ -157,4 +203,6 @@ MonoBehaviour:
   - {fileID: -52144666866073892}
   - {fileID: -149217819101719565}
   - {fileID: -771577896752890353}
+  - {fileID: -4073102940741915186}
+  - {fileID: -3147949853504628255}
   newNodeOffset: {x: 250, y: 0}

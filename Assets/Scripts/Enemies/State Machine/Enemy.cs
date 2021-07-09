@@ -160,4 +160,9 @@ public class Enemy : MonoBehaviour, IDamageable
     }
     #endregion
 
+    public void GenerateHitParticles()
+    {
+        Instantiate(enemyData.hitParticles.gameObject, transform.position, Quaternion.identity, null);
+    }
+
 }

@@ -30,4 +30,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   damage: 1
+  hitParticles: {fileID: 5824167095679372441, guid: 26179c8d12af8884d8d073ef578ce37b, type: 3}
   deathSound: {fileID: 8300000, guid: 75a83e39064faab4c87067ec9e1f3de6, type: 3}
