@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5980317695103574229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: 6057eff2-1fdf-4695-afe1-857e3e248cf1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Little! '
+  children:
+  - d7c950a2-4636-4e9f-96d4-6caf5013c559
+  rect:
+    serializedVersion: 2
+    x: 182
+    y: 85
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &-5248471014032781541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: d6e9de96-e5ee-4ffd-b0c9-4e2a6cfa996d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Take this bow...
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 668
+    y: 81
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18e5cfcbf811154f8d1562664bbc52a, type: 3}
+  m_Name: TestLevel_Vabbit4
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -5980317695103574229}
+  - {fileID: 8105605942437435432}
+  - {fileID: -5248471014032781541}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &8105605942437435432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: d7c950a2-4636-4e9f-96d4-6caf5013c559
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: '?'
+  children:
+  - d6e9de96-e5ee-4ffd-b0c9-4e2a6cfa996d
+  rect:
+    serializedVersion: 2
+    x: 418
+    y: 81
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}

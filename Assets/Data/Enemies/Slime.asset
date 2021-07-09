@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4d4e0bbbf48e6e4693aceb937a833d9, type: 3}
-  m_Name: BasicEnemy
+  m_Name: Slime
   m_EditorClassIdentifier: 
   movementSpeed: 5
   idleTime: 0.8
@@ -30,4 +30,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   damage: 1
-  deathSound: {fileID: 8300000, guid: f9572d5ed1f10734c82c30e84ea37e00, type: 3}
+  deathSound: {fileID: 8300000, guid: 75a83e39064faab4c87067ec9e1f3de6, type: 3}

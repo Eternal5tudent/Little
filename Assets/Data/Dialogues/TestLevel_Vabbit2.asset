@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2945889823725825208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: 52b16f5e-2e18-4227-91f1-8654e0eeb959
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: You know the basics right? You move with WASD or Arrow keys
+  children:
+  - 7d8e967f-e522-471b-b405-81f96bef2a4d
+  rect:
+    serializedVersion: 2
+    x: 5
+    y: 109
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18e5cfcbf811154f8d1562664bbc52a, type: 3}
+  m_Name: TestLevel_Vabbit2
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2945889823725825208}
+  - {fileID: 8586358951588923923}
+  - {fileID: 1685873090704637581}
+  - {fileID: 8210985646042820329}
+  - {fileID: 1521994272088344594}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &1521994272088344594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: 837376a5-ba69-4de8-8df1-6a175c9daacb
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: You can Attack with J or mouse button.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 858
+    y: 109
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &1685873090704637581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: 9dffb602-c982-446c-840d-aa03d46605da
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Jump with Space, hold onto  wall with Shift and talk to NPCs with T. '
+  children:
+  - a8e709f3-9685-4a60-8a89-02e8758275e8
+  rect:
+    serializedVersion: 2
+    x: 435
+    y: 109
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &8210985646042820329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: a8e709f3-9685-4a60-8a89-02e8758275e8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Alright.
+  children:
+  - 837376a5-ba69-4de8-8df1-6a175c9daacb
+  rect:
+    serializedVersion: 2
+    x: 646
+    y: 109
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &8586358951588923923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: 7d8e967f-e522-471b-b405-81f96bef2a4d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Aha...
+  children:
+  - 9dffb602-c982-446c-840d-aa03d46605da
+  rect:
+    serializedVersion: 2
+    x: 220
+    y: 109
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}

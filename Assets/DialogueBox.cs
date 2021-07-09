@@ -18,7 +18,6 @@ public class DialogueBox : MonoBehaviour
     private DialogueNode currentNode;
     private string currentSentence;
     AudioManager audioManager;
-    bool readyToMove = false;
 
     private Animator animator;
 
@@ -60,11 +59,8 @@ public class DialogueBox : MonoBehaviour
 
     public void ChooseAnswer(DialogueNode answerNode)
     {
-        if (readyToMove)
-        {
-            currentNode = currentDialogue.GetNextNode(answerNode);
-            RenderCurrentSentence();
-        }
+        currentNode = currentDialogue.GetNextNode(answerNode);
+        RenderCurrentSentence();
     }
 
     void DeleteExistingAnswerButtons()
@@ -78,10 +74,7 @@ public class DialogueBox : MonoBehaviour
     {
         void TryCloseBox()
         {
-            if(readyToMove)
-            {
-                CloseBox();
-            }
+            CloseBox();
         }
         int answerNum = 0;
         foreach (DialogueNode answerNode in currentDialogue.GetAllChildren(currentNode))
@@ -117,7 +110,6 @@ public class DialogueBox : MonoBehaviour
     IEnumerator DisplayText_Cor(string sentence)
     {
         DeleteExistingAnswerButtons();
-        readyToMove = false;
         char[] characters = sentence.ToCharArray();
         dialogueText.maxVisibleCharacters = 0;
         foreach (char letter in characters)
@@ -127,7 +119,6 @@ public class DialogueBox : MonoBehaviour
             yield return new WaitForSeconds(newCharEverySeconds);
         }
         RenderCurrentAnswers();
-        readyToMove = true;
     }
 
     public void CloseBox()

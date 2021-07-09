@@ -43,7 +43,6 @@ public class InputManager : Singleton<InputManager>
     private IEnumerator PressedTalk()
     {
         TalkInput = true;
-        Debug.Log(TalkInput);
         yield return null;
         TalkInput = false;
     }

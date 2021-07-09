@@ -22,7 +22,6 @@ public class NPC : MonoBehaviour
         {
             if(InputManager.Instance.TalkInput) //todo: create a seperate key for this functionallity
             {
-                Debug.Log("HAHAHAHA");
                 Talk();
             }
         }
@@ -33,7 +32,6 @@ public class NPC : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             shouldTalk = true;
-            Debug.Log("PLAYER DETECTION");
         }
     }
 

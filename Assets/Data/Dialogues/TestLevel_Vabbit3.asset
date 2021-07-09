@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5393355997626582346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: 6a354863-44ee-4e48-b244-8d941e1db2e0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Ok, now you got the basics down. Do you see those soldiers over there?
+  children:
+  - 8d32236a-813c-4c90-a81a-9601dca85cb1
+  - 9fae38e2-94ad-4c7d-a9eb-80131f292178
+  rect:
+    serializedVersion: 2
+    x: 46
+    y: 163
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &-4035275080967997703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: 8d32236a-813c-4c90-a81a-9601dca85cb1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yeah
+  children:
+  - d77bb1ff-b9ef-452b-9fef-265c7e44b396
+  rect:
+    serializedVersion: 2
+    x: 287
+    y: 80
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &-2836933310911400002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: 9fae38e2-94ad-4c7d-a9eb-80131f292178
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Where?
+  children:
+  - 01f010e7-dcf4-4824-b0b1-9a1c9028509f
+  rect:
+    serializedVersion: 2
+    x: 310
+    y: 271
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &-771577896752890353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: d77bb1ff-b9ef-452b-9fef-265c7e44b396
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Kill them all, and help our village stand on its feet again!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 997
+    y: 149
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &-149217819101719565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: 96569fba-62b3-46b7-81ff-a13c500f91b3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Oh... Yeah
+  children:
+  - d77bb1ff-b9ef-452b-9fef-265c7e44b396
+  rect:
+    serializedVersion: 2
+    x: 779
+    y: 277
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &-52144666866073892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8bb636c4dfd7247a6218fee596281a, type: 3}
+  m_Name: 01f010e7-dcf4-4824-b0b1-9a1c9028509f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Dude, they are in front of you!
+  children:
+  - 96569fba-62b3-46b7-81ff-a13c500f91b3
+  rect:
+    serializedVersion: 2
+    x: 542
+    y: 270
+    width: 200
+    height: 125
+  scrollPos: {x: 0, y: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18e5cfcbf811154f8d1562664bbc52a, type: 3}
+  m_Name: TestLevel_Vabbit3
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -5393355997626582346}
+  - {fileID: -4035275080967997703}
+  - {fileID: -2836933310911400002}
+  - {fileID: -52144666866073892}
+  - {fileID: -149217819101719565}
+  - {fileID: -771577896752890353}
+  newNodeOffset: {x: 250, y: 0}

@@ -50,6 +50,8 @@ public abstract class Weapon : MonoBehaviour
         if (attackFinished && CooldownReady)
         {
             Attack();
+            //todo: Refactor
+            CameraManager.Instance.Shake();
         }
     }
 

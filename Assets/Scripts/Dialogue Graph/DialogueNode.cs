@@ -11,7 +11,7 @@ namespace Dialogue_Udemy
         [SerializeField] bool isPlayerSpeaking = false;
         [SerializeField] string text;
         [SerializeField] List<string> children = new List<string>();
-        Rect rect = new Rect(0, 0, 200, 125);
+        [HideInInspector] [SerializeField] Rect rect = new Rect(0, 0, 200, 125);
         [HideInInspector] public Vector2 scrollPos;
         public int ChildCount { get { return children.Count; } }
         public bool IsEndingNode { get { return children.Count == 0; } }
