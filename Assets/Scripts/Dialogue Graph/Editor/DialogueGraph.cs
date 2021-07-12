@@ -31,6 +31,7 @@ namespace Dialogue_Udemy
         bool draggingCanvas = false;
         [NonSerialized]
         Vector2 draggingCanvasOffset;
+        private static DialogueEditor Instance;
 
         [MenuItem("Window/Dialogue Graph")]
         public static void ShowEditorWindow()
@@ -45,6 +46,7 @@ namespace Dialogue_Udemy
             if (dialogue != null)
             {
                 ShowEditorWindow();
+                Instance.OnSelectionChanged();
                 return true;
             }
             return false;
@@ -53,7 +55,7 @@ namespace Dialogue_Udemy
         private void OnEnable()
         {
             Selection.selectionChanged += OnSelectionChanged;
-
+            Instance = this;
             nodeStyle = new GUIStyle();
             nodeStyle.normal.background = EditorGUIUtility.Load("node0") as Texture2D;
             nodeStyle.normal.textColor = Color.white;

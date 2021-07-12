@@ -72,7 +72,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
         Rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalMat = spriteRenderer.material;
-        flashMat = VFXManager.Instance.flashMaterial;
+        flashMat = EffectManager.Instance.flashMaterial;
         Anim = GetComponent<Animator>();
         FacingDirection = 1;
         StateMachine.Initialize(IdleState);
@@ -87,10 +87,8 @@ public class Player : Singleton<Player>, IDamageable, IFighter
         { 
             InputHandler.ResetWallGrab(); 
         }
-        //todo: this is not the way
-        if (Input.GetButtonDown("Fire1") && !InputManager.Instance.IsPointerOverUI)
+        if (InputHandler.FireInput || InputHandler.IsPointerOverUI)
         {
-            //fistsWeapon.transform.position = transform.position;
             CurrentWeapon.TryAttack();
         }    
     }
@@ -198,18 +196,6 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     {
         if(gameObject.activeInHierarchy)
             StartCoroutine(EnableHitMaterial_Cor());
-    }
-
-    //todo: this should be done in a game manager
-    public void StopTime(float seconds)
-    {
-        IEnumerator StopTime_Cor()
-        {
-            Time.timeScale = 0;
-            yield return new WaitForSecondsRealtime(seconds);
-            Time.timeScale = 1;
-        }
-        StartCoroutine(StopTime_Cor());
     }
 
     private IEnumerator EnableHitMaterial_Cor()

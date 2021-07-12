@@ -56,9 +56,6 @@ namespace Dialogue_Udemy
             }
         }
 
-       
-
-
         public void AddChild(string childID)
         {
             Undo.RecordObject(this, "Add Dialogue Link");

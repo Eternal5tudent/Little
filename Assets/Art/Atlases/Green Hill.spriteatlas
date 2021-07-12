@@ -42,39 +42,14 @@ SpriteAtlas:
       enableTightPacking: 1
     secondaryTextureSettings: {}
     variantMultiplier: 1
-    packables:
-    - {fileID: 2800000, guid: fccb66812c17abd46be49a3d8c7145a8, type: 3}
-    totalSpriteSurfaceArea: 3072
+    packables: []
+    totalSpriteSurfaceArea: 0
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites:
-  - {fileID: -1651616176336293294, guid: fccb66812c17abd46be49a3d8c7145a8, type: 3}
-  - {fileID: 6886801762309245265, guid: fccb66812c17abd46be49a3d8c7145a8, type: 3}
-  - {fileID: -6625730226039717967, guid: fccb66812c17abd46be49a3d8c7145a8, type: 3}
-  - {fileID: 820723650786942648, guid: fccb66812c17abd46be49a3d8c7145a8, type: 3}
-  - {fileID: 8829430900200135961, guid: fccb66812c17abd46be49a3d8c7145a8, type: 3}
-  - {fileID: 6273985135140776486, guid: fccb66812c17abd46be49a3d8c7145a8, type: 3}
-  - {fileID: -2286220441360989190, guid: fccb66812c17abd46be49a3d8c7145a8, type: 3}
-  - {fileID: 5865498200640889381, guid: fccb66812c17abd46be49a3d8c7145a8, type: 3}
-  - {fileID: 7129951603975645010, guid: fccb66812c17abd46be49a3d8c7145a8, type: 3}
-  - {fileID: -7375962630550978634, guid: fccb66812c17abd46be49a3d8c7145a8, type: 3}
-  - {fileID: -8869979894536806736, guid: fccb66812c17abd46be49a3d8c7145a8, type: 3}
-  - {fileID: 6891994963747172719, guid: fccb66812c17abd46be49a3d8c7145a8, type: 3}
-  m_PackedSpriteNamesToIndex:
-  - Green-Hills_2
-  - Green-Hills_3
-  - Green-Hills_0
-  - Green-Hills_1
-  - Green-Hills_6
-  - Green-Hills_7
-  - Green-Hills_4
-  - Green-Hills_5
-  - Green-Hills_8
-  - Green-Hills_9
-  - Green-Hills_11
-  - Green-Hills_10
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
   m_RenderDataMap: {}
   m_Tag: Green Hill
   m_IsVariant: 0

@@ -12,10 +12,15 @@ namespace Dialogue_Udemy
         [SerializeField]
         List<DialogueNode> nodes = new List<DialogueNode>();
         [SerializeField] Vector2 newNodeOffset = new Vector2(250, 0);
-
         Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
 
-        
+        private void Awake()
+        {
+            foreach (DialogueNode node in GetAllNodes())
+            {
+                nodeLookup[node.name] = node;
+            }
+        }
 
         public IEnumerable<DialogueNode> GetAllNodes()
         {
@@ -49,6 +54,7 @@ namespace Dialogue_Udemy
                 return null;
             }
         }
+
         public DialogueNode GetFirstNode()
         {
             return nodes[0];
