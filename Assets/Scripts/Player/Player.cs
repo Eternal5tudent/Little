@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Dialogue_Udemy;
 
 public class Player : Singleton<Player>, IDamageable, IFighter
 {
@@ -23,6 +24,8 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     public PlayerWallGrabState WallGrabState { get; private set; }
     public PlayerWallClimbState WallClimbState { get; private set; }
     public PlayerWallJumpState WallJumpState { get; private set; }
+    public PlayerAttackState AttackState { get; private set; }
+    public PlayerTalkState TalkState { get; private set; }
     #endregion
 
     #region Components
@@ -46,6 +49,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     public int CurrentHealth { get; private set; }
     private bool speedIsConserved = false;
     public Weapon CurrentWeapon { get; private set; }
+    public NPC nearbyNPC { get; private set; }
 
     #endregion
 
@@ -62,6 +66,8 @@ public class Player : Singleton<Player>, IDamageable, IFighter
         WallGrabState = new PlayerWallGrabState(this, StateMachine, playerData, "wallGrab");
         WallClimbState = new PlayerWallClimbState(this, StateMachine, playerData, "wallClimb");
         WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "air");
+        AttackState = new PlayerAttackState(this, StateMachine, playerData, "idle");
+        TalkState = new PlayerTalkState(this, StateMachine, playerData, "idle");
     }
 
     private void Start()
@@ -87,10 +93,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
         { 
             InputHandler.ResetWallGrab(); 
         }
-        if (InputHandler.FireInput || InputHandler.IsPointerOverUI)
-        {
-            CurrentWeapon.TryAttack();
-        }    
+           
     }
 
     private void FixedUpdate()
@@ -99,14 +102,61 @@ public class Player : Singleton<Player>, IDamageable, IFighter
         DoChecks();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("NPC"))
+        {
+            NPC npc = collision.GetComponent<NPC>();
+            if (npc != null)
+            {
+                SetNearbyNPC(npc, true);
+                Debug.Log("NPC nearby");
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("NPC"))
+        {
+            NPC npc = collision.GetComponent<NPC>();
+            if (npc != null)
+            {
+                SetNearbyNPC(npc, false);
+                Debug.Log("No NPC nearby");
+
+            }
+        }
+    }
+    #endregion
+
+    #region Character Control
+    public void InteractWithNPC()
+    {
+        if(nearbyNPC != null)
+        {
+            nearbyNPC.Interact();
+        }
+    }
+
+    private void SetNearbyNPC(NPC npc, bool isNearby)
+    {
+        if(isNearby)
+        {
+            nearbyNPC = npc;
+        }
+        else
+        {
+            nearbyNPC = null;
+        }
+    }
+
     public void DoChecks()
     {
         IsGrounded = Physics2D.OverlapCircle(groundedCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
         IsTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, playerData.wallCheckDistance, playerData.whatIsGround);
     }
-    #endregion
 
-    #region Character Control
     public void SetVelocityX(float velocity)
     {
         Rb.velocity = new Vector2(velocity, CurrentVelocity.y);
@@ -188,6 +238,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
         }
         CurrentWeapon = newWeapon;
         CurrentWeapon.SetEnemy(playerData.whatIsEnemy);
+        CurrentWeapon.SetOnHit(() => { CameraManager.Instance.Shake(1, 0.2f); });
     }
     #endregion
 

@@ -52,7 +52,16 @@ public class PlayerGroundedState : PlayerState
         else if (!player.IsGrounded)
         {
             stateMachine.ChangeState(player.AirState);
-        }     
+        }
+        else if (player.InputHandler.FireInput && !player.InputHandler.IsPointerOverUI)
+        {
+            stateMachine.ChangeState(player.AttackState);
+        }
+        else if(player.InputHandler.TalkInput)
+        {
+            stateMachine.ChangeState(player.TalkState);
+        }
+
     }
 
     public override void PhysicsUpdate()

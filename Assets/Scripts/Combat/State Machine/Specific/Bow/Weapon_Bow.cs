@@ -40,7 +40,7 @@ public class Weapon_Bow : Weapon
         arrows.Add(arrow);
         arrow.transform.parent = null;
         arrow.Initialize(whatIsEnemy, weaponData.damage);
-        arrow.onHit += OnHitEnemy;
+        arrow.onHit += EnemyHit;
         return arrow;
     }
 

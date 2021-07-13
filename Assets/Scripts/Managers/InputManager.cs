@@ -29,7 +29,6 @@ public class InputManager : Singleton<InputManager>
         }
         else if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("a");
             StartCoroutine(PressedFire());
         }
     }

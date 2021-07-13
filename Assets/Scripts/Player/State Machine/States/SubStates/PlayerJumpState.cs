@@ -12,14 +12,13 @@ public class PlayerJumpState : PlayerAbilityState
     {
         base.Enter();
         player.PlaySound_Jump();
-        player.SetVelocityY(playerData.jumpPower); 
+        player.SetVelocityY(playerData.jumpPower);
+        isAbilityDone = true;
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
         player.ControlPlayer();
-        if (player.CurrentVelocity.y <= 7)
-            isAbilityDone = true;
     }
 }

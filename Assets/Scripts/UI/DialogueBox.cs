@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Dialogue_Udemy;
 using UnityEngine.UI;
+using System;
 
 public class DialogueBox : MonoBehaviour
 {
@@ -18,13 +19,12 @@ public class DialogueBox : MonoBehaviour
     private DialogueNode currentNode;
     private string currentSentence;
     AudioManager audioManager;
-
+    public static Action OnDialogueBoxClosed;
     private Animator animator;
 
     private void Awake()
     {
         NPC.OnTalk += OnNPCTalk;
-        NPC.OnPlayerLeft += CloseBox;
     }
 
     private void Start()
@@ -129,5 +129,6 @@ public class DialogueBox : MonoBehaviour
         currentNode = null;
         currentSentence = null;
         animator.SetBool("open", false);
+        OnDialogueBoxClosed?.Invoke();
     }
 }

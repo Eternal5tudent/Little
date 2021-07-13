@@ -33,7 +33,7 @@ public class State_Fists_Attack2 : WeaponState
                 {
                     AudioManager.Instance.PlaySFX(data.impactSound);
                     damageable.TakeDamage(weaponData.damage);
-                    weapon.OnHitEnemy?.Invoke();
+                    weapon.EnemyHit();
                 }
             }
         }

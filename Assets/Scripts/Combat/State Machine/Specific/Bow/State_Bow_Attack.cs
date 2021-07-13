@@ -5,7 +5,6 @@ using UnityEngine;
 public class State_Bow_Attack : WeaponState
 {
     Weapon_Bow bow;
-    Vector2 lastPos;
     public State_Bow_Attack(Weapon weapon, WeaponStateMachine stateMachine, D_Weapon weaponData, string animatorID, Weapon_Bow bow) : base(weapon, stateMachine, weaponData, animatorID)
     {
         this.bow = bow;

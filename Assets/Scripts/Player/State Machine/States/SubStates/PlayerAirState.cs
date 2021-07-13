@@ -52,7 +52,10 @@ public class PlayerAirState : PlayerState
         {
             stateMachine.ChangeState(player.WallSlideState);
         }
-
+        else if (player.InputHandler.FireInput && !player.InputHandler.IsPointerOverUI)
+        {
+            stateMachine.ChangeState(player.AttackState);
+        }
     }
 
     public override void PhysicsUpdate()

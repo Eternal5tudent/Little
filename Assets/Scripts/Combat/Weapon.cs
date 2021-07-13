@@ -9,7 +9,7 @@ public abstract class Weapon : MonoBehaviour
     #region State Machine
     public WeaponStateMachine StateMachine { get; private set; }
     public WeaponIdleState IdleState { get; private set; }
-    public Action OnHitEnemy;
+    protected Action OnHitEnemy;
     #endregion
 
     #region Components 
@@ -50,8 +50,6 @@ public abstract class Weapon : MonoBehaviour
         if (attackFinished && CooldownReady)
         {
             Attack();
-            //todo: Refactor
-            CameraManager.Instance.Shake();
         }
     }
 
@@ -71,6 +69,29 @@ public abstract class Weapon : MonoBehaviour
     public void SetEnemy(LayerMask whatIsEnemy)
     {
         this.whatIsEnemy = whatIsEnemy;
+    }
+
+    private void OnDisable()
+    {
+        OnHitEnemy = null;
+    }
+
+    /// <summary>
+    /// What is going to happen when weapon detects enemy?
+    /// </summary>
+    /// <param name="action"></param>
+    public void SetOnHit(Action action)
+    {
+        OnHitEnemy = null;
+        OnHitEnemy += action;
+    }
+
+    /// <summary>
+    /// Activates OnEnemyHit Action
+    /// </summary>
+    public void EnemyHit()
+    {
+        OnHitEnemy?.Invoke();
     }
 
 }
