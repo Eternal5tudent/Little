@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
     protected virtual void Start()
     {
-        
+
         MaxHealth = enemyData.maxHealth;
         CurrentHealth = MaxHealth;
         Rb = GetComponent<Rigidbody2D>();
@@ -150,7 +150,7 @@ public class Enemy : MonoBehaviour, IDamageable
     IEnumerator EnableDamageShader_Cor()
     {
         spriteRenderer.material = hitMaterial;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         spriteRenderer.material = originalMat;
     }
 

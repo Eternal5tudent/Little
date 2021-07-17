@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   movementSpeed: 6
-  jumpPower: 15
-  wallSlideSpeed: 7
+  jumpPower: 9
+  wallSlideSpeed: 5
   wallClimbSpeed: 6
   dropForce: 200
-  wallJumpForce: 8
+  wallJumpForce: 9
   groundCheckRadius: 0.16
   wallCheckDistance: 0.33
   whatIsGround:
@@ -28,6 +28,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   StartingWeapon: {fileID: 1845785741909306932, guid: ea54103ba2f17984a93808c7f970c75b, type: 3}
+  KnockBackDuration: 0.05
   footstep: {fileID: 8300000, guid: 9a53f04a624808648909c8c06ed13e6c, type: 3}
   hit_hurt: {fileID: 8300000, guid: 67be52175ce8c3e4ebd61bf2d56c4d45, type: 3}
   slide: {fileID: 8300000, guid: e5445e95578d4614f87d894fd68094e2, type: 3}

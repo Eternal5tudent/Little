@@ -28,12 +28,12 @@ public class PlayerWallState : PlayerState
         base.LogicUpdate();
         if (!player.IsTouchingWall || player.AxisInput.x * player.FacingDirection == -1)
         {
-            stateMachine.ChangeState(player.AirState);
+            ChangeState(player.AirState);
             player.InputHandler.ResetWallGrab();
         }
-        else if(player.InputHandler.JumpInput)
+        else if(player.InputHandler.JumpDown)
         {
-            stateMachine.ChangeState(player.WallJumpState);
+            ChangeState(player.WallJumpState);
         }
     }
 

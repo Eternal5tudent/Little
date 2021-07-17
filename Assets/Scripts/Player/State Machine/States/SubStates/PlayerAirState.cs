@@ -43,18 +43,18 @@ public class PlayerAirState : PlayerState
             player.Flip();
         }
         if (player.IsGrounded)
-            stateMachine.ChangeState(player.IdleState);
-        else if (player.IsTouchingWall && player.InputHandler.JumpInput)
+            ChangeState(player.IdleState);
+        else if (player.IsTouchingWall && player.InputHandler.JumpDown)
         {
-            stateMachine.ChangeState(player.WallJumpState);
+            ChangeState(player.WallJumpState);
         }
-        else if(player.IsTouchingWall && stateMachine.CurrentState!= player.JumpState)
+        else if(player.IsTouchingWall)
         {
-            stateMachine.ChangeState(player.WallSlideState);
+            ChangeState(player.WallSlideState);
         }
         else if (player.InputHandler.FireInput && !player.InputHandler.IsPointerOverUI)
         {
-            stateMachine.ChangeState(player.AttackState);
+            ChangeState(player.AttackState);
         }
     }
 

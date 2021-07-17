@@ -22,6 +22,7 @@ public class PlayerData : ScriptableObject
     public int maxHealth = 3;
     public LayerMask whatIsEnemy;
     public Weapon StartingWeapon;
+    public float KnockBackDuration = 0.1f;
 
     [Header("SFX")]
     public AudioClip footstep;

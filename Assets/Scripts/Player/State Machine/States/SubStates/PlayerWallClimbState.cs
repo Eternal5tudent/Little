@@ -21,17 +21,18 @@ public class PlayerWallClimbState : PlayerWallState
         base.LogicUpdate();
         if (player.IsGrounded && !player.GrabToggled && !enteredGrounded)
         {
-            stateMachine.ChangeState(player.IdleState);
+            ChangeState(player.IdleState);
             player.InputHandler.ResetWallGrab();
         }
-        player.SetVelocityY(playerData.wallClimbSpeed);
-        if(player.AxisInput.y <= 0)
+        if (!Transitioning)
+            player.SetVelocityY(playerData.wallClimbSpeed);
+        if (player.AxisInput.y <= 0)
         {
-            stateMachine.ChangeState(player.WallGrabState);
+            ChangeState(player.WallGrabState);
         }
-        else if(!detectingLedge && player.IsTouchingWall)
+        else if (!detectingLedge && player.IsTouchingWall)
         {
-            stateMachine.ChangeState(player.JumpState);
+            ChangeState(player.JumpState);
         }
     }
 

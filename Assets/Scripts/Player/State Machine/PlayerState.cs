@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerState 
 {
     protected Player player;
-    protected PlayerStateMachine stateMachine;
+    private PlayerStateMachine stateMachine;
     protected PlayerData playerData;
     private readonly string animBoolName;
     protected float startTime;
+    protected bool Transitioning { get; private set; }
 
     public PlayerState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName)
     {
@@ -21,6 +22,7 @@ public class PlayerState
     public virtual void Enter()
     {
         startTime = Time.time;
+        Transitioning = false;
         player.Anim.SetBool(animBoolName, true);
         DoChecks();
     }
@@ -32,7 +34,7 @@ public class PlayerState
 
     public virtual void LogicUpdate()
     {
-
+        
     }
 
     public virtual void PhysicsUpdate()
@@ -54,4 +56,12 @@ public class PlayerState
 
     }
 
+    public virtual void ChangeState(PlayerState newState)
+    {
+        if (!Transitioning)
+        {
+            stateMachine.ChangeState(newState);
+            Transitioning = true;
+        }
+    }
 }

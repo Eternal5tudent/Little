@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAbilityState : PlayerState
 {
     protected bool isAbilityDone = false;
+    bool changingState;
     public PlayerAbilityState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -18,6 +19,7 @@ public class PlayerAbilityState : PlayerState
     {
         base.Enter();
         isAbilityDone = false;
+        changingState = false;
     }
 
     public override void Exit()
@@ -28,17 +30,23 @@ public class PlayerAbilityState : PlayerState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        if(isAbilityDone)
+        if(isAbilityDone && !changingState)
         {
             if (player.IsGrounded && player.CurrentVelocity.y <= 0)
-                stateMachine.ChangeState(player.IdleState);
+                ChangeState(player.IdleState);
             else
-                stateMachine.ChangeState(player.AirState);
+                ChangeState(player.AirState);
         }
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+    }
+
+    public override void ChangeState(PlayerState newState)
+    {
+        changingState = true;
+        base.ChangeState(newState);
     }
 }

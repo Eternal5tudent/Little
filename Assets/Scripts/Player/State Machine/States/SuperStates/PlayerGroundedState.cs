@@ -31,35 +31,35 @@ public class PlayerGroundedState : PlayerState
     {
         base.LogicUpdate();
         input = player.InputHandler.AxisInput;
-        jumpInput = player.InputHandler.JumpInput;
+        jumpInput = player.InputHandler.JumpDown;
         if (player.AxisInput.x * player.FacingDirection == -1)
         {
             player.Flip();
         }
         if (jumpInput)
         {
-            stateMachine.ChangeState(player.JumpState);
+            ChangeState(player.JumpState);
         }
         else if (player.IsTouchingWall && player.GrabToggled)
         {
-            stateMachine.ChangeState(player.WallGrabState);
+            ChangeState(player.WallGrabState);
         }
         else if (player.IsTouchingWall && player.InputHandler.AxisInput.y > 0)
         {
             player.WallClimbState.enteredGrounded = true;
-            stateMachine.ChangeState(player.WallClimbState);
+            ChangeState(player.WallClimbState);
         }
         else if (!player.IsGrounded)
         {
-            stateMachine.ChangeState(player.AirState);
+            ChangeState(player.AirState);
         }
         else if (player.InputHandler.FireInput && !player.InputHandler.IsPointerOverUI)
         {
-            stateMachine.ChangeState(player.AttackState);
+            ChangeState(player.AttackState);
         }
         else if(player.InputHandler.TalkInput)
         {
-            stateMachine.ChangeState(player.TalkState);
+            ChangeState(player.TalkState);
         }
 
     }

@@ -27,16 +27,21 @@ public class State_Fists_Attack1 : WeaponState
         Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPos.position, data.attackRadius, weapon.whatIsEnemy);
         if (colliders != null)
         {
+            int i = 00;
             foreach (Collider2D collider in colliders)
             {
                 IDamageable damageable = collider.GetComponent<IDamageable>();
                 if (damageable != null)
                 {
+                    i++;
                     AudioManager.Instance.PlaySFX(data.impactSound);
                     damageable.TakeDamage(weaponData.damage);
                     weapon.EnemyHit();
                 }
             }
+            if(i > 0)
+                weapon.ApplyAttackEffects();
+
         }
         weapon.SetAttackTime();
         fists.waitState.SetLastAttack(1);

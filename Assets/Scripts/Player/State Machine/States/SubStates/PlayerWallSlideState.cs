@@ -20,7 +20,7 @@ public class PlayerWallSlideState : PlayerWallState
         base.LogicUpdate();
         if (player.IsGrounded && !player.GrabToggled)
         {
-            stateMachine.ChangeState(player.IdleState);
+            ChangeState(player.IdleState);
             player.InputHandler.ResetWallGrab();
         }
 
@@ -35,12 +35,12 @@ public class PlayerWallSlideState : PlayerWallState
 
         if ((player.GrabToggled && player.AxisInput.y == 0) || player.AxisInput.y > 0)
         {
-            stateMachine.ChangeState(player.WallGrabState);
+            ChangeState(player.WallGrabState);
         }
         else if(player.AxisInput.y < 0 && player.IsGrounded)
         {
             player.InputHandler.ResetWallGrab();
-            stateMachine.ChangeState(player.IdleState);
+            ChangeState(player.IdleState);
         }
     }
 

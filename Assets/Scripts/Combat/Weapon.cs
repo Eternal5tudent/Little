@@ -10,6 +10,7 @@ public abstract class Weapon : MonoBehaviour
     public WeaponStateMachine StateMachine { get; private set; }
     public WeaponIdleState IdleState { get; private set; }
     protected Action OnHitEnemy;
+    protected Action OnAttack;
     #endregion
 
     #region Components 
@@ -92,6 +93,24 @@ public abstract class Weapon : MonoBehaviour
     public void EnemyHit()
     {
         OnHitEnemy?.Invoke();
+    }
+
+    /// <summary>
+    /// What is going to happen when weapon attacks?
+    /// </summary>
+    /// <param name="action"></param>
+    public void SetOnAttack(Action action)
+    {
+        OnAttack = null;
+        OnAttack += action;
+    }
+
+    /// <summary>
+    /// Activates OnAttack Action
+    /// </summary>
+    public void ApplyAttackEffects()
+    {
+        OnAttack?.Invoke();
     }
 
 }

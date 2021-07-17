@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46125abc7ce65742b75438e073d0dce, type: 3}
   m_Name: Bow
   m_EditorClassIdentifier: 
-  attackCooldown: 0.08
+  attackCooldown: 0.1
   damage: 1
   idleAfterSecs: 1
   attackSound: {fileID: 8300000, guid: 9a17108b92b35a040959a76f47717fec, type: 3}

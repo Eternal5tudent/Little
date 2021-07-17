@@ -23,22 +23,24 @@ public class Projectile : MonoBehaviour
         lastPos = transform.position;
         transform.position += transform.right * Time.fixedDeltaTime * speed;
         Vector2 difference = (Vector2)transform.position - lastPos;
-        RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, difference.normalized, difference.magnitude, whatIsEnemy);
-        if (hit != null)
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, difference.normalized, difference.magnitude, whatIsEnemy);
+        if (hit)
         {
-            foreach (RaycastHit2D hitObject in hit)
-            {
-                IDamageable damageable = hitObject.collider.GetComponent<IDamageable>();
-                if (damageable != null)
-                {
-                    AudioManager.Instance.PlaySFX(impactSound);
-                    damageable.TakeDamage(damage);
-                    onHit?.Invoke();
-                    gameObject.SetActive(false);
-                }
-            }
+            DamageObject(hit);
         }
-       
+
+    }
+
+    private void DamageObject(RaycastHit2D hitObject)
+    {
+        IDamageable damageable = hitObject.collider.GetComponent<IDamageable>();
+        if (damageable != null)
+        {
+            AudioManager.Instance.PlaySFX(impactSound);
+            damageable.TakeDamage(damage);
+            onHit?.Invoke();
+            gameObject.SetActive(false);
+        }
     }
 
     public void Initialize(LayerMask whatIsEnemy, int damage)

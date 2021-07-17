@@ -20,26 +20,29 @@ public class PlayerWallGrabState : PlayerWallState
         base.LogicUpdate();
         if (player.IsGrounded && !player.GrabToggled)
         {
-            stateMachine.ChangeState(player.IdleState);
+            ChangeState(player.IdleState);
             player.InputHandler.ResetWallGrab();
         }
         player.transform.position = enterPosition;
-        player.SetVelocityX(0);
-        player.SetVelocityY(0);
+        if (!Transitioning)
+        {
+            player.SetVelocityX(0);
+            player.SetVelocityY(0); 
+        }
         if (player.AxisInput.y > 0)
         {
-            stateMachine.ChangeState(player.WallClimbState);
+            ChangeState(player.WallClimbState);
         }
         else if(player.GrabToggled)
         {
             if (player.AxisInput.y < 0)
             {
-                stateMachine.ChangeState(player.WallSlideState);
+                ChangeState(player.WallSlideState);
             }
         }
         else if(!player.GrabToggled)
         {
-            stateMachine.ChangeState(player.WallSlideState);
+            ChangeState(player.WallSlideState);
         }
         
     }

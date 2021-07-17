@@ -19,6 +19,6 @@ public class PlayerTalkState : PlayerState
 
     public void StopInteracting()
     {
-        stateMachine.ChangeState(player.IdleState);
+        ChangeState(player.IdleState);
     }
 }

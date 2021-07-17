@@ -6,11 +6,15 @@ using UnityEngine.EventSystems;
 public class InputManager : Singleton<InputManager>
 {
     public Vector2 AxisInput { get; private set; }
-    public bool JumpInput { get; private set; }
+    public bool JumpDown { get; private set; }
+    public bool JumpHold { get; private set; }
     public bool TalkInput { get; private set; }
     public bool FireInput { get; private set; }
     public bool GrabWallToggle { get; private set; } = false;
     public bool IsPointerOverUI { get { return EventSystem.current.IsPointerOverGameObject(); } }
+
+    private bool jumpUsed = false;
+
 
     private void Update()
     {
@@ -18,6 +22,11 @@ public class InputManager : Singleton<InputManager>
         if (Input.GetButtonDown("Jump"))
         {
             StartCoroutine(PressedJump());
+            JumpHold = true;
+        }
+        else if(Input.GetButtonUp("Jump"))
+        {
+            JumpHold = false;
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -40,9 +49,21 @@ public class InputManager : Singleton<InputManager>
 
     private IEnumerator PressedJump()
     {
-        JumpInput = true;
-        yield return new WaitForSeconds(0.1f);
-        JumpInput = false;
+        JumpDown = true;
+        jumpUsed = false;
+        float startTime = Time.time;
+        while (Time.time < startTime + 0.2f)
+        {
+            if (jumpUsed)
+                JumpDown = false;
+            yield return new WaitForEndOfFrame();
+        }
+        JumpDown = false;
+    }
+
+    public void ConsumeJump()
+    {
+        jumpUsed = true;
     }
 
     private IEnumerator PressedTalk()

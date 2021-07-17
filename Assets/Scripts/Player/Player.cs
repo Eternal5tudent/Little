@@ -6,6 +6,7 @@ using Dialogue_Udemy;
 
 public class Player : Singleton<Player>, IDamageable, IFighter
 {
+    #region Fields
     [SerializeField] Transform weaponPos;
     [SerializeField] PlayerData playerData;
     [SerializeField] Transform groundedCheck;
@@ -39,6 +40,9 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     #region Variables
     private Material originalMat;
     private Material flashMat;
+    private bool speedIsConserved = false;
+
+    private float originalGravity;
     public int FacingDirection { get; private set; }
     public Vector2 AxisInput { get { return InputHandler.AxisInput; } }
     public bool GrabToggled { get { return InputHandler.GrabWallToggle; } }
@@ -47,16 +51,18 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     public bool IsTouchingWall { get; private set; }
     public int MaxHealth { get; private set; }
     public int CurrentHealth { get; private set; }
-    private bool speedIsConserved = false;
     public Weapon CurrentWeapon { get; private set; }
     public NPC nearbyNPC { get; private set; }
-
+    public bool isControllable { get; private set; } = true;
+    #endregion
     #endregion
 
     #region Unity
     protected override void Awake()
     {
         base.Awake();
+        
+
         StateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
         MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
@@ -72,17 +78,20 @@ public class Player : Singleton<Player>, IDamageable, IFighter
 
     private void Start()
     {
-        MaxHealth = playerData.maxHealth;
-        CurrentHealth = MaxHealth;
-        InputHandler = InputManager.Instance;
         Rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        Anim = GetComponent<Animator>();
+        InputHandler = InputManager.Instance;
+        audioManager = AudioManager.Instance;
+
+        originalGravity = Rb.gravityScale;
+        MaxHealth = playerData.maxHealth;
+        CurrentHealth = MaxHealth;
         originalMat = spriteRenderer.material;
         flashMat = EffectManager.Instance.flashMaterial;
-        Anim = GetComponent<Animator>();
         FacingDirection = 1;
+
         StateMachine.Initialize(IdleState);
-        audioManager = AudioManager.Instance;
         EquipWeapon(playerData.StartingWeapon);
     }
 
@@ -151,6 +160,14 @@ public class Player : Singleton<Player>, IDamageable, IFighter
         }
     }
 
+    #region Physics
+
+    public void ChangeGravityPercent(int percent)
+    {
+        Rb.gravityScale = originalGravity * (percent / 100f);
+        Debug.Log("GRAVITY SCALE: " + Rb.gravityScale);
+    }
+
     public void DoChecks()
     {
         IsGrounded = Physics2D.OverlapCircle(groundedCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
@@ -172,37 +189,39 @@ public class Player : Singleton<Player>, IDamageable, IFighter
         Rb.velocity = velocity;
     }
 
-    public void Flip()
+    public void AttackKnockback(Vector2 direction, float seconds)
     {
-        FacingDirection *= -1;
-        transform.Rotate(0f, 180f, 0f);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(groundedCheck.position, playerData.groundCheckRadius);
-        Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.right * playerData.wallCheckDistance);
-    }
-
-    public void ControlPlayer()
-    { 
-        if(speedIsConserved)
+        if (IsGrounded)
         {
-            if (AxisInput.x != 0)
-                ConserveSpeed(false);
+            direction = direction.normalized;
+            IEnumerator KnockBack_Cor()
+            {
+                isControllable = false;
+                float startTime = Time.time;
+                while (Time.time < startTime + seconds)
+                {
+                    SetVelocity(direction * 10);
+                    yield return new WaitForEndOfFrame();
+                }
+                SetVelocity(Vector2.zero);
+                isControllable = true;
+            }
+            StartCoroutine(KnockBack_Cor()); 
         }
-        if (!IsTouchingWall && !speedIsConserved) 
-            SetVelocityX(playerData.movementSpeed * AxisInput.x); 
     }
 
-    public virtual void AnimationStartedTrigger()
+    public void ControlPlayer(int percent = 100)
     {
-        StateMachine.CurrentState.AnimationStartedTrigger();
-    }
-
-    public virtual void AnimationFinishedTrigger()
-    {
-        StateMachine.CurrentState.AnimationFinishedTrigger();
+        if (isControllable)
+        {
+            if (speedIsConserved)
+            {
+                if (AxisInput.x != 0)
+                    ConserveSpeed(false);
+            }
+            if (!IsTouchingWall && !speedIsConserved)
+                SetVelocityX(playerData.movementSpeed * AxisInput.x * percent/100);
+        }
     }
 
     public void ConserveSpeed(bool conserve)
@@ -215,6 +234,30 @@ public class Player : Singleton<Player>, IDamageable, IFighter
         return Physics2D.Raycast(ledgeCheck.position, transform.right, playerData.wallCheckDistance, playerData.whatIsGround);
     }
 
+    #endregion
+
+    public void Flip()
+    {
+        FacingDirection *= -1;
+        transform.Rotate(0f, 180f, 0f);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundedCheck.position, playerData.groundCheckRadius);
+        Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.right * playerData.wallCheckDistance);
+    }
+
+    public virtual void AnimationStartedTrigger()
+    {
+        StateMachine.CurrentState.AnimationStartedTrigger();
+    }
+
+    public virtual void AnimationFinishedTrigger()
+    {
+        StateMachine.CurrentState.AnimationFinishedTrigger();
+    }
+    
     public void TakeDamage(int damage)
     {
         CurrentHealth--;
@@ -238,7 +281,14 @@ public class Player : Singleton<Player>, IDamageable, IFighter
         }
         CurrentWeapon = newWeapon;
         CurrentWeapon.SetEnemy(playerData.whatIsEnemy);
-        CurrentWeapon.SetOnHit(() => { CameraManager.Instance.Shake(1, 0.2f); });
+        CurrentWeapon.SetOnHit(() =>
+        {
+            CameraManager.Instance.Shake(1, 0.2f);
+        });
+        CurrentWeapon.SetOnAttack(() =>
+        {
+            AttackKnockback(transform.right * -1, playerData.KnockBackDuration);
+        });
     }
     #endregion
 

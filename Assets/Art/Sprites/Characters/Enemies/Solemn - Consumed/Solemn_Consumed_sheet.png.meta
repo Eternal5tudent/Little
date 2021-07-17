@@ -1,0 +1,1284 @@
+fileFormatVersion: 2
+guid: 10ff5f0e0aaf6044281ad076da19036d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3038495619647289039
+    second: Solemn_Consumed_sheet_0
+  - first:
+      213: 8211807081549446518
+    second: Solemn_Consumed_sheet_1
+  - first:
+      213: -3176305607959096259
+    second: Solemn_Consumed_sheet_2
+  - first:
+      213: 3107271361095345364
+    second: Solemn_Consumed_sheet_3
+  - first:
+      213: -4899018675409108693
+    second: Solemn_Consumed_sheet_4
+  - first:
+      213: -8475518801802543604
+    second: Solemn_Consumed_sheet_5
+  - first:
+      213: 2360184402360884566
+    second: Solemn_Consumed_sheet_6
+  - first:
+      213: -8055224499707607475
+    second: Solemn_Consumed_sheet_7
+  - first:
+      213: 945783182485393673
+    second: Solemn_Consumed_sheet_8
+  - first:
+      213: -4732354072512726302
+    second: Solemn_Consumed_sheet_9
+  - first:
+      213: -3878282987264480326
+    second: Solemn_Consumed_sheet_10
+  - first:
+      213: -8573395673119805892
+    second: Solemn_Consumed_sheet_11
+  - first:
+      213: -778603794803922163
+    second: Solemn_Consumed_sheet_12
+  - first:
+      213: 3404637055493485622
+    second: Solemn_Consumed_sheet_13
+  - first:
+      213: -7499653918434204405
+    second: Solemn_Consumed_sheet_14
+  - first:
+      213: -1275366530619276641
+    second: Solemn_Consumed_sheet_15
+  - first:
+      213: -1102991095324681437
+    second: Solemn_Consumed_sheet_16
+  - first:
+      213: -1409189526962784227
+    second: Solemn_Consumed_sheet_17
+  - first:
+      213: 114681328356778048
+    second: Solemn_Consumed_sheet_18
+  - first:
+      213: 6998198522527237930
+    second: Solemn_Consumed_sheet_19
+  - first:
+      213: -5563391228029161027
+    second: Solemn_Consumed_sheet_20
+  - first:
+      213: 5882168371197365207
+    second: Solemn_Consumed_sheet_21
+  - first:
+      213: 5418928356150552416
+    second: Solemn_Consumed_sheet_22
+  - first:
+      213: 2938497224737084710
+    second: Solemn_Consumed_sheet_23
+  - first:
+      213: -571600299237705080
+    second: Solemn_Consumed_sheet_24
+  - first:
+      213: -4216583046338565951
+    second: Solemn_Consumed_sheet_25
+  - first:
+      213: -6827291192431170049
+    second: Solemn_Consumed_sheet_26
+  - first:
+      213: -9214486335471495655
+    second: Solemn_Consumed_sheet_27
+  - first:
+      213: 8016289712399914938
+    second: Solemn_Consumed_sheet_28
+  - first:
+      213: 7666720322707635827
+    second: Solemn_Consumed_sheet_29
+  - first:
+      213: -1195722014503515231
+    second: Solemn_Consumed_sheet_30
+  - first:
+      213: -4687767957011027648
+    second: Solemn_Consumed_sheet_31
+  - first:
+      213: 6092004931518979841
+    second: Solemn_Consumed_sheet_32
+  - first:
+      213: 4759593071636311888
+    second: Solemn_Consumed_sheet_33
+  - first:
+      213: -5223889681304669380
+    second: Solemn_Consumed_sheet_34
+  - first:
+      213: 3028824974630949606
+    second: Solemn_Consumed_sheet_35
+  - first:
+      213: -3105961828353567188
+    second: Solemn_Consumed_sheet_36
+  - first:
+      213: 5217885715788955406
+    second: Solemn_Consumed_sheet_37
+  - first:
+      213: 2556501438133629801
+    second: Solemn_Consumed_sheet_38
+  - first:
+      213: 3393528482553114898
+    second: Solemn_Consumed_sheet_39
+  - first:
+      213: 8014616724961425749
+    second: Solemn_Consumed_sheet_40
+  - first:
+      213: 9197645703708485865
+    second: Solemn_Consumed_sheet_41
+  - first:
+      213: 5926013088535617798
+    second: Solemn_Consumed_sheet_42
+  - first:
+      213: -8280022082389744420
+    second: Solemn_Consumed_sheet_43
+  - first:
+      213: -8686679083719007465
+    second: Solemn_Consumed_sheet_44
+  - first:
+      213: -8078618377538802708
+    second: Solemn_Consumed_sheet_45
+  - first:
+      213: 8936226980669421616
+    second: Solemn_Consumed_sheet_46
+  - first:
+      213: -8546523417248125508
+    second: Solemn_Consumed_sheet_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 238
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc638acdaa7ea2a20800000000000000
+      internalID: 3038495619647289039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 238
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67dbacb580336f170800000000000000
+      internalID: 8211807081549446518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 238
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34548bd0ee7be3d0800000000000000
+      internalID: -3176305607959096259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d425d207de3f1b20800000000000000
+      internalID: 3107271361095345364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 204
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b214c388870330cb0800000000000000
+      internalID: -4899018675409108693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 204
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e3a631e88e06a80800000000000000
+      internalID: -8475518801802543604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 204
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d532b853f01c020800000000000000
+      internalID: 2360184402360884566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 204
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4687e4fef7163090800000000000000
+      internalID: -8055224499707607475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 204
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90194922bc8102d00800000000000000
+      internalID: 945783182485393673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 204
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea718c4b0d435eb0800000000000000
+      internalID: -4732354072512726302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 204
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbe8adcb229d2ac0800000000000000
+      internalID: -3878282987264480326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ea2d02f0e250980800000000000000
+      internalID: -8573395673119805892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 170
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0be0fd49f7d135f0800000000000000
+      internalID: -778603794803922163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 170
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63432d90d53bf3f20800000000000000
+      internalID: 3404637055493485622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 170
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05ec5dfe70ebe790800000000000000
+      internalID: -7499653918434204405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 170
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f920408c5ecfc4ee0800000000000000
+      internalID: -1275366530619276641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 170
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32bd0c4517361b0f0800000000000000
+      internalID: -1102991095324681437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18be28679d817ce0800000000000000
+      internalID: -1409189526962784227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 136
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040631f7f0e679100800000000000000
+      internalID: 114681328356778048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 136
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2746ea6a789e1160800000000000000
+      internalID: 6998198522527237930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 136
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db13cca772ddac2b0800000000000000
+      internalID: -5563391228029161027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 136
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbc142f7f8a1a150800000000000000
+      internalID: 5882168371197365207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 136
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06725a311a6e33b40800000000000000
+      internalID: 5418928356150552416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 136
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625dce538a3a7c820800000000000000
+      internalID: 2938497224737084710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88afd6a6e844118f0800000000000000
+      internalID: -571600299237705080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 102
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c82e0d4f00bb75c0800000000000000
+      internalID: -4216583046338565951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 102
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffdacf045d69041a0800000000000000
+      internalID: -6827291192431170049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916d7829f719f1080800000000000000
+      internalID: -9214486335471495655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 68
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7173475059f3f60800000000000000
+      internalID: 8016289712399914938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 68
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37eb1437389a56a60800000000000000
+      internalID: 7666720322707635827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 68
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab476bb921f76fe0800000000000000
+      internalID: -1195722014503515231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 68
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04926e441e3b1feb0800000000000000
+      internalID: -4687767957011027648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 68
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10fdd1955362b8450800000000000000
+      internalID: 6092004931518979841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 68
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fea466ea87d0240800000000000000
+      internalID: 4759593071636311888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 68
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33b10023040187b0800000000000000
+      internalID: -5223889681304669380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e295bb544c880a20800000000000000
+      internalID: 3028824974630949606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 34
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2610175c2865e4d0800000000000000
+      internalID: -3105961828353567188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 34
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f7f28b967a96840800000000000000
+      internalID: 5217885715788955406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 34
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963fab753848a7320800000000000000
+      internalID: 2556501438133629801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 34
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211bfb9dc2c381f20800000000000000
+      internalID: 3393528482553114898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 34
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559fa36b273a93f60800000000000000
+      internalID: 8014616724961425749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8217b490a94af70800000000000000
+      internalID: 9197645703708485865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6012b74b18d6d3250800000000000000
+      internalID: 5926013088535617798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4e4c619c3771d80800000000000000
+      internalID: -8280022082389744420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 0
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713ec19b567b27780800000000000000
+      internalID: -8686679083719007465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb6bd2536bf2ef80800000000000000
+      internalID: -8078618377538802708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 0
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038ff0fb71bd30c70800000000000000
+      internalID: 8936226980669421616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Solemn_Consumed_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd2e52cb36a46980800000000000000
+      internalID: -8546523417248125508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

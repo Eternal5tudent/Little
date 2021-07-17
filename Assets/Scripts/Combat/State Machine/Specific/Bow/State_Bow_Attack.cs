@@ -12,13 +12,14 @@ public class State_Bow_Attack : WeaponState
     public override void Enter()
     {
         base.Enter();
-        Attack();
     }
 
     public void Attack()
     {
         AudioManager.Instance.PlaySFX(weaponData.attackSound);
         bow.LaunchArrow();
+        weapon.ApplyAttackEffects();
+
     }
 
     public override void PhysicsUpdate()
@@ -29,6 +30,7 @@ public class State_Bow_Attack : WeaponState
     public override void OnAnimationEnd()
     {
         base.OnAnimationEnd();
+        Attack();
         weapon.SetAttackTime();
         stateMachine.ChangeState(bow.IdleState);
     }
