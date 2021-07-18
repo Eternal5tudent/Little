@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PlayerWallJumpState : PlayerAbilityState
 {
-    const float dashTime = 0.1f;
-    const float holdJumpTime = 0.25f;
+    const float dashTime = 0.17f;
+    const float holdJumpTime = 0.3f;
     public PlayerWallJumpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -15,40 +15,53 @@ public class PlayerWallJumpState : PlayerAbilityState
     {
         base.Enter();
         player.Flip();
+        Debug.Log("DASH!!");
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
         float timePassed = Time.time - startTime;
-        if(timePassed <= dashTime) // if dashing
+        if (timePassed <= dashTime) // Dash Phase
         {
             Dash();
         }
-        else // after dashing
+        else if (timePassed <= holdJumpTime) // Hold/Control Phase
         {
             if (player.AxisInput.x * player.FacingDirection == -1)
             {
                 player.Flip();
             }
-            if (player.InputHandler.JumpHold && timePassed <= holdJumpTime)
+            if (player.InputHandler.JumpHold && !Transitioning)
             {
                 player.SetVelocityY(playerData.wallJumpForce);
             }
-            if(player.IsTouchingWall && !player.InputHandler.JumpHold)
+            else if (player.IsTouchingWall && !player.InputHandler.JumpHold)
             {
                 isAbilityDone = true;
             }
-            player.ControlPlayer(60);
+            else if (player.IsGrounded)
+            {
+                isAbilityDone = true;
+
+            }
+            else if (!player.InputHandler.JumpHold)
+            {
+                player.SetVelocityY(0);
+                isAbilityDone = true;
+            }
+            if (!Transitioning && !player.IsTouchingWall)
+                player.ControlPlayer();
         }
-        if(timePassed > holdJumpTime || player.IsGrounded)
+        else
         {
             isAbilityDone = true;
         }
+
     }
 
     private void Dash()
     {
-        player.SetVelocity(new Vector2(player.FacingDirection * 10, playerData.wallJumpForce));
+        player.SetVelocity(new Vector2(player.FacingDirection * 5, playerData.wallJumpForce));
     }
 }

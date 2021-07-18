@@ -33,6 +33,7 @@ public class PlayerWallState : PlayerState
         }
         else if(player.InputHandler.JumpDown)
         {
+            player.InputHandler.ConsumeJump();
             ChangeState(player.WallJumpState);
         }
     }

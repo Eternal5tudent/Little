@@ -15,11 +15,11 @@ MonoBehaviour:
   movementSpeed: 2
   idleTime: 0.8
   groundCheckRay: 0.42
-  wallCheckRay: 0.71
-  playerCheckRay: 0.78
+  wallCheckBox: {x: 0.35, y: 1.26}
+  playerCheckRay: 0.7
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128

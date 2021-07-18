@@ -10,7 +10,7 @@ public class D_Enemy : ScriptableObject
     public float idleTime = 1f;
     [Header("Surroundings")]
     public float groundCheckRay;
-    public float wallCheckRay;
+    public Vector2 wallCheckBox;
     public float playerCheckRay;
     public LayerMask whatIsGround;
     public LayerMask whatIsPlayer;

@@ -8,6 +8,7 @@ public class PlayerData : ScriptableObject
     [Header("Movement")]
     public float movementSpeed = 10f;
     public float jumpPower = 15;
+    public float jumpHoldTime = 0.35f;
     public float wallSlideSpeed = 3f;
     public float wallClimbSpeed = 2f;
     public float dropForce = 30f;

@@ -6,6 +6,9 @@ using UnityEngine.EventSystems;
 public class InputManager : Singleton<InputManager>
 {
     public Vector2 AxisInput { get; private set; }
+    /// <summary>
+    /// Don't forget to always use "ConsumeJump()" function
+    /// </summary>
     public bool JumpDown { get; private set; }
     public bool JumpHold { get; private set; }
     public bool TalkInput { get; private set; }

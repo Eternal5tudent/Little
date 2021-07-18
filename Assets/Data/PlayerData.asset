@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   movementSpeed: 6
-  jumpPower: 9
+  jumpPower: 8
   wallSlideSpeed: 5
   wallClimbSpeed: 6
   dropForce: 200
-  wallJumpForce: 9
+  wallJumpForce: 10
   groundCheckRadius: 0.16
   wallCheckDistance: 0.33
   whatIsGround:

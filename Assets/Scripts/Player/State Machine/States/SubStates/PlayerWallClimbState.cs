@@ -32,7 +32,7 @@ public class PlayerWallClimbState : PlayerWallState
         }
         else if (!detectingLedge && player.IsTouchingWall)
         {
-            ChangeState(player.JumpState);
+            player.SetVelocityY(playerData.jumpPower);
         }
     }
 

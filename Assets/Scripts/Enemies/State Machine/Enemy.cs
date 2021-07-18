@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour, IDamageable
     [SerializeField] D_Enemy enemyData;
     [SerializeField] Transform groundedCheck;
     [SerializeField] Transform wallCheck;
+    [SerializeField] Transform playerCheck;
     [SerializeField] Material hitMaterial;
     [SerializeField] UnityEvent onDamage;
     [SerializeField] UnityEvent onDeath;
@@ -63,10 +64,12 @@ public class Enemy : MonoBehaviour, IDamageable
     protected virtual void OnDrawGizmos()
     {
         Gizmos.DrawRay(groundedCheck.position, transform.up * -1 * enemyData.groundCheckRay);
-        Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.right * enemyData.wallCheckRay);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(wallCheck.position, enemyData.wallCheckBox);
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.right * enemyData.playerCheckRay);
         Gizmos.DrawWireSphere(transform.position, enemyData.attackRadius);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawRay(playerCheck.position, Vector3.right * enemyData.playerCheckRay);
     }
 
     #endregion
@@ -121,13 +124,14 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public bool CheckWall()
     {
-        return Physics2D.Raycast(wallCheck.position, transform.right, enemyData.wallCheckRay, enemyData.whatIsGround);
+        return Physics2D.BoxCast(wallCheck.position, enemyData.wallCheckBox, 0f, Vector2.right, 0, enemyData.whatIsGround);
     }
 
     public bool CheckPlayer()
     {
-        return Physics2D.Raycast(wallCheck.position, transform.right, enemyData.playerCheckRay, enemyData.whatIsPlayer);
+        return Physics2D.Raycast(playerCheck.position, transform.right, enemyData.playerCheckRay, enemyData.whatIsPlayer);
     }
+    #endregion
 
     public void TakeDamage(int damage)
     {
@@ -142,6 +146,7 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         onDeath?.Invoke();
     }
+
     public void EnableDamageShader()
     {
         StartCoroutine(EnableDamageShader_Cor());
@@ -158,7 +163,6 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         AudioManager.Instance.PlaySFX(enemyData.deathSound);
     }
-    #endregion
 
     public void GenerateHitParticles()
     {

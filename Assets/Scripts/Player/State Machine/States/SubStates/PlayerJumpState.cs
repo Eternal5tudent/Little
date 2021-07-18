@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerJumpState : PlayerAbilityState
 {
-    const float maxHoldTime = 0.25f;
     bool canHold;
     public PlayerJumpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
@@ -23,20 +22,18 @@ public class PlayerJumpState : PlayerAbilityState
     {
         base.LogicUpdate();
         player.ControlPlayer();
-        canHold = Time.time < startTime + maxHoldTime;
+        canHold = Time.time < startTime + playerData.jumpHoldTime;
         if (canHold)
         {
             if (player.InputHandler.JumpHold)
             {
                 player.SetVelocityY(playerData.jumpPower);
             }
-            else
-            {
-                isAbilityDone = true;
-            }
+            
         }
         else
         {
+            player.SetVelocityY(playerData.jumpPower / 1.5f);
             isAbilityDone = true;
         }
         if (player.CurrentVelocity.y <= 0)
@@ -46,6 +43,11 @@ public class PlayerJumpState : PlayerAbilityState
         if (player.InputHandler.FireInput && !player.InputHandler.IsPointerOverUI)
         {
             ChangeState(player.AttackState);
+        }
+        if(!player.InputHandler.JumpHold && !Transitioning)
+        {
+            player.SetVelocityY(0);
+            isAbilityDone = true;
         }
     }
 

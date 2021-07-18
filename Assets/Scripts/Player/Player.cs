@@ -137,6 +137,14 @@ public class Player : Singleton<Player>, IDamageable, IFighter
             }
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundedCheck.position, playerData.groundCheckRadius);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.right * playerData.wallCheckDistance);
+        Gizmos.DrawRay(ledgeCheck.position, playerData.wallCheckDistance * transform.right);
+    }
     #endregion
 
     #region Character Control
@@ -240,12 +248,6 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     {
         FacingDirection *= -1;
         transform.Rotate(0f, 180f, 0f);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(groundedCheck.position, playerData.groundCheckRadius);
-        Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.right * playerData.wallCheckDistance);
     }
 
     public virtual void AnimationStartedTrigger()

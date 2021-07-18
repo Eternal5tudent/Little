@@ -43,12 +43,10 @@ public class PlayerAirState : PlayerState
             player.Flip();
         }
         if (player.IsGrounded)
-            ChangeState(player.IdleState);
-        else if (player.IsTouchingWall && player.InputHandler.JumpDown)
         {
-            ChangeState(player.WallJumpState);
+            ChangeState(player.IdleState);
         }
-        else if(player.IsTouchingWall)
+        else if (player.IsTouchingWall)
         {
             ChangeState(player.WallSlideState);
         }
