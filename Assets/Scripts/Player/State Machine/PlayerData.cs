@@ -31,4 +31,8 @@ public class PlayerData : ScriptableObject
     public AudioClip slide;
     public AudioClip jump;
     public AudioClip equipWeapon;
+
+    [Header("Particle Effects")]
+    public ParticleSystem movingDust;
+    public ParticleSystem jumpDust;
 }

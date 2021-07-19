@@ -8,6 +8,12 @@ public class PlayerMoveState : PlayerGroundedState
     {
     }
 
+    public override void Enter()
+    {
+        base.Enter();
+        player.PlayMoveDust(true);
+    }
+
     public override void LogicUpdate()
     {
         base.LogicUpdate();
@@ -22,7 +28,11 @@ public class PlayerMoveState : PlayerGroundedState
         base.PhysicsUpdate();
         player.ControlPlayer();
     }
-    
 
+    public override void Exit()
+    {
+        base.Exit();
+        player.PlayMoveDust(false);
+    }
 
 }

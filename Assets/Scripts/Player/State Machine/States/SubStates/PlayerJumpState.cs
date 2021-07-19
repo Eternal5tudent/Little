@@ -16,6 +16,7 @@ public class PlayerJumpState : PlayerAbilityState
         player.SetVelocityY(playerData.jumpPower);
         player.InputHandler.ConsumeJump();
         canHold = true;
+        player.PlayJumpDust();
     }
 
     public override void LogicUpdate()

@@ -13,7 +13,11 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     [SerializeField] Transform wallCheck;
     [SerializeField] Transform ledgeCheck;
     [SerializeField] UnityEvent OnDamage;
-    [SerializeField] UnityEvent OnDeath;   
+    [SerializeField] UnityEvent OnDeath;
+
+    [Header("Particles")]
+    [SerializeField] ParticleSystem moveDust;
+    [SerializeField] ParticleSystem jumpDust;
 
     #region States
     public PlayerStateMachine StateMachine { get; private set; }
@@ -61,7 +65,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     protected override void Awake()
     {
         base.Awake();
-        
+
 
         StateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
@@ -99,10 +103,10 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     {
         StateMachine.CurrentState.LogicUpdate();
         if (GrabToggled && !IsTouchingWall)
-        { 
-            InputHandler.ResetWallGrab(); 
+        {
+            InputHandler.ResetWallGrab();
         }
-           
+
     }
 
     private void FixedUpdate()
@@ -113,7 +117,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("NPC"))
+        if (collision.CompareTag("NPC"))
         {
             NPC npc = collision.GetComponent<NPC>();
             if (npc != null)
@@ -150,7 +154,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     #region Character Control
     public void InteractWithNPC()
     {
-        if(nearbyNPC != null)
+        if (nearbyNPC != null)
         {
             nearbyNPC.Interact();
         }
@@ -158,7 +162,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
 
     private void SetNearbyNPC(NPC npc, bool isNearby)
     {
-        if(isNearby)
+        if (isNearby)
         {
             nearbyNPC = npc;
         }
@@ -214,7 +218,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
                 SetVelocity(Vector2.zero);
                 isControllable = true;
             }
-            StartCoroutine(KnockBack_Cor()); 
+            StartCoroutine(KnockBack_Cor());
         }
     }
 
@@ -228,7 +232,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
                     ConserveSpeed(false);
             }
             if (!IsTouchingWall && !speedIsConserved)
-                SetVelocityX(playerData.movementSpeed * AxisInput.x * percent/100);
+                SetVelocityX(playerData.movementSpeed * AxisInput.x * percent / 100);
         }
     }
 
@@ -259,7 +263,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     {
         StateMachine.CurrentState.AnimationFinishedTrigger();
     }
-    
+
     public void TakeDamage(int damage)
     {
         CurrentHealth--;
@@ -276,7 +280,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     public void EquipWeapon(Weapon newWeapon)
     {
         newWeapon = Instantiate(newWeapon.gameObject, weaponPos.position, transform.rotation, transform).GetComponent<Weapon>();
-        if(CurrentWeapon!=null)
+        if (CurrentWeapon != null)
         {
             audioManager.PlaySFX(playerData.equipWeapon);
             Destroy(CurrentWeapon.gameObject);
@@ -297,7 +301,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     #region Effects
     public void EnableHitMaterial()
     {
-        if(gameObject.activeInHierarchy)
+        if (gameObject.activeInHierarchy)
             StartCoroutine(EnableHitMaterial_Cor());
     }
 
@@ -321,10 +325,11 @@ public class Player : Singleton<Player>, IDamageable, IFighter
             yield return new WaitForSeconds(0.05f);
             SetVelocityX(0f);
         }
-       
+
         StartCoroutine(OnMeleeWeaponAttack_Cor());
     }
 
+    #region Audio
     public void PlaySound_Footsteps()
     {
         audioManager.PlaySFX(playerData.footstep);
@@ -339,5 +344,25 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     {
         audioManager.PlaySFX(playerData.jump);
     }
+    #endregion
+
+    #region Visual Effects
+    public void PlayMoveDust(bool play)
+    {
+        if(play)
+        {
+            moveDust.Play();
+        }
+        else
+        {
+            moveDust.Stop();
+        }
+    }
+
+    public void PlayJumpDust()
+    {
+        jumpDust.Play();
+    }
+    #endregion
     #endregion
 }
