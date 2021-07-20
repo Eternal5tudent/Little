@@ -18,7 +18,7 @@ public class EnemyAttackState : EnemyAbillityState
             IDamageable damageable = collider.GetComponent<IDamageable>();
             if (damageable != null)
             {
-                damageable.TakeDamage(enemyData.damage);
+                damageable.TakeDamage(enemyData.damage, enemy.transform.position);
             }
         }
         if (detectingPlayer)

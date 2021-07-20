@@ -10,8 +10,7 @@ public class Enemy : MonoBehaviour, IDamageable
     [SerializeField] Transform wallCheck;
     [SerializeField] Transform playerCheck;
     [SerializeField] Material hitMaterial;
-    [SerializeField] UnityEvent onDamage;
-    [SerializeField] UnityEvent onDeath;
+
     private Material originalMat;
 
     #region Condition variables
@@ -19,6 +18,7 @@ public class Enemy : MonoBehaviour, IDamageable
     public Vector2 CurrentVelocity { get { return Rb.velocity; } }
     public int CurrentHealth { get; protected set; }
     public int MaxHealth { get; protected set; }
+    public bool IsControllable { get; protected set; } = true;
     #endregion
 
     #region Components
@@ -35,7 +35,6 @@ public class Enemy : MonoBehaviour, IDamageable
         MoveState = new EnemyMoveState(this, StateMachine, enemyData, "move");
         PlayerDetectedState = new EnemyPlayerDetectedState(this, StateMachine, enemyData, "idle");
         AttackState = new EnemyAttackState(this, StateMachine, enemyData, "attack");
-
     }
 
     protected virtual void Start()
@@ -84,19 +83,22 @@ public class Enemy : MonoBehaviour, IDamageable
 
     #region Control
 
-    public void SetVelocityX(float velocity)
+    public void SetVelocityX(float velocity, bool skipControl = false)
     {
-        Rb.velocity = new Vector2(velocity, CurrentVelocity.y);
+        if (IsControllable || skipControl)
+            Rb.velocity = new Vector2(velocity, CurrentVelocity.y);
     }
 
-    public void SetVelocityY(float velocity)
+    public void SetVelocityY(float velocity, bool skipControl = false)
     {
-        Rb.velocity = new Vector2(CurrentVelocity.x, velocity);
+        if (IsControllable || skipControl)
+            Rb.velocity = new Vector2(CurrentVelocity.x, velocity);
     }
 
-    public void SetVelocity(Vector2 velocity)
+    public void SetVelocity(Vector2 velocity, bool skipControl = false)
     {
-        Rb.velocity = velocity;
+        if (IsControllable || skipControl)
+            Rb.velocity = velocity;
     }
 
     public void Flip()
@@ -133,18 +135,23 @@ public class Enemy : MonoBehaviour, IDamageable
     }
     #endregion
 
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage, Vector2 attackOrigin)
     {
         CurrentHealth--;
-        //Debug.Log(name + ": ouch!");
-        onDamage?.Invoke();
+
+        EnableDamageShader();
+        GenerateHitParticles();
+        PlayHitSound();
+        AttackKnockback((Vector2)transform.position - attackOrigin, 0.07f);
+
         if (CurrentHealth <= 0)
-            onDeath?.Invoke();
+            Die();
     }
 
-    public void Die()
+    public virtual void Die()
     {
-        onDeath?.Invoke();
+        PlayDeathSound();
+        GenerateHitParticles();
     }
 
     public void EnableDamageShader()
@@ -159,9 +166,32 @@ public class Enemy : MonoBehaviour, IDamageable
         spriteRenderer.material = originalMat;
     }
 
+    public void AttackKnockback(Vector2 direction, float seconds)
+    {
+        direction = direction.normalized;
+        IEnumerator KnockBack_Cor()
+        {
+            IsControllable = false;
+            float startTime = Time.time;
+            while (Time.time < startTime + seconds)
+            {
+                SetVelocity(direction * 10, true);
+                yield return new WaitForEndOfFrame();
+            }
+            SetVelocity(Vector2.zero, true);
+            IsControllable = true;
+        }
+        StartCoroutine(KnockBack_Cor());
+    }
+
     public void PlayDeathSound()
     {
         AudioManager.Instance.PlaySFX(enemyData.deathSound);
+    }
+
+    public void PlayHitSound()
+    {
+        AudioManager.Instance.PlaySFX(enemyData.hitSound);
     }
 
     public void GenerateHitParticles()

@@ -264,7 +264,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
         StateMachine.CurrentState.AnimationFinishedTrigger();
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Vector2 attackOrigin)
     {
         CurrentHealth--;
         if (CurrentHealth <= 0)

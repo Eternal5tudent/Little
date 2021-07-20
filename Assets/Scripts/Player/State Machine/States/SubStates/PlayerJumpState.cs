@@ -23,6 +23,11 @@ public class PlayerJumpState : PlayerAbilityState
     {
         base.LogicUpdate();
         player.ControlPlayer();
+        if (player.CurrentVelocity.y <= 0)
+        {
+            //isAbilityDone = true;
+            Debug.Log("done");
+        }
         canHold = Time.time < startTime + playerData.jumpHoldTime;
         if (canHold)
         {
@@ -37,10 +42,6 @@ public class PlayerJumpState : PlayerAbilityState
             player.SetVelocityY(playerData.jumpPower / 1.5f);
             isAbilityDone = true;
         }
-        if (player.CurrentVelocity.y <= 0)
-        {
-            isAbilityDone = true;
-        }
         if (player.InputHandler.FireInput && !player.InputHandler.IsPointerOverUI)
         {
             ChangeState(player.AttackState);
@@ -50,6 +51,7 @@ public class PlayerJumpState : PlayerAbilityState
             player.SetVelocityY(0);
             isAbilityDone = true;
         }
+        
     }
 
     public override void Exit()

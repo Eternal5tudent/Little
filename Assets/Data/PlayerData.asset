@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 6
   jumpPower: 8
+  jumpHoldTime: 0.35
   wallSlideSpeed: 5
   wallClimbSpeed: 6
   dropForce: 200
   wallJumpForce: 10
-  groundCheckRadius: 0.16
+  groundCheckRadius: 0.12
   wallCheckDistance: 0.33
   whatIsGround:
     serializedVersion: 2
@@ -34,3 +35,5 @@ MonoBehaviour:
   slide: {fileID: 8300000, guid: e5445e95578d4614f87d894fd68094e2, type: 3}
   jump: {fileID: 8300000, guid: c7e1fbf93eff63e40a2698bd6248cdb0, type: 3}
   equipWeapon: {fileID: 8300000, guid: db718791f81237b46b5a86c2cf63a58e, type: 3}
+  movingDust: {fileID: 0}
+  jumpDust: {fileID: 0}

@@ -32,7 +32,7 @@ public class State_Fists_Attack2 : WeaponState
                 if (damageable != null)
                 {
                     AudioManager.Instance.PlaySFX(data.impactSound);
-                    damageable.TakeDamage(weaponData.damage);
+                    damageable.TakeDamage(weaponData.damage, weapon.transform.position);
                     weapon.EnemyHit();
                 }
             }

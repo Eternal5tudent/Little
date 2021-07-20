@@ -6,7 +6,7 @@ public interface IDamageable
 {
     int MaxHealth { get; }
     int CurrentHealth { get; }
-    void TakeDamage(int damage);
+    void TakeDamage(int damage, Vector2 attackOrigin);
     void Die();
 }
 

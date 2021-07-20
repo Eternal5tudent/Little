@@ -23,4 +23,5 @@ public class D_Enemy : ScriptableObject
     public ParticleSystem hitParticles;
     [Header("Sounds")]
     public AudioClip deathSound;
+    public AudioClip hitSound;
 }

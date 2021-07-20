@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
         if (damageable != null)
         {
             AudioManager.Instance.PlaySFX(impactSound);
-            damageable.TakeDamage(damage);
+            damageable.TakeDamage(damage, transform.position);
             onHit?.Invoke();
             gameObject.SetActive(false);
         }
