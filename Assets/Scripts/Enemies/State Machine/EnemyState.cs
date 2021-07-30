@@ -10,6 +10,7 @@ public class EnemyState
     protected D_Enemy enemyData;
     private readonly string animBoolName;
     protected float startTime;
+    protected float TimePassed { get { return Time.time - startTime; } }
 
     public EnemyState(Enemy enemy, EnemyStateMachine stateMachine, D_Enemy enemyData, string animBoolName)
     {

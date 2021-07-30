@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d4e0bbbf48e6e4693aceb937a833d9, type: 3}
   m_Name: Solemn
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  movementSpeed: 3
   idleTime: 0.8
   groundCheckRay: 0.35
   wallCheckBox: {x: 0.35, y: 0.76}
-  playerCheckRay: 0.91
+  playerCheckRay: 0.74
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
@@ -25,7 +25,7 @@ MonoBehaviour:
     m_Bits: 128
   playerDetectedAwaitTime: 0.3
   maxHealth: 3
-  attackRadius: 1.06
+  attackRadius: 0.83
   whatIsDamageable:
     serializedVersion: 2
     m_Bits: 128

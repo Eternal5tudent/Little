@@ -3,7 +3,12 @@ guid: bee59a49bb403ce4e82ec7c4ee15a44f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - enemyData: {instanceID: 0}
+  - groundedCheck: {instanceID: 0}
+  - wallCheck: {instanceID: 0}
+  - playerCheck: {instanceID: 0}
+  - hitMaterial: {fileID: 2100000, guid: 1f6872f989f1d75459909df8b9c21f67, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

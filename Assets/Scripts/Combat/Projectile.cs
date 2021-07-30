@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
     [SerializeField] float speed = 10;
     [SerializeField] float disableAfterSeconds = 1f;
     [SerializeField] AudioClip impactSound;
+    [SerializeField] GameObject destroyParticles;
+    bool destroyAfter = false;
 
     LayerMask whatIsEnemy;
     public Action onHit;
@@ -18,6 +20,12 @@ public class Projectile : MonoBehaviour
     {
         StartCoroutine(Disable());
     }
+
+    public void SetDestroyAfterwards(bool value)
+    {
+        destroyAfter = value;
+    }
+
     private void FixedUpdate()
     {
         lastPos = transform.position;
@@ -36,11 +44,24 @@ public class Projectile : MonoBehaviour
         IDamageable damageable = hitObject.collider.GetComponent<IDamageable>();
         if (damageable != null)
         {
-            AudioManager.Instance.PlaySFX(impactSound);
+            if (impactSound != null)
+                AudioManager.Instance.PlaySFX(impactSound);
             damageable.TakeDamage(damage, transform.position);
             onHit?.Invoke();
-            gameObject.SetActive(false);
         }
+        Destroy();
+    }
+
+    private void Destroy()
+    {
+        if (destroyParticles != null)
+        {
+            Instantiate(destroyParticles, transform.position, Quaternion.identity);
+        }
+        if (!destroyAfter)
+            gameObject.SetActive(false);
+        else
+            Destroy(gameObject);
     }
 
     public void Initialize(LayerMask whatIsEnemy, int damage)
@@ -52,6 +73,6 @@ public class Projectile : MonoBehaviour
     IEnumerator Disable()
     {
         yield return new WaitForSeconds(disableAfterSeconds);
-        gameObject.SetActive(false);
+        Destroy();
     }
 }

@@ -12,8 +12,6 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     [SerializeField] Transform groundedCheck;
     [SerializeField] Transform wallCheck;
     [SerializeField] Transform ledgeCheck;
-    [SerializeField] UnityEvent OnDamage;
-    [SerializeField] UnityEvent OnDeath;
 
     [Header("Particles")]
     [SerializeField] ParticleSystem moveDust;
@@ -269,12 +267,17 @@ public class Player : Singleton<Player>, IDamageable, IFighter
         CurrentHealth--;
         if (CurrentHealth <= 0)
             Die();
-        OnDamage?.Invoke();
+        else
+        {
+            EnableHitMaterial();
+            CameraManager.Instance.Shake();
+            CameraManager.Instance.StopTime(0.2f);
+        }
     }
 
     public void Die()
     {
-        OnDeath?.Invoke();
+        Destroy(gameObject);
     }
 
     public void EquipWeapon(Weapon newWeapon)

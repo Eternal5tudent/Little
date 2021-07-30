@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Enemy : MonoBehaviour, IDamageable
+public abstract class Enemy : MonoBehaviour, IDamageable
 {
-    [SerializeField] D_Enemy enemyData;
-    [SerializeField] Transform groundedCheck;
-    [SerializeField] Transform wallCheck;
-    [SerializeField] Transform playerCheck;
-    [SerializeField] Material hitMaterial;
+    [SerializeField] protected D_Enemy enemyData;
+    [SerializeField] protected Transform groundedCheck;
+    [SerializeField] protected Transform wallCheck;
+    [SerializeField] protected Transform playerCheck;
+    [SerializeField] protected Material hitMaterial;
 
     private Material originalMat;
+
+    #region States
+    public EnemyStateMachine StateMachine { get; protected set; }
+    #endregion
 
     #region Condition variables
     public int FacingDirection { get; private set; }
@@ -31,10 +35,6 @@ public class Enemy : MonoBehaviour, IDamageable
     protected virtual void Awake()
     {
         StateMachine = new EnemyStateMachine();
-        IdleState = new EnemyIdleState(this, StateMachine, enemyData, "idle");
-        MoveState = new EnemyMoveState(this, StateMachine, enemyData, "move");
-        PlayerDetectedState = new EnemyPlayerDetectedState(this, StateMachine, enemyData, "idle");
-        AttackState = new EnemyAttackState(this, StateMachine, enemyData, "attack");
     }
 
     protected virtual void Start()
@@ -47,38 +47,50 @@ public class Enemy : MonoBehaviour, IDamageable
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalMat = spriteRenderer.material;
         FacingDirection = 1;
-        StateMachine.Initialize(MoveState);
     }
 
     protected virtual void Update()
     {
-        StateMachine.CurrentState.LogicUpdate();
+        if(StateMachine.CurrentState != null)
+            StateMachine.CurrentState.LogicUpdate();
     }
 
     protected virtual void FixedUpdate()
     {
-        StateMachine.CurrentState.PhysicsUpdate();
+        if(StateMachine.CurrentState != null)
+            StateMachine.CurrentState.PhysicsUpdate();
     }
 
     protected virtual void OnDrawGizmos()
     {
-        Gizmos.DrawRay(groundedCheck.position, transform.up * -1 * enemyData.groundCheckRay);
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawWireCube(wallCheck.position, enemyData.wallCheckBox);
-        Gizmos.color = Color.red;
+        DrawSurroundingsChecks();
         Gizmos.DrawWireSphere(transform.position, enemyData.attackRadius);
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(playerCheck.position, Vector3.right * enemyData.playerCheckRay);
     }
 
-    #endregion
+    protected void DrawSurroundingsChecks()
+    {
+        Gizmos.DrawRay(groundedCheck.position, transform.up * -1 * enemyData.groundCheckRay);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(wallCheck.position, enemyData.wallCheckBox);
+        Gizmos.color = Color.red;
+    }
 
-    #region States
-    public EnemyStateMachine StateMachine { get; protected set; }
-    public EnemyIdleState IdleState { get; protected set; }
-    public EnemyMoveState MoveState { get; protected set; }
-    public EnemyPlayerDetectedState PlayerDetectedState { get; protected set; }
-    public EnemyAttackState AttackState { get; protected set; }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            IDamageable playerDamageable = collision.GetComponent<IDamageable>();
+            if (playerDamageable != null)
+            {
+                print("damage");
+                playerDamageable.TakeDamage(1, transform.position);
+                AttackKnockback(transform.position - collision.transform.position, 0.1f);
+            }
+        }
+    }
+
     #endregion
 
     #region Control
@@ -129,7 +141,7 @@ public class Enemy : MonoBehaviour, IDamageable
         return Physics2D.BoxCast(wallCheck.position, enemyData.wallCheckBox, 0f, Vector2.right, 0, enemyData.whatIsGround);
     }
 
-    public bool CheckPlayer()
+    public virtual bool CheckPlayer()
     {
         return Physics2D.Raycast(playerCheck.position, transform.right, enemyData.playerCheckRay, enemyData.whatIsPlayer);
     }
@@ -138,12 +150,14 @@ public class Enemy : MonoBehaviour, IDamageable
     public virtual void TakeDamage(int damage, Vector2 attackOrigin)
     {
         CurrentHealth--;
-
         EnableDamageShader();
         GenerateHitParticles();
         PlayHitSound();
         AttackKnockback((Vector2)transform.position - attackOrigin, 0.07f);
-
+        if(!CheckPlayer())
+        {
+            Flip();
+        }
         if (CurrentHealth <= 0)
             Die();
     }
@@ -152,6 +166,7 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         PlayDeathSound();
         GenerateHitParticles();
+        Destroy(gameObject);
     }
 
     public void EnableDamageShader()

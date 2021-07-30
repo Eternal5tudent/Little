@@ -20,4 +20,15 @@ public class CameraManager : Singleton<CameraManager>
         StartCoroutine(Shake(seconds));
     }
 
+    public void StopTime(float seconds = 0.1f)
+    {
+        IEnumerator StopTime_Cor()
+        {
+            Time.timeScale = 0;
+            yield return new WaitForSecondsRealtime(seconds);
+            Time.timeScale = 1;
+        }
+        StartCoroutine(StopTime_Cor());
+    }
+
 }

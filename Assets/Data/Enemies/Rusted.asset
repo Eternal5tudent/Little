@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d4e0bbbf48e6e4693aceb937a833d9, type: 3}
+  m_Name: Rusted
+  m_EditorClassIdentifier: 
+  movementSpeed: 2
+  idleTime: 0.8
+  groundCheckRay: 0.35
+  wallCheckBox: {x: 0.35, y: 0.76}
+  playerCheckRay: 1.48
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  playerDetectedAwaitTime: 0.3
+  maxHealth: 3
+  attackRadius: 1.06
+  whatIsDamageable:
+    serializedVersion: 2
+    m_Bits: 128
+  damage: 1
+  hitParticles: {fileID: 3105407809963600285, guid: 9b17c0812b9c9464cb4a4920c171d000, type: 3}
+  deathSound: {fileID: 8300000, guid: 75a83e39064faab4c87067ec9e1f3de6, type: 3}
+  hitSound: {fileID: 8300000, guid: 30665505071f2654187827877e573532, type: 3}

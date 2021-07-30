@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 721292486484718949}
-  - component: {fileID: 6487745494175182553}
+  - component: {fileID: 2150001727175718333}
   - component: {fileID: 6624772055984115367}
   - component: {fileID: 8977424429476312628}
   - component: {fileID: 8956359405951406923}
   - component: {fileID: 5996995347092687421}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Solemn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6487745494175182553
+--- !u!114 &2150001727175718333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1636792727582218869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bee59a49bb403ce4e82ec7c4ee15a44f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bf83fbdd84d4f6488fcbf91fda73832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 07480f54c4f5e47468e3ae56ee6b80d1, type: 2}
@@ -116,7 +116,7 @@ Animator:
   m_GameObject: {fileID: 1636792727582218869}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: aa3c38c23a1eec54084d6364f20dd97f, type: 2}
+  m_Controller: {fileID: 9100000, guid: de64e091622a6fc4d98b4f265fcdc2dc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -138,7 +138,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015166834, y: -0.12285125}
+  m_Offset: {x: -0.015166834, y: -0.10085642}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -149,7 +149,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32523534, y: 0.8167975}
+  m_Size: {x: 0.32523534, y: 0.77280784}
   m_EdgeRadius: 0
 --- !u!50 &5996995347092687421
 Rigidbody2D:
@@ -181,7 +181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6824869476156700663}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3557888353545585685}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7165424179167631540}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
