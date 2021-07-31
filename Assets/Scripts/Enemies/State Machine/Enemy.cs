@@ -206,7 +206,8 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 
     public void PlayHitSound()
     {
-        AudioManager.Instance.PlaySFX(enemyData.hitSound);
+        if(enemyData.hitSound != null)
+            AudioManager.Instance.PlaySFX(enemyData.hitSound);
     }
 
     public void GenerateHitParticles()
