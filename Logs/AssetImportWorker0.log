@@ -560,3 +560,45 @@ Received Prepare
 Registering precompiled user dll's ...
 Registered in 1.447577 seconds.
 Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in 27.259 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3326 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 146.9 MB.
+System memory in use after: 147.0 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4044.
+Total: 5.818700 ms (FindLiveObjects: 0.512100 ms CreateObjectMapping: 0.160000 ms MarkObjects: 4.880100 ms  DeleteObjects: 0.264300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 986.349788 seconds.
+  path: Assets/Data/Enemies/Rusted.asset
+  artifactKey: Guid(b3b13f345a7e27f4f8411f05f1144e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Enemies/Rusted.asset using Guid(b3b13f345a7e27f4f8411f05f1144e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6d2deb2290e8a672b187487cdf4cb5b') in 0.076589 seconds
+  Import took 0.090073 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000319 seconds.
+  path: Assets/Data/Enemies/Solemn.asset
+  artifactKey: Guid(07480f54c4f5e47468e3ae56ee6b80d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Enemies/Solemn.asset using Guid(07480f54c4f5e47468e3ae56ee6b80d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '752306ac35df318e16d9c0027f0b7e81') in 0.025174 seconds
+  Import took 0.041065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000658 seconds.
+  path: Assets/Data/Enemies/Vengeful.asset
+  artifactKey: Guid(834fcec18cf70ac459191be524aa4d82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Enemies/Vengeful.asset using Guid(834fcec18cf70ac459191be524aa4d82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd476096ab0c831e2fe65c019b9cf1174') in 0.024806 seconds
+  Import took 0.041805 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

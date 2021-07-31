@@ -32,4 +32,4 @@ MonoBehaviour:
   damage: 1
   hitParticles: {fileID: 3105407809963600285, guid: 9b17c0812b9c9464cb4a4920c171d000, type: 3}
   deathSound: {fileID: 8300000, guid: 75a83e39064faab4c87067ec9e1f3de6, type: 3}
-  hitSound: {fileID: 8300000, guid: 30665505071f2654187827877e573532, type: 3}
+  hitSound: {fileID: 0}
