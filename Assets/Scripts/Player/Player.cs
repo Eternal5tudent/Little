@@ -6,6 +6,7 @@ using Dialogue_Udemy;
 
 public class Player : Singleton<Player>, IDamageable, IFighter
 {
+    // Use Control + K + 8 to collapse all regions
     #region Fields
     [SerializeField] Transform weaponPos;
     [SerializeField] PlayerData playerData;
@@ -63,8 +64,6 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     protected override void Awake()
     {
         base.Awake();
-
-
         StateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
         MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
@@ -77,6 +76,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
         AttackState = new PlayerAttackState(this, StateMachine, playerData, "idle");
         TalkState = new PlayerTalkState(this, StateMachine, playerData, "idle");
     }
+
 
     private void Start()
     {
@@ -352,7 +352,7 @@ public class Player : Singleton<Player>, IDamageable, IFighter
     #region Visual Effects
     public void PlayMoveDust(bool play)
     {
-        if(play)
+        if (play)
         {
             moveDust.Play();
         }
